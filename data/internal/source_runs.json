@@ -1,0 +1,32 @@
+{
+  "runs": [
+    {
+      "source": "source_a",
+      "records": 220,
+      "mode": "public_open_data_ingest",
+      "captured_at": "2026-03-13T04:57:42.595974+00:00",
+      "status": "ok"
+    },
+    {
+      "source": "source_b",
+      "records": 419,
+      "mode": "public_open_data_ingest",
+      "captured_at": "2026-03-13T04:57:42.595974+00:00",
+      "status": "ok"
+    },
+    {
+      "source": "manual_uploads",
+      "records": 0,
+      "mode": "local_pack_seed_mode_off",
+      "captured_at": "2026-03-13T04:57:42.595974+00:00",
+      "status": "ok"
+    },
+    {
+      "source": "internal_leads",
+      "records": 0,
+      "mode": "none",
+      "captured_at": "2026-03-13T04:57:42.595974+00:00",
+      "status": "ok"
+    }
+  ]
+}

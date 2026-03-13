@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+env/
+
+# Editors
+.vscode/
+.idea/
+*.sublime-*
+
+# Node (if ever added)
+node_modules/
+
+# Logs
+*.log

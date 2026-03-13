@@ -1,0 +1,5609 @@
+[
+  {
+    "id": "LST-469d5a429713",
+    "address": "2790 WILKES AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-447f38859f60",
+    "address": "3162 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-eab2eceb7228",
+    "address": "14 MONARCH MEWS",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c78a95400687",
+    "address": "18 MONARCH MEWS",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-327d8158b258",
+    "address": "30 MONARCH MEWS",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-71c468d25fa6",
+    "address": "43 MONARCH MEWS",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-da54b011db4e",
+    "address": "39 MONARCH MEWS",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5b0ef8ba2de6",
+    "address": "27 MONARCH MEWS",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b3d5fc89e515",
+    "address": "3178 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7a88c6a39879",
+    "address": "42 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e15cb7f90116",
+    "address": "14 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-28df7927d24f",
+    "address": "3198 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-59d24f11c232",
+    "address": "95 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-213b9646d9f9",
+    "address": "187 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-aeceb7d65958",
+    "address": "165 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-53c5cf145d38",
+    "address": "163 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-6c59c78489a3",
+    "address": "1550 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4294b463531f",
+    "address": "1536 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-092c40579943",
+    "address": "1390 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a31389d6485b",
+    "address": "3154 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-63f1d38fe277",
+    "address": "98 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-82950a12ee25",
+    "address": "406 2ND AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-669e7759b806",
+    "address": "202 BROUGHTON ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ca84bd269bdc",
+    "address": "411 MANITOBA ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9e33cd252d7a",
+    "address": "707 ABBOTT ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-494771819d4e",
+    "address": "1306 MAINLAND ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-11a94af7c65c",
+    "address": "213 VANNESS AVE",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1201cabb982a",
+    "address": "204 11TH AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9fa8fc3f7d00",
+    "address": "304 13TH AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8fbeb9fa74fd",
+    "address": "C YUKON ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ecd6b81c53a1",
+    "address": "3006 GRANVILLE ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7417f358f458",
+    "address": "106 49TH AVE E",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-692eb396e0a6",
+    "address": "203 WALL ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-931af96a092f",
+    "address": "204 21ST AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-54af994a9ae7",
+    "address": "410 KNIGHT ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-fdd0e7ea666d",
+    "address": "213 MAIN ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-584dc5b94353",
+    "address": "12838 65 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a8d92bdbcbe9",
+    "address": "9023 105A AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-56f5f985a183",
+    "address": "9028 JASPER AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0c58f80c4767",
+    "address": "10420 93 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-813a663785ea",
+    "address": "10555 93 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a57c724b1778",
+    "address": "10356 92 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c1263b13a7d5",
+    "address": "5730 RIVERBEND ROAD NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-08c055aff176",
+    "address": "10136 160 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-d9661115a741",
+    "address": "10111 160 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c48d38c297da",
+    "address": "15105 121 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8c1548baf4b2",
+    "address": "10136 153 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-69b38a0bbc11",
+    "address": "10139 155 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-078ec0ab8385",
+    "address": "15525 103 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7561f3a26373",
+    "address": "1470 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-583018dd80e3",
+    "address": "1356 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-feb62ccfde89",
+    "address": "MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-6ac7f65fb737",
+    "address": "1750 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c83ae7608020",
+    "address": "1976 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c25b7a36d265",
+    "address": "1720 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-730f39c4499b",
+    "address": "2424 WILKES AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f7168adbe113",
+    "address": "22 MONARCH MEWS",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-098a8c77cb3b",
+    "address": "26 MONARCH MEWS",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2210d689a78a",
+    "address": "35 MONARCH MEWS",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-62a0116fd216",
+    "address": "3174 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-217e2ca58150",
+    "address": "3182 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ca9a39b1ba5d",
+    "address": "3186 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a8c0895d6f6e",
+    "address": "3190 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-35822ad461d0",
+    "address": "66 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a3a3eb5bf932",
+    "address": "62 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4f771263332d",
+    "address": "58 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-fe23469aa7ed",
+    "address": "54 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4a50c6f385b6",
+    "address": "50 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-bf8828d7c1ac",
+    "address": "46 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c2c244829b62",
+    "address": "38 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a99fe1ad2b59",
+    "address": "34 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a6474e1643a8",
+    "address": "30 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-eff5bf997d3b",
+    "address": "26 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0dd774120054",
+    "address": "22 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-84d67430bd8d",
+    "address": "18 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-593b3e726cf7",
+    "address": "10 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a29bd01f53d6",
+    "address": "3206 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-09161d80ee70",
+    "address": "3202 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2b89962c9730",
+    "address": "99 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-d0ce94e74ca9",
+    "address": "91 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7c48286d5112",
+    "address": "87 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-908ea921ec0d",
+    "address": "83 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-407f5deda090",
+    "address": "79 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-068bc8c8d46e",
+    "address": "75 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7a5c6488b651",
+    "address": "71 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0e4ecc915d7d",
+    "address": "67 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5a2a2a9615c8",
+    "address": "63 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-27096b69e652",
+    "address": "59 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-720900392212",
+    "address": "55 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-3efa4e5f92ac",
+    "address": "51 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b77fba2a0fe7",
+    "address": "59 KINGSHEAD CLOSE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f5ede48ccdd7",
+    "address": "55 KINGSHEAD CLOSE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ab231d352b4a",
+    "address": "51 KINGSHEAD CLOSE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f3696cfcecca",
+    "address": "47 KINGSHEAD CLOSE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-bf8f12d9e235",
+    "address": "43 KINGSHEAD CLOSE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-92bf3fa122fe",
+    "address": "35 KINGSHEAD CLOSE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-89ad795b911e",
+    "address": "31 KINGSHEAD CLOSE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-901910d8abc0",
+    "address": "27 KINGSHEAD CLOSE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e325ed20c65a",
+    "address": "23 KINGSHEAD CLOSE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-092391b3f03f",
+    "address": "19 KINGSHEAD CLOSE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-738cdd7b826b",
+    "address": "15 KINGSHEAD CLOSE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a0163835dd6c",
+    "address": "11 KINGSHEAD CLOSE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a3d8c5fe3269",
+    "address": "3 KINGSHEAD CLOSE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1cfa6c991995",
+    "address": "189 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a4ec2539e900",
+    "address": "183 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b46075ca6736",
+    "address": "181 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-d6180309beb3",
+    "address": "177 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f4e2c75a8788",
+    "address": "175 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-04b093c85ace",
+    "address": "171 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-caa1e0909244",
+    "address": "169 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0bfc8495eafb",
+    "address": "159 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1737ed83a249",
+    "address": "157 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-25606b104ebc",
+    "address": "153 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f4fffad732ef",
+    "address": "151 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b803d179565e",
+    "address": "147 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4e99049a71fc",
+    "address": "145 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c6cf415fc4ab",
+    "address": "141 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8bb4c663160b",
+    "address": "139 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7ac0e6574981",
+    "address": "135 HENDON AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-268553b6fed4",
+    "address": "WELLINGTON AVE",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-705853f842c3",
+    "address": "3804 CORDOVA ST W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-fb4d4a9fa5e0",
+    "address": "1202 KINGHORNE MEWS",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2f757aa220f3",
+    "address": "45TH AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-352a8bf9998d",
+    "address": "31ST AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-fdb6a8bd9e78",
+    "address": "DUMFRIES ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-81e098efd834",
+    "address": "3RD AVE E",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0967b9d58b58",
+    "address": "EUCLID AVE",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ad17b03944ac",
+    "address": "414 HAMILTON ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-452fb1af1a57",
+    "address": "WILLIAM ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2af1bf380e8f",
+    "address": "404 BARCLAY ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-edf553d9f6aa",
+    "address": "PRINCE EDWARD ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-870f57a3be6d",
+    "address": "3007 MAINLAND ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-93e411c520f0",
+    "address": "306 KENT AVENUE SOUTH E",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-85ce0b633600",
+    "address": "GEORGIA ST E",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-42951ec010f3",
+    "address": "KITCHENER ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e5cbaa2f4ab7",
+    "address": "CEDAR CRES",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9a7d24069897",
+    "address": "COLUMBIA ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f99f29ea868e",
+    "address": "101 ROBSON ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-83c6dd2a5959",
+    "address": "PANDORA ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5fc1ffabd024",
+    "address": "3901 RICHARDS ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9acf2c689d8f",
+    "address": "215 MELVILLE ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1462b074a4ed",
+    "address": "CYPRESS ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-deada5292214",
+    "address": "8TH AVE E",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f1ff36d37866",
+    "address": "2905 GEORGIA ST W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-34baa1fe82be",
+    "address": "10TH AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-90bbf9c1b716",
+    "address": "5TH AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2442b61d6e45",
+    "address": "BALSAM ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-14ae44abb8e7",
+    "address": "507 STRATHMORE MEWS",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-239ec2125e30",
+    "address": "412 FOSTER AVE",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-db37a42d76ea",
+    "address": "41ST AVE E",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8c300a2ca5d0",
+    "address": "48TH AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f42c4d3927a4",
+    "address": "304 12TH AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-832946f31a2b",
+    "address": "WAVERLEY AVE",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5ead63786848",
+    "address": "VINE ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-30a80e56f70f",
+    "address": "ADANAC ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-37c8d7997c6c",
+    "address": "1703 CROWLEY DR",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-17e206b712ce",
+    "address": "6TH AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-82c096b22153",
+    "address": "301 1ST AVE E",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0a6c1d3e6645",
+    "address": "GRANDVIEW HWY",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-296a8aa3420a",
+    "address": "20TH AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1c6edd447792",
+    "address": "CARTIER ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-96fd4da1ab33",
+    "address": "SOPHIA ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-bd4e8b1450c1",
+    "address": "BURRARD ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-38fadec94d36",
+    "address": "MARGUERITE ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a8da85dc961e",
+    "address": "2006 CITADEL PARADE",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5e9020973357",
+    "address": "HASTINGS ST W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-cdd9f759728d",
+    "address": "DAVIE ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-656ad28ef364",
+    "address": "PRIOR ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1f08cdcebb84",
+    "address": "1808 REGIMENT SQ",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1f751d8c9fa0",
+    "address": "SLOCAN ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2e9aa1007b0f",
+    "address": "806 QUEBEC ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1511713e24da",
+    "address": "ST. MARGARETS ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a9f7f39dffe7",
+    "address": "2204 HORNBY ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7550dbff6589",
+    "address": "NAPIER ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1da86ec1a150",
+    "address": "2708 STRATHMORE MEWS",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4e52deb6e3c4",
+    "address": "ANCASTER CRES",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1c92dcf096b3",
+    "address": "GREENSBORO PL",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-12a80dc788c9",
+    "address": "51ST AVE E",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0f0a28c752e4",
+    "address": "48TH AVE E",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-206205c2d637",
+    "address": "806 MILROSS AVE",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e6406c6dab9e",
+    "address": "58TH AVE E",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-087359545d73",
+    "address": "1403 BAYSHORE DR",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-abadacddd6f7",
+    "address": "1005 HEATHER ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-23aa1c6d79cb",
+    "address": "801 2ND AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-3e7d3919d4f3",
+    "address": "630 MANITOBA ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-beddb9de197a",
+    "address": "1011 MOBERLY RD",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-bb6489209a54",
+    "address": "2610 GRANVILLE ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c2f180e320eb",
+    "address": "4509 RICHARDS ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-86a99c720237",
+    "address": "KING EDWARD AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4c91873322ba",
+    "address": "WORTHINGTON DR",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-85c868f430a0",
+    "address": "28TH AVE E",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5a900259e31f",
+    "address": "11TH AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a422687c391b",
+    "address": "203 FAIRCHILD RD",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9684cb60ac46",
+    "address": "ONTARIO ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-15463f11bf27",
+    "address": "1303 GEORGIA ST W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-fcdd40354b9c",
+    "address": "1503 MELVILLE ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-816a79672ed8",
+    "address": "2405 PENDER ST W",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4f764073b6d6",
+    "address": "GRANT ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-91f2a2407d5c",
+    "address": "409 KENT AVENUE SOUTH E",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a80a71b96bb0",
+    "address": "VENABLES ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5ea33725ef71",
+    "address": "1229 MACLEOD TR SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-779efa853b4e",
+    "address": "1111 4 ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5fe395c613d0",
+    "address": "917 10 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e00f6c4529da",
+    "address": "510 12 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-bc33ddf7c0e0",
+    "address": "538 10 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7df3fb985684",
+    "address": "4739 DALTON DR NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-602c5a7dd934",
+    "address": "524 10 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5efaadce9fe4",
+    "address": "1235 11 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-6bc9379549e8",
+    "address": "655 CENTRE ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e5e14e03e13c",
+    "address": "201 10 AV SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-3721e0855d86",
+    "address": "1055 11 ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-6cad4d7118f4",
+    "address": "609 8 ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-00b2bca6b7bf",
+    "address": "14440 1 ST NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-62f9689a9f6f",
+    "address": "1018 MCDOUGALL RD NE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-3dbfca475309",
+    "address": "120 YORKVILLE PA SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f9ae32b6c569",
+    "address": "620 10 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b9728ae28e59",
+    "address": "355 SKYVIEW RANCH DR NE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9147dd2b4a88",
+    "address": "2105 90 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-09a9e3770eff",
+    "address": "2416 16 AV NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0428237b9fbc",
+    "address": "83 QUARRY PARK RD SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-aa0aa4c648da",
+    "address": "1400 NA'A DR SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0c4f5c105ef7",
+    "address": "4055 KOVITZ AV NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4f12a33950a4",
+    "address": "123 10 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-df65e72732c3",
+    "address": "4135 UNIVERSITY AV NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0ba8e5cdb0fd",
+    "address": "887 10 ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-d7377c303c8d",
+    "address": "950 MCPHERSON SQ NE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ea2f3a8510d7",
+    "address": "850 11 ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8548a4444638",
+    "address": "1320 16 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-df498d1f5e48",
+    "address": "510 15 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e215d236134d",
+    "address": "110 BISHOP WY SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-6c32742fe379",
+    "address": "7779 MACLEOD TR SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b06bbef6b926",
+    "address": "66 YARROW LD SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4aab43aac577",
+    "address": "4850 50 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-921ffd8344f9",
+    "address": "4020 37 ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a5d2244a1805",
+    "address": "1919 UNIVERSITY DR NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9dab223bef16",
+    "address": "202 14 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a24e96f8b22e",
+    "address": "150 LEGACY MAIN ST SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1f05f2fbd984",
+    "address": "120 NA'A CR SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b5eb5ea4c5e1",
+    "address": "905 EVANSTON DR NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-63e260384387",
+    "address": "1301 16 AV NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a6224a7f7fa4",
+    "address": "612 67 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-adebd61c0964",
+    "address": "730 58 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-dd64c851b6a9",
+    "address": "611 7 AV SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9cc48f9fdfdd",
+    "address": "505 4 ST SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9a67d9f2879b",
+    "address": "69 GLAMIS DR SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ac9e4f9bd6ba",
+    "address": "8620 CANADA OLYMPIC DR SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e21ee7a06736",
+    "address": "3805 MARLBOROUGH DR NE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4be02f2e8a7c",
+    "address": "1015 13 ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0887935f7640",
+    "address": "5051 NORTHLAND DR NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-10c557ed4b1a",
+    "address": "915 MAHOGANY BV SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f62165f31d43",
+    "address": "1538 10 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-eddb4eef38d4",
+    "address": "30 UXBOROUGH PL NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-6803793e904f",
+    "address": "73 SKYVIEW POINT CR NE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c1a871f4e33c",
+    "address": "20 CITYSIDE RD NE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-37958a6b9736",
+    "address": "9700 BONAVENTURE DR SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ea431410ee13",
+    "address": "30 SAGE HILL RO NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7694aa7e7ade",
+    "address": "121 13 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5b5604d789ea",
+    "address": "14540 1 ST NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1863fa28be24",
+    "address": "1200 6 ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e566d02a69be",
+    "address": "4515 VARSITY DR NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-450b85cd61bc",
+    "address": "50 BRENTWOOD CM NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e60518e23a15",
+    "address": "80 SETON PA SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-dc37a11d107a",
+    "address": "22 SHAWNEE HL SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-358866dc36ec",
+    "address": "6707 ELBOW DR SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b09d36b4c83e",
+    "address": "111 25 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-539dfaee742e",
+    "address": "388 SILVERTON GLEN GR SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-01aa78a4865a",
+    "address": "20 AUBURN BAY ST SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-414fe918fd83",
+    "address": "4963 FRONT ST SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a1eec58fb6a8",
+    "address": "618 5 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-50b85db53aba",
+    "address": "1010 CENTRE ST SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-684324f6382e",
+    "address": "9100 BONAVENTURE DR SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-76fe0377d65a",
+    "address": "220 4 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4bff4983578c",
+    "address": "6440 CENTRE ST NE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b00ca8e8d8be",
+    "address": "505 4 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-3750d10d696a",
+    "address": "380 QUARRY WY SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e3964ec083c7",
+    "address": "600 NOLAN HILL RI NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-07e601b313e6",
+    "address": "100 NOLAN HILL RI NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7731e5ef8f45",
+    "address": "50 SHAWNEE ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-96421cf25d88",
+    "address": "120 SPRING WILLOW ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-cdf1100b8396",
+    "address": "3600 BRENNER DR NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1ca750724779",
+    "address": "181 SKYVIEW BA NE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-73944c542e93",
+    "address": "226 MAHOGANY GD SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-83052dd6a6e2",
+    "address": "6500 144 AV NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-12d02ac2d27c",
+    "address": "1115 9 ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1832b58698b2",
+    "address": "680 BELMONT ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a2f838566a9d",
+    "address": "808 5 ST SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a683a0f718b3",
+    "address": "21209 72 ST SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-854ebb5c41eb",
+    "address": "521 3 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a7ed6ba8e131",
+    "address": "9600 SOUTHLAND CI SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-87a9752ee539",
+    "address": "1112 9 ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-cbf923c4fc8c",
+    "address": "250 WALDEN DR SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f571f26ec3e1",
+    "address": "8720 SCURFIELD DR NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8bdac5fa3807",
+    "address": "4650 50 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-57dba6708976",
+    "address": "2 11519 29 ST SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-063950f7342f",
+    "address": "40 VARSITY ESTATES CI NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c08417bc7c12",
+    "address": "2915 26 AV SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f98302a9baf0",
+    "address": "8233 19 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-14e534712450",
+    "address": "5717 2 ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-30eee5aa2afb",
+    "address": "2500 UNIVERSITY DR NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0eb8fc7339a1",
+    "address": "223 9A ST NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2b220fcc0099",
+    "address": "1070 SETON CI SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4af998a5164d",
+    "address": "135 LYNNVIEW RD SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-17bc014e3117",
+    "address": "3524 31 ST NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-08ed96c01848",
+    "address": "10 REDSTONE PL NE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-02b59d92b1ec",
+    "address": "1000 1620 70 ST SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1aa20b086b35",
+    "address": "18800 52 ST SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-d6998b1c0e89",
+    "address": "1 90 ARBOUR LAKE HL NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-dbc60a7659cf",
+    "address": "70 EVANSPARK MR NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ec87ec31d366",
+    "address": "3360 16 ST SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-149501bd5e5b",
+    "address": "2107 194 AV SE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-35ab7383bac0",
+    "address": "3380 SPRUCE DR SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-89444d281d6b",
+    "address": "3307 SPRUCE DR SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2bb9c34378b6",
+    "address": "235 CARRINGTON PZ NW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-781b47d30698",
+    "address": "3003 56 ST NE",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-65e1c1810ea2",
+    "address": "610 2 AV SW",
+    "city": "Calgary",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1fc4d690deeb",
+    "address": "1319 AINSLIE WYND SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-85e30e217c3b",
+    "address": "2514 CAMERON RAVINE LANDING NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-80dff1589394",
+    "address": "235 78 STREET SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b49f53dfc519",
+    "address": "2637 15A AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8d9efc5cc2c6",
+    "address": "449 OSBORNE CRESCENT NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-185a75d434c0",
+    "address": "8804 141 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c9deb68f9e7d",
+    "address": "10620 75 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-6f188f8225d4",
+    "address": "9618 75 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-48210ed3a137",
+    "address": "8819 99 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-566f739094b4",
+    "address": "2018 89B STREET SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b5ca14e691c2",
+    "address": "339 TWIN BROOKS DRIVE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ec66b4f7aa07",
+    "address": "2638 WATCHER WAY SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c1dcf18bcc80",
+    "address": "3115 2 AVENUE SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e5f3aa210e68",
+    "address": "640 BUTCHART WYND NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-568b13b3d2ee",
+    "address": "9732 94 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-bf8db39e24ce",
+    "address": "855 DRYSDALE RUN NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0aa56a0121b7",
+    "address": "3311 158 STREET SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f5fc3c95ca9f",
+    "address": "1375 155 STREET SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-91b630cc5aee",
+    "address": "7804 145 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2a8c916b0d0c",
+    "address": "4042 MACTAGGART DRIVE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-df1002d2406d",
+    "address": "11507 78 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-46a818e63e42",
+    "address": "37 VALLEYVIEW CRESCENT NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-02375c09ca56",
+    "address": "8712 138 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-37e914935d20",
+    "address": "481 RONNING STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-debb253953c7",
+    "address": "6703 16 AVENUE SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c999aa7cdc2e",
+    "address": "1511 67 STREET SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ff5858499d2b",
+    "address": "14111 96 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-db65940467c0",
+    "address": "10518 137 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-286415f95519",
+    "address": "11236 60 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9d4efef51635",
+    "address": "936 WALLBRIDGE PLACE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-50089396ce8f",
+    "address": "10943 62 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5586a61056aa",
+    "address": "2044 88 STREET SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e11fa1850890",
+    "address": "680 TODD LANDING NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-db8eef3d70cb",
+    "address": "102 FAIRWAY DRIVE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-cf9740e31aa5",
+    "address": "403 CALDWELL PLACE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2afff0b769eb",
+    "address": "9724 141 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b4e4513e8f6b",
+    "address": "6219 129 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c34144e9fd8e",
+    "address": "3227 3 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b8cce594fde3",
+    "address": "255 161 AVENUE NE",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-49aed670fe54",
+    "address": "20312 5 AVENUE SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7366f8c7a482",
+    "address": "1229 SUMMERSIDE DRIVE SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-379ec626cd31",
+    "address": "11723 91 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-fadba7bfaf72",
+    "address": "14611 99 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-76e75ffa0c71",
+    "address": "8303 101 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a84ce4eb70db",
+    "address": "1656 GLASTONBURY BOULEVARD NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-3df29a40f380",
+    "address": "10231 130 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-255706c97ab9",
+    "address": "4022 MORRISON WAY NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-dbe1c2db7c84",
+    "address": "7924 97 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4854f7223f04",
+    "address": "14516 84 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1297debf26aa",
+    "address": "10550 ELLERSLIE ROAD SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e2dcc9c41f6b",
+    "address": "9634 75 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4534dcdaf2b3",
+    "address": "12705 199 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0790657a7eee",
+    "address": "9036 24 AVENUE SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-d44ccb89c06f",
+    "address": "268 TORY CRESCENT NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-3883f9285191",
+    "address": "47 WOLF CRESCENT NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-428dc5662ce6",
+    "address": "17904 7 AVENUE SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7f69864eee91",
+    "address": "9228 89 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-d9428fa17175",
+    "address": "4532 DONSDALE DRIVE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e1683d84da2f",
+    "address": "425 EDGEMONT ROAD NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7958b6f18628",
+    "address": "3063 158 STREET SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-447380fc1f6a",
+    "address": "1756 HASWELL COVE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9d602ddd3d57",
+    "address": "1535 HECTOR ROAD NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-20fa71a6cd7b",
+    "address": "1587 HOWES PLACE SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-875ca9f25fdc",
+    "address": "3509 KESWICK BOULEVARD SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a87ef74a746f",
+    "address": "8106 134 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-bcbbc868e8af",
+    "address": "5255 MULLEN CREST NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-6693b4abcee6",
+    "address": "912 MASSEY COURT NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-54cab64981c2",
+    "address": "906 MASSEY COURT NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-108250466804",
+    "address": "6003 107 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1eeb08e1b5ba",
+    "address": "495 RONNING STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a58ca6760839",
+    "address": "9739 81 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-db11db4b8fdb",
+    "address": "152 WOODBEND WYND NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-00302a02dc3b",
+    "address": "1435 BISHOP POINT SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2570a34eb9df",
+    "address": "9740 92 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-48d936706d93",
+    "address": "6224 128 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0accefa6f636",
+    "address": "6607 125 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4dfb6ae51ac1",
+    "address": "14319 101 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-db63cbbdb459",
+    "address": "945 HEACOCK ROAD NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-45b0682cf0e3",
+    "address": "6318 111 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ee645cc5e357",
+    "address": "835 HOLLANDS LANDING NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9f398f679b01",
+    "address": "3141 KOSTASH GREEN SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a11c1e69857d",
+    "address": "5311 MULLEN BEND NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-d399d7557a39",
+    "address": "4007 MACNEIL PLACE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-86818f5a0fec",
+    "address": "940 WALLBRIDGE PLACE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e287fef22833",
+    "address": "10035 94 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-548b1c17169b",
+    "address": "2419 TEGLER GREEN NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b6484811a9b7",
+    "address": "7718 JASPER AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-794403e9452d",
+    "address": "3947 GINSBURG CRESCENT NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-fad41bb2e160",
+    "address": "10364 144 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-535a4a0ebbba",
+    "address": "11324 64 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0cc211f4a879",
+    "address": "5812 KEEPING COURT SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e782353902ed",
+    "address": "1003 WANYANDI WAY NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-746e74c66373",
+    "address": "455 RONNING STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-3f2efe51f3d1",
+    "address": "437 RONNING STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8350923fcca8",
+    "address": "9851 78 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-42ba3a0bd5b6",
+    "address": "9719 73 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-cea20514d5c5",
+    "address": "9245 87 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-892803465bee",
+    "address": "3038 WATSON LANDING SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-fc405d48d27a",
+    "address": "1516 ADAMSON VIEW SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-6855c29eecc6",
+    "address": "5510 CHEGWIN POINT SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b421b745762e",
+    "address": "9519 141 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8a9960ae56a6",
+    "address": "10360 102 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-51de4cf77e4f",
+    "address": "14022 101A AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5e713828de29",
+    "address": "1441 HOWES CRESCENT SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5a7b790e7c10",
+    "address": "8618 77 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8709b25312ef",
+    "address": "444 ROONEY CRESCENT NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c0498c90637e",
+    "address": "9639 77 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-876a3e3c37ca",
+    "address": "2047 90 STREET SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-83d5169119d7",
+    "address": "728 TODD LANDING NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-cec6a1807615",
+    "address": "1631 12 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-684e032e8123",
+    "address": "12520 28A AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-27877aeeec4a",
+    "address": "419 CALDWELL PLACE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7e779567de60",
+    "address": "10509 174A AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-cd0f65ba5405",
+    "address": "6054 CRAWFORD DRIVE SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-717e22d512dc",
+    "address": "4131 7 AVENUE SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9473363cffe7",
+    "address": "1019 148 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-14a18b306f47",
+    "address": "4240 VETERANS WAY NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e3aa34ddcaf6",
+    "address": "591 MERLIN LANDING NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-87dd6f3c16a7",
+    "address": "1466 HOWES CRESCENT SW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-075f1f5a5378",
+    "address": "248 MAGRATH BOULEVARD NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-d22c913bb1b9",
+    "address": "9831 91 AVENUE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b316e39c8f0b",
+    "address": "11020 131 STREET NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8abc82e47093",
+    "address": "1636 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5a75e7eb6027",
+    "address": "1584 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8229ade2fc2d",
+    "address": "1574 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-62c1a056959c",
+    "address": "1538 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2636742b4840",
+    "address": "1520 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-93898dfbcbab",
+    "address": "1510 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5cc2e4f69b68",
+    "address": "1500 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a08dc9607fa8",
+    "address": "1490 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f191a75da01a",
+    "address": "1450 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-365c63ba3425",
+    "address": "1430 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b16a58ca25f9",
+    "address": "1420 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c9767035dd23",
+    "address": "1320 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2f28c12b3c4d",
+    "address": "1290 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1af0afc056ce",
+    "address": "1268 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-153846182e15",
+    "address": "1760 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-744f1e89f552",
+    "address": "1782 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-64b0f6a3c455",
+    "address": "1808 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-938dbda875a8",
+    "address": "1800 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0b8d04ddab40",
+    "address": "1820 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-bac4959c57a6",
+    "address": "1880 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1b3458397ca1",
+    "address": "1990 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1e61e0c963a2",
+    "address": "1964 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-33ce66ff0565",
+    "address": "1916 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b4255d313648",
+    "address": "1904 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-06faa99d4317",
+    "address": "1892 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0d8ebbb0643d",
+    "address": "1662 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-37c2e65870c1",
+    "address": "1672 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a474cf94824c",
+    "address": "1684 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-027f10e8d8b9",
+    "address": "1700 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0b2ebaaa6892",
+    "address": "1652 MCCREARY ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ebbbd5dccca4",
+    "address": "2798 WILKES AVENUE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-df58a9ace0ea",
+    "address": "3179 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9ec09a2c9c7b",
+    "address": "3175 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2cdb7ffc70ef",
+    "address": "3165 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-369a143334f2",
+    "address": "3161 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-42afd6e384b3",
+    "address": "3155 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a3ea2d50ae91",
+    "address": "3151 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7fb8a4efb9a3",
+    "address": "3158 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e9bd62cf4e40",
+    "address": "10 MONARCH MEWS",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-46c5c8e6a60c",
+    "address": "34 MONARCH MEWS",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2f3e0799be1d",
+    "address": "38 MONARCH MEWS",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-3a7c8a5344eb",
+    "address": "31 MONARCH MEWS",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-727932694beb",
+    "address": "23 MONARCH MEWS",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8c124c89e99e",
+    "address": "3170 VIALOUX DRIVE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-920f1ac8b213",
+    "address": "102 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-139ded0c3e87",
+    "address": "94 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-6f16a6926ad5",
+    "address": "90 ROYALGATE ROAD",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f17078c6a4d6",
+    "address": "39 KINGSHEAD CLOSE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9ffd2ac87fce",
+    "address": "7 KINGSHEAD CLOSE",
+    "city": "Winnipeg",
+    "province": "MB",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-bbfce31f0f02",
+    "address": "8850-8900 AV HENRI-JULIEN",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9c9daacf9ac4",
+    "address": "8701-9197 BOUL DE L'ACADIE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e57d8ddc0ee3",
+    "address": "55 LEGENDRE E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f561e7add3b4",
+    "address": "951-959 DU MARCHE-CENTRAL",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-deada59916ca",
+    "address": "1500 JACQUES-CASAULT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-85483bafdb9c",
+    "address": "10800 AV MILLEN",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4a7c8df67b32",
+    "address": "1980-2030 SAUVE O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-90e489019e39",
+    "address": "2100-2220 SAUVE O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9127e7584bc3",
+    "address": "555 CHABANEL O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-d032f48c9f06",
+    "address": "8485 AV CHRISTOPHE-COLOMB",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-45f6ee2d7b1c",
+    "address": "1600-1770 AV EMILE-JOURNAULT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-bd6f7e2e5644",
+    "address": "1370 DE BEAUHARNOIS O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0ccecd62e851",
+    "address": "545 BOUL CREMAZIE E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f155e0e62c07",
+    "address": "433 CHABANEL O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a347493dd544",
+    "address": "9675 AV PAPINEAU",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-cc321c28f933",
+    "address": "323-355 CHABANEL O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-dd68a84c62ea",
+    "address": "255 BOUL CREMAZIE E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-56d0cc9ab441",
+    "address": "10500 BOUL DE L'ACADIE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2f19317aafe3",
+    "address": "2510-2886 DE SALABERRY",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4f832c275d76",
+    "address": "12260 BOUL LAURENTIEN",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7027bf8c8fa0",
+    "address": "1611 BOUL CREMAZIE E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5c6d313b1819",
+    "address": "215-235 CHABANEL O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8ed26cce300b",
+    "address": "10450-10480 PL DE L'ACADIE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-21cdbebb0f0c",
+    "address": "555-561 BOUL CREMAZIE E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ab32929d6a53",
+    "address": "0 CHABANEL O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-53621be716ae",
+    "address": "1030-1080 DE LOUVAIN E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-702e183b4be5",
+    "address": "1777 AV EMILE-JOURNAULT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-24ba2c219bfd",
+    "address": "5605-5655 DE SALABERRY",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-fbce2a3d36da",
+    "address": "1700 LEGENDRE E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-27fb29ba992b",
+    "address": "75 DE PORT-ROYAL E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-dac610d7736d",
+    "address": "1600 LEGENDRE E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-6dc9e602e577",
+    "address": "10150 BOUL SAINT-LAURENT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-d28cf33a6d51",
+    "address": "9001 BOUL DE L'ACADIE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-970cc38cec85",
+    "address": "505 BOUL GOUIN O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-69fe85b55202",
+    "address": "6093-6095 BOUL GOUIN O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-628bb79e64cf",
+    "address": "1650 CHABANEL O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2a5878fc1487",
+    "address": "9300-9340 BOUL SAINT-LAURENT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4364f40215ba",
+    "address": "35 DE PORT-ROYAL E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-3d847449a654",
+    "address": "10355 AV DU BOIS-DE-BOULOGNE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-6ab8a7aaf18b",
+    "address": "500 SAUVE E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5e006bb6cb8a",
+    "address": "1615-1635 BOUL GOUIN E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8a84931f3b68",
+    "address": "10350-10390 PL DE L'ACADIE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9350693d53b0",
+    "address": "11885 BOUL LAURENTIEN",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9a24f0ebd291",
+    "address": "9600-9630 MEILLEUR",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-43c1738f9182",
+    "address": "0 AV CHARTON",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-6b56494ef7c7",
+    "address": "9550 LAJEUNESSE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-25434f4f18fc",
+    "address": "1350 MAZURETTE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c3e4849faed7",
+    "address": "1205 BOUL HENRI-BOURASSA O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-7100ec634b93",
+    "address": "10760 AV MILLEN",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c7aaca99291a",
+    "address": "11100 BOUL DE L'ACADIE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ea2eb08639fa",
+    "address": "9494 BOUL SAINT-LAURENT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-91f37d21267f",
+    "address": "10250 AV DU BOIS-DE-BOULOGNE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9072a7a9543d",
+    "address": "255 BOUL HENRI-BOURASSA E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5c51bac41eec",
+    "address": "2025 BOUL HENRI-BOURASSA E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a485daa4d14e",
+    "address": "10190-10200 AV DU BOIS-DE-BOULOGNE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b9bb20475e4f",
+    "address": "655-675 SAUVE E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-151472379dca",
+    "address": "10350 AV DU BOIS-DE-BOULOGNE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-19024e6034bf",
+    "address": "10300 AV DU BOIS-DE-BOULOGNE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1d4e90264a36",
+    "address": "1000 SAUVE O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-4af211f39cd5",
+    "address": "250 SAUVE O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-684a77086591",
+    "address": "1625 CHABANEL O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5bc0f2591a68",
+    "address": "10005 AV DU BOIS-DE-BOULOGNE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8bdc65eabe85",
+    "address": "9840-10090 MEUNIER",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-d57a206f53bd",
+    "address": "615-685 DU MARCHE-CENTRAL",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-dea287a5c336",
+    "address": "8750 BERRI",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ff61e50a74af",
+    "address": "11810 RANGER",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-24d318e2fc70",
+    "address": "6311-6319 BOUL GOUIN O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1c3e92f30c0f",
+    "address": "10175 AV PAPINEAU",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8569e3e1a57d",
+    "address": "0 AV STUART",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c5473b45e996",
+    "address": "9050 BOUL DE L'ACADIE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-51264b3ef012",
+    "address": "800 BOUL HENRI-BOURASSA O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-b7a97e7d0758",
+    "address": "2175 DE SALABERRY",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ee323c623297",
+    "address": "1800 YVETTE-BRILLON",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0b244943f2fe",
+    "address": "5773-5781 BOUL GOUIN O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a616ca4bd37b",
+    "address": "1375-1405 DE LOUVAIN O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f556d65802bc",
+    "address": "0 BOUL SAINT-LAURENT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1358ef5ac378",
+    "address": "1401-1551 BOUL CREMAZIE E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-91feaf6f3b07",
+    "address": "9500 MEILLEUR",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-13851f910988",
+    "address": "10333 BERRI",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8174ba782c72",
+    "address": "1575 BOUL HENRI-BOURASSA O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-f5b1c5f07fc1",
+    "address": "101-103 DE LOUVAIN O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-06b1afd3b841",
+    "address": "95-99 CHABANEL O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-64519b94de5f",
+    "address": "105-111 CHABANEL O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a8860fe7eb5e",
+    "address": "655 SAURIOL E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-2d864acd5102",
+    "address": "51-55 DE LOUVAIN O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-aac4c1dbc8ea",
+    "address": "8905-8925 BOUL SAINT-LAURENT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a4ede000f639",
+    "address": "1570-1650 BOUL HENRI-BOURASSA O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-03cb4fd048ec",
+    "address": "1545-1555 DE BEAUHARNOIS O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-0984811f7f18",
+    "address": "8905-8923 PL DES COOPERATIVES",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-d885ad4d3c88",
+    "address": "12049 BOUL LAURENTIEN",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-6b6e0da0256a",
+    "address": "1747-1775 FLEURY E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-5034d95d5767",
+    "address": "770-798 BOUL HENRI-BOURASSA E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-04afe95b45f8",
+    "address": "5553-5555 DE SALABERRY",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8a2d4ec6e74a",
+    "address": "8908-8952 PL DES COOPERATIVES",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-3cf774fd9a67",
+    "address": "10231-10233 BOUL SAINT-LAURENT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-59e77d209adf",
+    "address": "10850-10900 HAMON",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1673b1caa886",
+    "address": "10205-10229 AV DU BOIS-DE-BOULOGNE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-51c3b148e5b9",
+    "address": "9244-9250 AV DU PARC",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1a92167358ba",
+    "address": "9150-9240 AV DU PARC",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-715241af3d81",
+    "address": "9425-9477 MEILLEUR",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1145ad92266f",
+    "address": "9150-9170 CHARLES-DE LA TOUR",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-d39874d2a304",
+    "address": "10720-10740 LAJEUNESSE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-108a276a5ec2",
+    "address": "8947-8977 PL DES COOPERATIVES",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e207a40cbc34",
+    "address": "8925-8945 PL DES COOPERATIVES",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-41c2152cdb83",
+    "address": "211 DE LOUVAIN O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-abed4e403edd",
+    "address": "1400 JACQUES-CASAULT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-dd2f49346ffd",
+    "address": "0 BOUL HENRI-BOURASSA O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-cef4efda553d",
+    "address": "9445 JEAN-PRATT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1428364ba080",
+    "address": "1745 FLEURY E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8e889efc6315",
+    "address": "12187 COUSINEAU",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-56c78c4dc56e",
+    "address": "9149-9151 BOUL SAINT-LAURENT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9a00c5daecb0",
+    "address": "9350 AV DE L'ESPLANADE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a9ab2f05e3c5",
+    "address": "649-665 BOUL GOUIN E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-661fcb2e2b70",
+    "address": "2001 SAUVE O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e1d1f3e62a67",
+    "address": "2550 FLEURY E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-60e6e4fef2ac",
+    "address": "5400-5500 DUDEMAINE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e90914206dae",
+    "address": "5340-5370 DUDEMAINE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-ec9737f2782e",
+    "address": "9380-9400 BOUL SAINT-LAURENT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8afff05f164f",
+    "address": "6358-6376 BOUL GOUIN O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-cc4f241b9e7d",
+    "address": "1605 BOUL HENRI-BOURASSA O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-8b23098f8058",
+    "address": "1585 BOUL HENRI-BOURASSA O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-415ed3a23624",
+    "address": "270 DE LOUVAIN O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-851f75116993",
+    "address": "8984-9030 BOUL DE L'ACADIE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-3049cedc8aa0",
+    "address": "9000-9020 BOUL SAINT-LAURENT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-46b4bab14342",
+    "address": "12435 AV DE LA MISERICORDE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-a8b62c64f019",
+    "address": "350 DE LOUVAIN O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-378bafc01add",
+    "address": "10660-10670 SAINT-HUBERT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-9462af050b27",
+    "address": "12174-12208 BOUL LAURENTIEN",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-67e61a7cfd5e",
+    "address": "1505-1555 LEGENDRE O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-99cb6cf7e40d",
+    "address": "1493-1517 ANTONIO-BARBEAU",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-cc8dbe8ccabd",
+    "address": "9540-9630 BOUL SAINT-LAURENT",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-25b8697da767",
+    "address": "855 BOUL HENRI-BOURASSA O",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-03321bf3350c",
+    "address": "1400-1440 ANTONIO-BARBEAU",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-1934471c0b7b",
+    "address": "1000 DE PORT-ROYAL E",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-69b8770506a5",
+    "address": "9870 LAVERDURE",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-c1203bcf7963",
+    "address": "12435 BOUL LAURENTIEN",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  },
+  {
+    "id": "LST-e50b1f0ea552",
+    "address": "9505-9585 AV CHRISTOPHE-COLOMB",
+    "city": "Montréal",
+    "province": "QC",
+    "verification_status": "verified_internal",
+    "first_seen_at": "2026-03-13T04:57:42.595974+00:00",
+    "status": "internal_only"
+  }
+]

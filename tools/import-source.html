@@ -1,0 +1,110 @@
+
+<!doctype html>
+<html><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gary Doman & Ricki Kohli Local Source Import</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+body{background:#0c0d10;color:#ece7de}.wrap{max-width:1080px;margin:0 auto;padding:28px}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.panelx{background:#131417;border:1px solid #22252d;border-radius:18px;padding:18px}.mono{font-family:var(--mono)} textarea{width:100%;min-height:220px;background:#0e1014;color:#ece7de;border:1px solid #242a33;border-radius:14px;padding:12px;font-family:var(--mono)} .row{display:flex;gap:10px;flex-wrap:wrap}.bannerx{background:#171a20;border:1px solid #2a303b;padding:12px 14px;border-radius:14px;margin:12px 0;color:#cfc7bb}.pillx{display:inline-block;padding:7px 10px;border:1px solid #2a303b;border-radius:999px;margin:4px 6px 0 0;font-size:12px;color:#cfc7bb}.btnx{background:#d4a843;color:#111;border:none;padding:10px 14px;border-radius:12px;font-weight:700;cursor:pointer}.btn2{background:#20242c;color:#ece7de;border:1px solid #2a303b;padding:10px 14px;border-radius:12px;cursor:pointer} code{background:#0e1014;padding:2px 6px;border-radius:6px}
+</style>
+<script src="../assets/js/resolver.js"></script>
+<script src="../assets/js/compiler.js"></script>
+<script src="../data/bootstrap.js"></script><script src="../assets/js/utils.js"></script><script src="../assets/js/auth.js"></script>
+</head><body>
+<div class="wrap">
+  <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:18px">
+    <div>
+      <h1 style="margin:0;font-family:var(--serif)">G&amp;R Local Source Import</h1>
+      <div class="mono" style="color:#9a9286;margin-top:6px">raw source file -&gt; resolver -&gt; internal canonical listings -&gt; public release compile</div>
+    </div>
+    <div class="row">
+      <a class="btn2" href="../command-center.html">← Command Center</a>
+      <a class="btn2" href="../directory.html">Public Directory</a>
+    </div>
+  </div>
+  <div class="bannerx">This tool imports <b>non-stock real estate data only</b>. Use JSON arrays for now. Validate packs first with <code>python3 tools/validate_local_pack.py --pack tools/examples/vancouver_island_licensed_pack.json --require-city Victoria --require-city Saanich --require-city Langford --require-province BC --min-total 6</code>. The first 1000 canonical listings still bypass the grace window after compile so early rollout remains clean.</div>
+  <div class="grid">
+    <div class="panelx">
+      <h3 style="margin-top:0">Import JSON records</h3>
+      <div class="row" style="margin-bottom:10px">
+        <select id="sourceBucket" class="btn2"><option value="source_a">source_a</option><option value="source_b">source_b</option><option value="manual_uploads">manual_uploads</option></select>
+        <input id="fileInput" type="file" accept=".json,application/json">
+        <button class="btnx" onclick="importSelectedFile()">Import file</button>
+      </div>
+      <p style="color:#b9b2a8">Or paste a JSON array below. Each object can use fields like <code>address</code>, <code>city</code>, <code>province</code>, <code>list_price</code>, <code>beds</code>, <code>baths</code>, <code>sqft</code>, <code>status</code>, <code>property_type</code>, <code>description</code>, <code>mls</code>. Example licensed pack: <code>tools/examples/vancouver_island_licensed_pack.json</code>.</p>
+      <textarea id="jsonPaste" placeholder='[{"address":"1842 Fairfield Road","city":"Victoria","province":"BC","list_price":849000,"beds":3,"baths":2,"sqft":1580,"status":"active","property_type":"House","mls":"R123456"}]'></textarea>
+      <div class="row" style="margin-top:12px">
+        <button class="btnx" onclick="importPastedJson(false)">Replace bucket</button>
+        <button class="btn2" onclick="importPastedJson(true)">Append bucket</button>
+      </div>
+    </div>
+    <div class="panelx">
+      <h3 style="margin-top:0">Pipeline actions</h3>
+      <div id="summaryBox" class="bannerx">Loading summary…</div>
+      <div class="row">
+        <button class="btnx" onclick="runReconcile()">Run reconcile + compile</button>
+        <button class="btn2" onclick="exportPipeline()">Export pipeline JSON</button>
+        <button class="btn2" onclick="clearAllData()">Clear local pipeline</button>
+      </div>
+      <div style="margin-top:16px">
+        <h4 style="margin:0 0 8px">What happens next</h4>
+        <div class="pillx">1. Raw source rows land here first</div>
+        <div class="pillx">2. Resolver normalizes and merges records</div>
+        <div class="pillx">3. Conflicts stay internal to G&amp;R</div>
+        <div class="pillx">4. Public dataset compiles from released records only</div>
+      </div>
+      <div style="margin-top:18px">
+        <h4 style="margin:0 0 8px">Next-click intro</h4>
+        <ol style="color:#cfc7bb;line-height:1.6;padding-left:18px">
+          <li>Run <code>tools/validate_local_pack.py</code> against your local pack first.</li>
+          <li>Choose the source bucket you want to fill.</li>
+          <li>Import a JSON file or paste an array of listing records.</li>
+          <li>Click <b>Run reconcile + compile</b>.</li>
+          <li>Open the real <b>Command Center</b> to review internal listings and conflicts.</li>
+          <li>Open the <b>Public Directory</b> to confirm only released data appears there.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function updateSummary(){
+  const p = GRR.loadPipeline();
+  const s = GRR.pipelineSummary();
+  document.getElementById('summaryBox').innerHTML = `
+    <div><b>Raw records:</b> ${s.rawCount}</div>
+    <div><b>Canonical listings:</b> ${s.canonical}</div>
+    <div><b>Released public listings:</b> ${s.released}</div>
+    <div><b>Conflicts:</b> ${s.conflicts}</div>
+    <div><b>Last updated:</b> ${s.updated_at || 'not yet'}</div>
+    <div style="margin-top:10px;color:#9a9286">Buckets · source_a ${p.raw.source_a.length} · source_b ${p.raw.source_b.length} · manual_uploads ${p.raw.manual_uploads.length}</div>`;
+}
+async function importSelectedFile(){
+  const input = document.getElementById('fileInput');
+  const bucket = document.getElementById('sourceBucket').value;
+  if (!input.files[0]) return alert('Choose a JSON file first.');
+  const text = await input.files[0].text();
+  let rows = [];
+  try { rows = JSON.parse(text); }
+  catch(e){ alert('Invalid JSON file. Please upload a valid JSON array.'); return; }
+  if (!Array.isArray(rows)) return alert('The file must contain a JSON array.');
+  GRR.importRawSource(bucket, rows); updateSummary(); alert(`Imported ${rows.length} rows into ${bucket}.`);
+}
+function importPastedJson(append){
+  const bucket = document.getElementById('sourceBucket').value;
+  const text = document.getElementById('jsonPaste').value.trim();
+  if (!text) return alert('Paste a JSON array first.');
+  let rows = [];
+  try { rows = JSON.parse(text); }
+  catch(e){ alert('Invalid JSON. Paste a valid JSON array.'); return; }
+  if (!Array.isArray(rows)) return alert('The pasted content must be a JSON array.');
+  append ? GRR.mergeRawSource(bucket, rows) : GRR.importRawSource(bucket, rows);
+  updateSummary();
+  alert(`${append ? 'Appended' : 'Replaced'} ${rows.length} rows in ${bucket}.`);
+}
+function runReconcile(){ GRR.runPipeline(); updateSummary(); alert('Local pipeline compiled. Open the Command Center and Public Directory now.'); }
+function exportPipeline(){ const blob = new Blob([JSON.stringify(GRR.loadPipeline(), null, 2)], {type:'application/json'}); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'grr-local-pipeline.json'; a.click(); }
+function clearAllData(){ if (confirm('Clear the entire local import pipeline?')) { GRR.clearPipeline(); updateSummary(); } }
+updateSummary();
+</script>
+</body></html>

@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-03-13T04:57:42.595974+00:00",
+  "grace_bypass_until_listing_count": 1000,
+  "provinces": [
+    {
+      "province_code": "AB",
+      "slug": "alberta",
+      "name": "Alberta",
+      "listing_count": 249,
+      "summary": "Verified public release coverage for this province or territory.",
+      "cities": [
+        {
+          "slug": "edmonton",
+          "name": "Edmonton",
+          "listing_count": 134,
+          "top_deal_score": 48
+        },
+        {
+          "slug": "calgary",
+          "name": "Calgary",
+          "listing_count": 115,
+          "top_deal_score": 42
+        }
+      ]
+    },
+    {
+      "province_code": "MB",
+      "slug": "manitoba",
+      "name": "Manitoba",
+      "listing_count": 140,
+      "summary": "Verified public release coverage for this province or territory.",
+      "cities": [
+        {
+          "slug": "winnipeg",
+          "name": "Winnipeg",
+          "listing_count": 140,
+          "top_deal_score": 62
+        }
+      ]
+    },
+    {
+      "province_code": "QC",
+      "slug": "quebec",
+      "name": "Quebec",
+      "listing_count": 134,
+      "summary": "Verified public release coverage for this province or territory.",
+      "cities": [
+        {
+          "slug": "montréal",
+          "name": "Montréal",
+          "listing_count": 134,
+          "top_deal_score": 42
+        }
+      ]
+    },
+    {
+      "province_code": "BC",
+      "slug": "british-columbia",
+      "name": "British Columbia",
+      "listing_count": 92,
+      "summary": "Verified public release coverage for this province or territory.",
+      "cities": [
+        {
+          "slug": "vancouver",
+          "name": "Vancouver",
+          "listing_count": 92,
+          "top_deal_score": 48
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R&G Command Center</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Syne:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+<script src="assets/js/resolver.js"></script>
+<script src="assets/js/compiler.js"></script>
+<script src="data/bootstrap.js"></script><script src="assets/js/utils.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/settings.js"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:#0c0d10; --panel:#131417; --panel2:#191b20; --panel3:#1e2027; --border:#22252d; --border2:#2a2e38;
+  --accent:#d4a843; --hot:#e8445a; --warm:#d4a843; --cold:#4b8fcc; --green:#2ec97a;
+  --ink:#eaecf0; --ink2:#8e97a8; --ink3:#50586a; --mono:'DM Mono', monospace; --serif:'Fraunces', Georgia, serif; --display:'Syne', sans-serif; --radius:10px;
+}
+body.theme-light { --bg:#f3efe7; --panel:#ffffff; --panel2:#f7f4ee; --panel3:#ede7dd; --border:#ddd4c7; --border2:#d0c4b2; --ink:#15181d; --ink2:#4d5563; --ink3:#8b93a1; }
+html { font-family: var(--display); background: var(--bg); color: var(--ink); }
+body { min-height: 100vh; overflow-x: hidden; }
+button { font-family: inherit; cursor: pointer; }
+input, select, textarea { font-family: inherit; }
+a { color: inherit; text-decoration: none; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 4px; }
+.mono { font-family: var(--mono); } .serif { font-family: var(--serif); }
+#app { display:flex; flex-direction:column; min-height:100vh; }
+.topbar { height:52px; background:var(--panel); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; padding:0 24px; position:sticky; top:0; z-index:200; gap:16px; }
+.topbar-logo { display:flex; align-items:center; gap:10px; flex-shrink:0; }
+.logo-hex { width:28px; height:28px; background:var(--accent); clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%); display:flex; align-items:center; justify-content:center; font-family:var(--display); font-weight:800; font-size:11px; color:#000; }
+.topbar-name { font-family:var(--display); font-weight:700; font-size:14px; letter-spacing:.02em; }
+.topbar-sub { font-family:var(--mono); font-size:9px; color:var(--ink3); letter-spacing:.1em; text-transform:uppercase; }
+.topbar-tabs { display:flex; gap:2px; }
+.tab-btn { padding:6px 16px; border-radius:6px; background:transparent; border:1px solid transparent; font-family:var(--display); font-size:12px; font-weight:600; color:var(--ink3); transition:all .15s; letter-spacing:.02em; }
+.tab-btn:hover { color:var(--ink); background:var(--panel2); }
+.tab-btn.active { color:var(--accent); background:rgba(212,168,67,.08); border-color:rgba(212,168,67,.2); }
+.topbar-right { display:flex; align-items:center; gap:10px; }
+.pulse-dot { width:7px; height:7px; border-radius:50%; background:var(--green); box-shadow:0 0 8px var(--green); animation:pulse 2.5s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.35;} }
+.clock { font-family:var(--mono); font-size:11px; color:var(--ink3); }
+.view { display:block; flex:1; padding:28px 28px 60px; max-width:1360px; margin:0 auto; width:100%; }
+.page-hd { margin-bottom:28px; }
+.page-hd h1 { font-family:var(--serif); font-size:28px; font-weight:600; letter-spacing:-.01em; margin-bottom:3px; }
+.page-hd p { font-family:var(--mono); font-size:10px; color:var(--ink3); letter-spacing:.1em; text-transform:uppercase; }
+.stats-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:24px; }
+.stat-card { background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:16px 18px; }
+.stat-card .lbl { font-family:var(--mono); font-size:9px; color:var(--ink3); letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px; }
+.stat-card .val { font-family:var(--serif); font-size:36px; font-weight:600; line-height:1; margin-bottom:4px; }
+.stat-card .sub { font-family:var(--mono); font-size:10px; color:var(--ink3); }
+.two-col { display:grid; grid-template-columns:1.1fr .9fr; gap:16px; }
+.stack { display:flex; flex-direction:column; gap:16px; }
+.card { background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
+.card-hd { display:flex; align-items:center; justify-content:space-between; padding:14px 18px; border-bottom:1px solid var(--border); }
+.card-hd h2 { font-family:var(--display); font-size:13px; font-weight:600; display:flex; align-items:center; gap:8px; }
+.hd-dot { width:6px; height:6px; border-radius:50%; } .card-action { font-family:var(--mono); font-size:10px; color:var(--ink3); cursor:pointer; transition:color .15s; } .card-action:hover { color:var(--accent); }
+.card-bd { padding:18px; }
+.notice { padding:12px 14px; border:1px solid rgba(212,168,67,.22); background:rgba(212,168,67,.06); border-radius:8px; font-family:var(--mono); font-size:10px; color:var(--ink2); line-height:1.6; margin-bottom:14px; }
+.row, .row3, .row4 { display:grid; gap:12px; margin-bottom:12px; }
+.row { grid-template-columns:1fr 1fr; } .row3 { grid-template-columns:1fr 1fr 1fr; } .row4 { grid-template-columns:1fr 1fr 1fr 1fr; }
+.field label { display:block; font-size:10px; color:var(--ink3); margin-bottom:6px; text-transform:uppercase; letter-spacing:.08em; font-family:var(--mono); }
+.field input, .field select, .field textarea { width:100%; padding:11px 12px; border:1px solid var(--border2); border-radius:8px; background:var(--panel2); color:var(--ink); outline:none; }
+.field textarea { min-height:92px; resize:vertical; }
+.connector { background:var(--panel2); border:1px solid var(--border2); border-radius:10px; padding:14px; margin-bottom:14px; }
+.connector-head { display:flex; justify-content:space-between; gap:14px; align-items:flex-start; margin-bottom:12px; }
+.pill { display:inline-flex; align-items:center; gap:6px; padding:4px 8px; border-radius:999px; font-family:var(--mono); font-size:10px; border:1px solid var(--border2); color:var(--ink2); }
+.pill.ok { color:var(--green); border-color:rgba(46,201,122,.25); background:rgba(46,201,122,.08); }
+.pill.warn { color:var(--warm); border-color:rgba(212,168,67,.25); background:rgba(212,168,67,.08); }
+.connector-actions, .action-row { display:flex; flex-wrap:wrap; gap:10px; }
+.btn { padding:10px 14px; border-radius:8px; border:1px solid var(--border2); background:var(--panel2); color:var(--ink); font-family:var(--mono); font-size:11px; }
+.btn.gold { background:var(--accent); border-color:var(--accent); color:#000; font-weight:600; }
+.btn.ghost:hover, .btn:hover { background:var(--panel3); }
+.tile-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.tile { display:block; padding:16px; border-radius:10px; background:var(--panel2); border:1px solid var(--border2); }
+.tile b { display:block; font-size:14px; margin-bottom:4px; }
+.tile span { font-family:var(--mono); font-size:10px; color:var(--ink3); line-height:1.6; }
+.log-row { padding:12px 0; border-bottom:1px solid var(--border); }
+.log-row:last-child { border-bottom:none; }
+.log-note { margin-top:8px; color:var(--ink2); font-size:12px; line-height:1.55; }
+.empty-box { padding:14px; border:1px dashed var(--border2); border-radius:10px; color:var(--ink3); font-family:var(--mono); font-size:11px; }
+.help-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.56); z-index:500; align-items:center; justify-content:center; padding:20px; }
+.help-box { max-width:720px; width:100%; background:var(--panel); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+.help-bd { padding:20px 18px; color:var(--ink2); line-height:1.8; }
+.help-ft { display:flex; justify-content:space-between; padding:18px; border-top:1px solid var(--border); }
+@media (max-width: 1100px){ .stats-grid{grid-template-columns:repeat(3,1fr)} .two-col,.row,.row3,.row4,.tile-grid{grid-template-columns:1fr} }
+@media (max-width: 760px){ .topbar{height:auto; padding:12px; flex-wrap:wrap;} .topbar-tabs{width:100%; overflow:auto;} .stats-grid{grid-template-columns:1fr 1fr;} .view{padding:18px 14px 40px;} }
+</style>
+</head>
+<body>
+<div id="app">
+<header class="topbar">
+  <div class="topbar-logo">
+    <div class="logo-hex">R</div>
+    <div>
+      <div class="topbar-name">R&G Command Center</div>
+      <div class="topbar-sub mono">Real Estate Intelligence</div>
+    </div>
+  </div>
+  <nav class="topbar-tabs">
+    <button class="tab-btn" onclick="window.location.href='command-center.html'">Dashboard</button>
+    <button class="tab-btn" onclick="window.location.href='listings.html'">Listings</button>
+    <button class="tab-btn" onclick="window.location.href='leads.html'">Leads</button>
+    <button class="tab-btn" onclick="window.location.href='add.html'">+ Add</button>
+    <button class="tab-btn active">Settings</button>
+  </nav>
+  <div class="topbar-right">
+    <button class="tab-btn" data-theme-label onclick="GRRTheme.toggle('command')">Light Theme</button>
+    <button class="tab-btn" onclick="openSettingsHelp()">Info / Help</button>
+    <div class="pulse-dot"></div>
+    <span class="clock" id="clock">--:--:--</span>
+  </div>
+</header>
+<section class="view active">
+  <div class="page-hd">
+    <h1 class="serif">Settings</h1>
+    <p>Local intake · raw buckets · reconcile · public compile</p>
+  </div>
+  <div class="stats-grid" id="kpis"></div>
+  <div class="two-col">
+    <div class="stack">
+      <section class="card">
+        <div class="card-hd"><h2><span class="hd-dot" style="background:var(--accent)"></span>Connector Intake</h2><span class="card-action" onclick="openSettingsHelp()">Walkthrough</span></div>
+        <div class="card-bd">
+          <div class="notice">This is the real non-stock intake layer. <b>Local-only mode</b> is enforced: import local JSON files into raw source buckets first, then <span class="serif">Reconcile + Compile</span> merges them into canonical internal listings and a released public dataset. Under the first 1000 verified listings, the grace hold stays bypassed for clean early testing.</div>
+          <div id="connectorList"></div>
+          <div class="action-row">
+            <button class="btn ghost" onclick="exportPipelineSnapshot()">Export Pipeline Snapshot</button><button class="btn ghost" onclick="resetPipelineState()">Reset Pipeline</button>
+            <button class="btn ghost" onclick="syncAllApis()">Sync All APIs</button>
+            <button class="btn gold" onclick="runReconcile()">Reconcile + Compile</button>
+            <button class="btn ghost" onclick="openImportTool()">Open Import Tool</button>
+            <button class="btn ghost" onclick="exportConnectorConfig()">Export Config</button>
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <div class="card-hd"><h2><span class="hd-dot" style="background:var(--green)"></span>Connector Run Log</h2><span class="card-action" onclick="resetApiRuns()">Clear</span></div>
+        <div class="card-bd" id="runLog"></div>
+      </section>
+    </div>
+    <div class="stack">
+      <section class="card">
+        <div class="card-hd"><h2><span class="hd-dot" style="background:var(--cold)"></span>Utilities</h2><span class="card-action" onclick="window.location.href='command-center.html'">Return</span></div>
+        <div class="card-bd">
+          <div class="tile-grid">
+            <a class="tile" href="tools/import-source.html"><b>Import Source Files</b><span>Load local JSON arrays for endpoints blocked by CORS or signing rules.</span></a>
+            <a class="tile" href="directory.html"><b>Open Public Directory</b><span>Review the released public dataset exactly as the browser sees it.</span></a>
+            <a class="tile" href="deals.html"><b>Open Public Deals</b><span>Check that release compilation is flowing into the live listings surface.</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <div class="card-hd"><h2><span class="hd-dot" style="background:var(--hot)"></span>Internal Access Control</h2><span class="card-action">Role gate</span></div>
+        <div class="card-bd">
+          <div class="notice">Enable a local passcode lock for internal pages. `settings.html` requires <b>admin</b>; other internal pages require at least <b>operator</b>.</div>
+          <div class="row">
+            <div class="field"><label>Access lock</label><select id="secEnabled"><option value="false">Off</option><option value="true">On</option></select></div>
+            <div class="field"><label>Session minutes</label><input id="secSessionMinutes" type="number" min="5" step="5" placeholder="480"></div>
+          </div>
+          <div class="row">
+            <div class="field"><label>Passcode</label><input id="secPasscode" type="password" placeholder="Set or rotate passcode"></div>
+            <div class="field"><label>Confirm passcode</label><input id="secPasscodeConfirm" type="password" placeholder="Repeat passcode"></div>
+          </div>
+          <div class="action-row">
+            <button class="btn gold" onclick="saveSecurityPolicy()">Save Access Policy</button>
+            <button class="btn ghost" onclick="clearSecuritySession()">Clear Current Session</button>
+          </div>
+          <div id="secStatus" class="notice" style="margin-top:12px;margin-bottom:0">Access policy status will appear here.</div>
+        </div>
+      </section>
+      <section class="card">
+        <div class="card-hd"><h2><span class="hd-dot" style="background:var(--warm)"></span>How the pipeline works</h2><span class="card-action">Locked flow</span></div>
+        <div class="card-bd">
+          <div class="notice" style="margin-bottom:10px">1. Raw source records land in <span class="mono">source_a</span>, <span class="mono">source_b</span>, or <span class="mono">manual_uploads</span>.</div>
+          <div class="notice" style="margin-bottom:10px">2. Reconcile merges duplicates, flags source inconsistencies, and builds canonical internal listings.</div>
+          <div class="notice" style="margin-bottom:10px">3. Compile generates the public release pack. The public site never reads raw intake directly.</div>
+          <div class="notice" style="margin-bottom:0">4. Fully local operation: no server dependency is required for data browsing, internal review, or public release compilation.</div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+<div id="settingsHelp" class="help-overlay">
+  <div class="help-box">
+    <div class="card-hd"><h2 id="helpTitle"><span class="hd-dot" style="background:var(--accent)"></span>Settings Intro</h2><span class="card-action">Next-click walkthrough</span></div>
+    <div class="help-bd" id="helpBody"></div>
+    <div class="help-ft">
+      <button class="tab-btn" onclick="closeSettingsHelp()">Close</button>
+      <div style="display:flex; gap:8px;">
+        <button class="tab-btn" onclick="prevSettingsHelp()">Back</button>
+        <button class="tab-btn active" onclick="nextSettingsHelp()">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+(function(){ const clock=document.getElementById('clock'); if(clock){ setInterval(()=> clock.textContent = new Date().toLocaleTimeString(), 1000); clock.textContent = new Date().toLocaleTimeString(); }})();
+GRRTheme.init('command');
+</script>
+</body>
+</html>

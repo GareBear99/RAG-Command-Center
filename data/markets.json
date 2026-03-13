@@ -1,0 +1,108 @@
+{
+  "provinces": [
+    {
+      "slug": "british-columbia",
+      "province_code": "BC",
+      "name": "British Columbia",
+      "summary": "92 released listings across 1 market.",
+      "active_markets": 1,
+      "listing_count": 92
+    },
+    {
+      "slug": "alberta",
+      "province_code": "AB",
+      "name": "Alberta",
+      "summary": "249 released listings across 2 markets.",
+      "active_markets": 2,
+      "listing_count": 249
+    },
+    {
+      "slug": "saskatchewan",
+      "province_code": "SK",
+      "name": "Saskatchewan",
+      "summary": "No loaded records from current ingest sources.",
+      "active_markets": 0,
+      "listing_count": 0
+    },
+    {
+      "slug": "manitoba",
+      "province_code": "MB",
+      "name": "Manitoba",
+      "summary": "140 released listings across 1 market.",
+      "active_markets": 1,
+      "listing_count": 140
+    },
+    {
+      "slug": "ontario",
+      "province_code": "ON",
+      "name": "Ontario",
+      "summary": "No loaded records from current ingest sources.",
+      "active_markets": 0,
+      "listing_count": 0
+    },
+    {
+      "slug": "quebec",
+      "province_code": "QC",
+      "name": "Quebec",
+      "summary": "134 released listings across 1 market.",
+      "active_markets": 1,
+      "listing_count": 134
+    },
+    {
+      "slug": "new-brunswick",
+      "province_code": "NB",
+      "name": "New Brunswick",
+      "summary": "No loaded records from current ingest sources.",
+      "active_markets": 0,
+      "listing_count": 0
+    },
+    {
+      "slug": "nova-scotia",
+      "province_code": "NS",
+      "name": "Nova Scotia",
+      "summary": "No loaded records from current ingest sources.",
+      "active_markets": 0,
+      "listing_count": 0
+    },
+    {
+      "slug": "prince-edward-island",
+      "province_code": "PE",
+      "name": "Prince Edward Island",
+      "summary": "No loaded records from current ingest sources.",
+      "active_markets": 0,
+      "listing_count": 0
+    },
+    {
+      "slug": "newfoundland-and-labrador",
+      "province_code": "NL",
+      "name": "Newfoundland and Labrador",
+      "summary": "No loaded records from current ingest sources.",
+      "active_markets": 0,
+      "listing_count": 0
+    },
+    {
+      "slug": "yukon",
+      "province_code": "YT",
+      "name": "Yukon",
+      "summary": "No loaded records from current ingest sources.",
+      "active_markets": 0,
+      "listing_count": 0
+    },
+    {
+      "slug": "northwest-territories",
+      "province_code": "NT",
+      "name": "Northwest Territories",
+      "summary": "No loaded records from current ingest sources.",
+      "active_markets": 0,
+      "listing_count": 0
+    },
+    {
+      "slug": "nunavut",
+      "province_code": "NU",
+      "name": "Nunavut",
+      "summary": "No loaded records from current ingest sources.",
+      "active_markets": 0,
+      "listing_count": 0
+    }
+  ]
+}

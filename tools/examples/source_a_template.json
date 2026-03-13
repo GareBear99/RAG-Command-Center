@@ -1,0 +1,16 @@
+[
+  {
+    "address": "1842 Fairfield Road",
+    "city": "Victoria",
+    "province": "BC",
+    "list_price": 849000,
+    "beds": 3,
+    "baths": 2,
+    "sqft": 1580,
+    "status": "active",
+    "property_type": "House",
+    "mls": "R123456",
+    "description": "Family home near Fairfield with suite potential.",
+    "fetched_at": "2026-03-12T18:00:00Z"
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-03-13T04:57:42.595974+00:00",
+  "compiler_version": "rg-local-v1",
+  "counts": {
+    "raw_source_a": 220,
+    "raw_source_b": 419,
+    "raw_manual_uploads": 0,
+    "canonical_listings": 623,
+    "released_listings": 615,
+    "conflicts": 8,
+    "release_queue": 623,
+    "internal_leads": 0,
+    "directory_provinces": 4
+  },
+  "hashes": {
+    "canonical_listings_sha256": "bb51fe1c7038c292a336491d743f09dbc945f72cb406c9bbe2ddf3dde8878103",
+    "released_listings_sha256": "7781cc56923b716018305c5ae0f90fc51cc54400bb48f67dfdf8cb337543759b",
+    "directory_index_sha256": "b8e30ad7aa6fcf2370417016d75cba792e924cf0187c6c9b4758e3dfe3d26e27",
+    "internal_leads_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "raw_source_a_sha256": "272455fc2ac951c877e16af13475a22b1afc91cb73d59ad251b3632f9c95dce8",
+    "raw_source_b_sha256": "fca9679301a6a47916a0af88a60139297df7a24f54a0cd7ea00f419613f9cba3",
+    "raw_manual_uploads_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "coverage": {
+    "national_province_target": 13,
+    "raw_ingest": {
+      "province_codes": [
+        "AB",
+        "BC",
+        "MB",
+        "QC"
+      ],
+      "province_count": 4,
+      "city_count": 5,
+      "is_national": false
+    },
+    "released_public": {
+      "province_codes": [
+        "AB",
+        "BC",
+        "MB",
+        "QC"
+      ],
+      "province_count": 4,
+      "city_count": 5,
+      "is_national": false
+    }
+  },
+  "manual_mode": {
+    "seed_mode": "off",
+    "requested_seed_mode": "off",
+    "effective_seed_mode": "off",
+    "manual_pack_paths": 0,
+    "loaded_pack_records": 0,
+    "existing_manual_records": 0,
+    "non_seed_manual_records": 0,
+    "seed_records_available": 0,
+    "seed_fallback_min_non_seed": 50
+  },
+  "lead_mode": {
+    "enabled": false,
+    "source": "listing_bootstrap",
+    "bootstrap_max": 0,
+    "bootstrap_listing_leads": 0,
+    "explicit_pack_leads": 0,
+    "total_internal_leads": 0
+  }
+}

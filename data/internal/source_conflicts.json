@@ -1,0 +1,98 @@
+[
+  {
+    "listing_id": "LST-0967b9d58b58",
+    "address": "EUCLID AVE",
+    "city": "Vancouver",
+    "province": "BC",
+    "field": "list_price",
+    "source_a_value": 1596000,
+    "source_b_value": 1158000,
+    "canonical_value": 1596000,
+    "resolution": "latest_source_wins_pending_review",
+    "status": "review"
+  },
+  {
+    "listing_id": "LST-2af1bf380e8f",
+    "address": "404 BARCLAY ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "field": "list_price",
+    "source_a_value": 882000,
+    "source_b_value": 401600,
+    "canonical_value": 882000,
+    "resolution": "latest_source_wins_pending_review",
+    "status": "review"
+  },
+  {
+    "listing_id": "LST-1462b074a4ed",
+    "address": "CYPRESS ST",
+    "city": "Vancouver",
+    "province": "BC",
+    "field": "list_price",
+    "source_a_value": 826000,
+    "source_b_value": 1824000,
+    "canonical_value": 826000,
+    "resolution": "latest_source_wins_pending_review",
+    "status": "review"
+  },
+  {
+    "listing_id": "LST-17e206b712ce",
+    "address": "6TH AVE W",
+    "city": "Vancouver",
+    "province": "BC",
+    "field": "list_price",
+    "source_a_value": 1195000,
+    "source_b_value": 1444000,
+    "canonical_value": 1195000,
+    "resolution": "latest_source_wins_pending_review",
+    "status": "review"
+  },
+  {
+    "listing_id": "LST-2a8c916b0d0c",
+    "address": "4042 MACTAGGART DRIVE NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "field": "list_price",
+    "source_a_value": 999000,
+    "source_b_value": 997000,
+    "canonical_value": 999000,
+    "resolution": "latest_source_wins_pending_review",
+    "status": "review"
+  },
+  {
+    "listing_id": "LST-0ccecd62e851",
+    "address": "545 BOUL CREMAZIE E",
+    "city": "Montréal",
+    "province": "QC",
+    "field": "list_price",
+    "source_a_value": 49640000,
+    "source_b_value": 18980000,
+    "canonical_value": 49640000,
+    "resolution": "latest_source_wins_pending_review",
+    "status": "review"
+  },
+  {
+    "listing_id": "LST-ab32929d6a53",
+    "address": "0 CHABANEL O",
+    "city": "Montréal",
+    "province": "QC",
+    "field": "list_price",
+    "source_a_value": 32159367,
+    "source_b_value": 15107333,
+    "canonical_value": 32159367,
+    "resolution": "latest_source_wins_pending_review",
+    "status": "review"
+  },
+  {
+    "listing_id": "LST-f556d65802bc",
+    "address": "0 BOUL SAINT-LAURENT",
+    "city": "Montréal",
+    "province": "QC",
+    "field": "list_price",
+    "source_a_value": 15510267,
+    "source_b_value": 13462467,
+    "canonical_value": 15510267,
+    "resolution": "latest_source_wins_pending_review",
+    "status": "review"
+  }
+]
