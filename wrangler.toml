@@ -1,0 +1,17 @@
+name = "rg-command-center-api"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Workers.dev subdomain (free tier)
+workers_dev = true
+
+# KV namespace binding — replace id after: wrangler kv:namespace create "RG_DATA"
+[[kv_namespaces]]
+binding = "RG_DATA"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+
+# Routes — configure after deploying with a custom domain
+# [env.production]
+# routes = [
+#   { pattern = "api.rgcommandcenter.com/*", zone_name = "rgcommandcenter.com" }
+# ]

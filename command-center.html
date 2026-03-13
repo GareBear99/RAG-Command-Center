@@ -1360,12 +1360,12 @@ function renderDashboard() {
   const cqEl = document.getElementById('cq-list');
   if (!sorted.length) { cqEl.innerHTML = '<div class="empty">No leads yet. Add one in the + Add tab.</div>'; }
   else cqEl.innerHTML = sorted.slice(0,8).map((l,i)=>`
-    <div class="cq-row" onclick="showLeadDetail('${l.lead_id}')">
+    <div class="cq-row" onclick="showLeadDetail('${escapeAttr(l.lead_id)}')">
       <span class="cq-num">#${i+1}</span>
-      <div class="cq-ring ${l.score}">${l.score[0].toUpperCase()}</div>
+      <div class="cq-ring ${escapeAttr(l.score)}">${escapeHtml(l.score[0].toUpperCase())}</div>
       <div class="cq-info">
-        <div class="cq-name">${l.name}</div>
-        <div class="cq-meta">${l.phone||l.email||'No contact'} · ${l.timeline||l.task||''} · ${String(l.routing_queue||leadQueueName(l.licensed_priority||leadLicensedPriorityValue(l))).replaceAll('_',' ')}</div>
+        <div class="cq-name">${escapeHtml(l.name)}</div>
+        <div class="cq-meta">${escapeHtml(l.phone||l.email||'No contact')} · ${escapeHtml(l.timeline||l.task||'')} · ${escapeHtml(String(l.routing_queue||leadQueueName(l.licensed_priority||leadLicensedPriorityValue(l))).replaceAll('_',' '))}</div>
       </div>
       <button class="cq-cta" onclick="event.stopPropagation();${l.phone?`window.location.href='tel:${l.phone.replace(/\D/g,'')}';`:'alert(\"No phone — try email: '+l.email+'\")'}">${l.phone?'Call':'Email'}</button>
     </div>
@@ -1377,12 +1377,12 @@ function renderDashboard() {
   if (!topDeals.length) { tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:32px;font-family:var(--mono);font-size:11px;color:var(--ink3)">No listings yet</td></tr>'; }
   else tbody.innerHTML = topDeals.slice(0,8).map(l=>{
     const marketPos = listingMarketPosition(l, marketBench);
-    const marketTag = marketPos?.label ? `<span class="tag ${marketPos.direction==='below'?'below':(marketPos.direction==='above'?'drop':'new')}">${marketPos.label}</span>` : '';
+    const marketTag = marketPos?.label ? `<span class="tag ${marketPos.direction==='below'?'below':(marketPos.direction==='above'?'drop':'new')}">${escapeHtml(marketPos.label)}</span>` : '';
     return `
-    <tr onclick="showListingDetail('${l.listing_id}')">
-      <td><div class=\"deal-addr\">${l.address}</div><div class=\"deal-city\">${l.city}, ${l.province} · ${postedDateLabel(l)}${marketPos?.label ? ` · ${marketPos.label}` : ''}</div></td>
+    <tr onclick="showListingDetail('${escapeAttr(l.listing_id)}')">
+      <td><div class=\"deal-addr\">${escapeHtml(l.address)}</div><div class=\"deal-city\">${escapeHtml(l.city)}, ${escapeHtml(l.province)} · ${escapeHtml(postedDateLabel(l))}${marketPos?.label ? ` · ${escapeHtml(marketPos.label)}` : ''}</div></td>
       <td><div class="deal-price">${fmtPrice(l.list_price)}</div></td>
-      <td style=\"font-family:var(--mono);font-size:11px;color:var(--ink2)\">${listingFactBits(l, marketBench).slice(0,4).join(' · ') || 'Stats n/a'}</td>
+      <td style=\"font-family:var(--mono);font-size:11px;color:var(--ink2)\">${listingFactBits(l, marketBench).slice(0,4).map(escapeHtml).join(' · ') || 'Stats n/a'}</td>
       <td><div class="score-wrap"><div class="score-bar"><div class="score-fill" style="width:${Math.round(l.deal_score*100)}%"></div></div><span class="score-pct">${Math.round(l.deal_score*100)}%</span></div></td>
       <td><div class=\"tags\">${marketTag}${buildTags(l)}</div></td>
     </tr>
@@ -1393,11 +1393,11 @@ function renderDashboard() {
   const sigEl = document.getElementById('sig-feed');
   if (!allSigs.length) { sigEl.innerHTML = '<div class="empty">No signals yet.</div>'; }
   else sigEl.innerHTML = allSigs.slice(0,12).map(s=>`
-    <div class="sig-row" onclick="showListingDetail('${s.listing_id}')">
-      <div class="sig-ico ${s.cls}">${s.icon}</div>
+    <div class="sig-row" onclick="showListingDetail('${escapeAttr(s.listing_id)}')">
+      <div class="sig-ico ${escapeAttr(s.cls)}">${escapeHtml(s.icon)}</div>
       <div class="sig-body">
-        <div class="sig-addr">${s.address}, ${s.city}</div>
-        <div class="sig-desc">${s.label}</div>
+        <div class="sig-addr">${escapeHtml(s.address)}, ${escapeHtml(s.city)}</div>
+        <div class="sig-desc">${escapeHtml(s.label)}</div>
       </div>
     </div>
   `).join('');
@@ -1450,19 +1450,19 @@ function renderListingsView() {
     const dom = getDom(postedIso);
     const marketPos = listingMarketPosition(l, marketBench);
     return `
-      <div class="l-card" onclick="showListingDetail('${l.listing_id}')">
+      <div class="l-card" onclick="showListingDetail('${escapeAttr(l.listing_id)}')">
         <div class="l-card-img">
           <div class="l-card-badges">${buildTags(l)}</div>
-          🏠
+          ${window.GPSFallbackMap ? GPSFallbackMap.listingThumbnailHtml(l, {provider:'dark'}) : '🏠'}
           ${l.deal_score>0.45?`<div class="l-card-score">Deal ${Math.round(l.deal_score*100)}%</div>`:''}
         </div>
         <div class="l-card-body">
           <div class="l-card-price">${fmtPrice(l.list_price)}</div>
-          <div class="l-card-addr">${l.address}</div>
-          <div class=\"l-card-loc\">${l.city}, ${l.province} · ${postedDateLabel(l)}${marketPos?.label ? ` · ${marketPos.label}` : ''}</div>
-          ${summ?`<div class="l-card-explain">◆ ${summ}</div>`:''}
+          <div class="l-card-addr">${escapeHtml(l.address)}</div>
+          <div class=\"l-card-loc\">${escapeHtml(l.city)}, ${escapeHtml(l.province)} · ${escapeHtml(postedDateLabel(l))}${marketPos?.label ? ` · ${escapeHtml(marketPos.label)}` : ''}</div>
+          ${summ?`<div class="l-card-explain">◆ ${escapeHtml(summ)}</div>`:''}
           <div class="l-card-specs" style="flex-wrap:wrap">
-            ${(listingFactBits(l, marketBench).length ? listingFactBits(l, marketBench) : ['Stats n/a']).map(bit=>`<span>${bit}</span>`).join('')}
+            ${(listingFactBits(l, marketBench).length ? listingFactBits(l, marketBench) : ['Stats n/a']).map(bit=>`<span>${escapeHtml(bit)}</span>`).join('')}
           </div>
         </div>
       </div>
@@ -1514,26 +1514,26 @@ function renderLeadsView() {
     if (l.timeline) attrs.push(`<span class="lattr">${l.timeline}</span>`);
     attrs.push(`<span class="lattr">${String(l.routing_queue || leadQueueName(l.licensed_priority || leadLicensedPriorityValue(l))).replaceAll('_',' ')}</span>`);
     return `
-      <div class="lead-card ${l.score}">
+      <div class="lead-card ${escapeAttr(l.score)}">
         <div class="lead-main">
-          <div class="lead-badge ${l.score}">${l.score[0].toUpperCase()}</div>
+          <div class="lead-badge ${escapeAttr(l.score)}">${escapeHtml(l.score[0].toUpperCase())}</div>
           <div class="lead-info">
-            <div class="lead-name">${l.name}</div>
+            <div class="lead-name">${escapeHtml(l.name)}</div>
             <div class="lead-meta">
-              ${l.phone?`<span>📞 ${l.phone}</span>`:''}
-              ${l.email?`<span>✉ ${l.email}</span>`:''}
-              <span>${l.source||'manual'}</span>
+              ${l.phone?`<span>📞 ${escapeHtml(l.phone)}</span>`:''}
+              ${l.email?`<span>✉ ${escapeHtml(l.email)}</span>`:''}
+              <span>${escapeHtml(l.source||'manual')}</span>
               <span>${timeAgo(l.created_at)}</span>
             </div>
             ${attrs.length?`<div class="lead-attrs">${attrs.join('')}</div>`:''}
-            ${l.notes?`<div style="margin-top:8px;font-family:var(--mono);font-size:10px;color:var(--ink3)">"${l.notes}"</div>`:''}
+            ${l.notes?`<div style="margin-top:8px;font-family:var(--mono);font-size:10px;color:var(--ink3)">\"${escapeHtml(l.notes)}\"</div>`:''}
           </div>
           <div class="lead-actions">
             ${l.phone?`<button class="lbtn" onclick="event.stopPropagation();window.location.href='tel:${l.phone.replace(/\D/g,'')}'">Call</button>`:''}
-            <button class="lbtn" onclick="event.stopPropagation();deleteLead('${l.lead_id}')">Delete</button>
+            <button class="lbtn" onclick="event.stopPropagation();deleteLead('${escapeAttr(l.lead_id)}')">Delete</button>
           </div>
         </div>
-        <div class="lead-task-bar ${l.score}">${l.task||''}</div>
+        <div class="lead-task-bar ${escapeAttr(l.score)}">${escapeHtml(l.task||'')}</div>
       </div>
     `;
   }).join('');
