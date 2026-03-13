@@ -38,6 +38,8 @@
 
 Public Site: https://garebear99.github.io/RG-Command-Center/
 
+Handler Core: https://github.com/GareBear99/ARC-Core
+
 **R&G Command Center** is a local-first, zero-dependency real estate intelligence platform built with static HTML, vanilla JavaScript, and Python tooling. It ingests real municipal assessment data from Canadian cities, runs a multi-source reconciliation pipeline, scores every listing with a transparent deal engine, and surfaces actionable signals for investment decisions.
 
 **R = Ricki Kohli** · **G = Gary Doman**
