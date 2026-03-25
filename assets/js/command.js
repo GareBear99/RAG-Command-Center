@@ -201,11 +201,14 @@ function renderLeadCardsPage(items){
   wrap.innerHTML = rows.map(l=>{ const band=(l.score_band||scoreBand(l.deal_score||0)); return `<article class="lead-card ${band}"><div class="lead-main"><div class="lead-ring ${band}">${escapeHtml((l.name||'?')[0])}</div><div><div class="lead-name">${escapeHtml(l.name||'Unnamed')}</div><div class="lead-meta">${l.phone?`<span>📞 ${escapeHtml(l.phone)}</span>`:''}${l.email?`<span>✉ ${escapeHtml(l.email)}</span>`:''}<span>${escapeHtml(l.source||'website')}</span><span>${escapeHtml(l.created_at?isoShort(l.created_at):'new')}</span></div><div class="lead-pill-row">${l.preapproved?'<span class="tag green">✓ Pre-Approved</span>':''}${l.budget?`<span class="tag gold">${escapeHtml(l.budget)}</span>`:''}${l.beds_min?`<span class="tag blue">${fmtNum(l.beds_min)}+ bed</span>`:''}${l.market?`<span class="tag gray">${escapeHtml(l.market)}</span>`:''}${l.timeline?`<span class="tag gray">${escapeHtml(l.timeline)}</span>`:''}</div><div class="lead-note">“${escapeHtml(l.notes || l.intent || 'No notes yet.')}”</div></div><div class="lead-actions"><button class="tab-btn">${l.phone&&l.phone!=='—'?'Call':'Email'}</button><button class="tab-btn">Delete</button></div></div><div class="lead-footer">${band==='hot'?'Call within 1 hour — hot lead':(band==='warm'?'Follow up within 24 hours':'Low urgency / nurture queue')}</div></article>`; }).join('');
 }
 async function initCommandV12(){
+  try {
   const data = await GRR.loadData();
   const state = GRR.loadState();
   const internalListings = data.internal.canonicalListings || [];
-  const publicListings = GRR.getPublicListings(data) || [];
-  const internalOnly = GRR.getInternalOnlyListings(data) || [];
+  /* Use released listings directly — skip expensive getPublicListings clone */
+  const publicListings = data.public.releasedListings || [];
+  const publicIds = new Set(publicListings.map(l=>l.id));
+  const internalOnly = internalListings.filter(l=>!publicIds.has(l.id));
   const marketBench = buildMarketBenchmarks(internalListings.length ? internalListings : publicListings);
   const leads = (data.internal.leads || []).concat((state.inquiries||[]).map(i => ({name:i.name,email:i.email,phone:i.phone||'—',score_band:i.score_band||'warm',timeline:i.timeline||'new',notes:i.notes,source:i.source||'website',market:i.market||'',budget:i.budget||'',intent:i.intent||'inquiry',created_at:i.created_at||'',preapproved:i.preapproved||false,beds_min:i.beds_min||''})));
   const topDeal = internalListings.length ? Math.max(...internalListings.map(l => Number(l.deal_score||0))) : 0;
@@ -223,6 +226,7 @@ async function initCommandV12(){
   document.querySelectorAll('.sort-pill').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('.sort-pill').forEach(x=>x.classList.remove('active')); btn.classList.add('active'); renderListingsGridPage(internalListings.length?internalListings:publicListings, marketBench);});
   ['f-search','f-beds','f-type','f-maxprice'].forEach(id=>{ const el=document.getElementById(id); if(el) el.addEventListener('input',()=>renderListingsGridPage(internalListings.length?internalListings:publicListings, marketBench)); if(el) el.addEventListener('change',()=>renderListingsGridPage(internalListings.length?internalListings:publicListings, marketBench));});
   document.querySelectorAll('.lead-tab').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('.lead-tab').forEach(x=>x.classList.remove('active')); btn.classList.add('active'); renderLeadCardsPage(leads);});
+  } catch(err) { console.error('initCommandV12 error:', err); document.getElementById('dash-date').textContent = 'Error: ' + err.message; }
 }
 document.removeEventListener('DOMContentLoaded', initCommand);
 document.addEventListener('DOMContentLoaded', initCommandV12);
