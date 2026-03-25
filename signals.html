@@ -56,7 +56,7 @@ Example: 'Looking for a 3 bedroom home in Langford, budget around $650K. Pre-app
 </div>
 </div>
 </div></div>
-<div class="card"><div class="card-hd"><h2>Signal History</h2><span style="font-family:var(--mono);font-size:10px;color:var(--ink3)" id="h-count">0 signals</span></div><div id="history-list"></div></div>
+<div class="card"><div class="card-hd"><h2>Monitored Facebook Groups</h2><span style="font-family:var(--mono);font-size:10px;color:var(--ink3)" id="g-count">0 groups</span></div><div class="card-bd"><div class="banner">Add Victoria/Vancouver Facebook real estate groups to monitor. Paste posts from these groups into the Signal Paste above to score leads.</div><div id="groups-list" style="margin-bottom:12px"></div><div style="display:flex;gap:10px"><input class="fi" id="g-name" placeholder="Group name (e.g. Victoria BC Real Estate)" style="flex:1"><input class="fi" id="g-url" placeholder="Facebook group URL (optional)" style="flex:1"><button class="btn-p" onclick="addGroup()">Add Group</button></div></div></div><div class="card"><div class="card-hd"><h2>Signal History</h2><span style="font-family:var(--mono);font-size:10px;color:var(--ink3)" id="h-count">0 signals</span></div><div id="history-list"></div></div>
 </div>
 <script>
 /* ═══════════ NEIGHBOURHOOD DICTIONARIES ═══════════ */
@@ -251,6 +251,45 @@ function updateStats(){
   document.getElementById('s-warm').textContent = history.filter(s=>s.score>=40&&s.score<70).length;
   document.getElementById('s-avg').textContent = history.length ? Math.round(history.reduce((s,h)=>s+h.score,0)/history.length) : 0;
 }
+
+
+/* FB Groups Monitoring */
+var GROUPS_KEY = 'rag_fb_groups';
+function loadGroups(){ try{ return JSON.parse(localStorage.getItem(GROUPS_KEY)||'[]'); }catch(e){ return []; } }
+function saveGroupsList(g){ localStorage.setItem(GROUPS_KEY, JSON.stringify(g)); }
+function addGroup(){
+  var name = document.getElementById('g-name').value.trim();
+  if(!name){ alert('Enter a group name.'); return; }
+  var url = document.getElementById('g-url').value.trim();
+  var groups = loadGroups();
+  groups.unshift({ name:name, url:url, added:new Date().toISOString(), signals:0 });
+  saveGroupsList(groups);
+  document.getElementById('g-name').value = '';
+  document.getElementById('g-url').value = '';
+  renderGroups();
+}
+function removeGroup(idx){
+  var groups = loadGroups();
+  groups.splice(idx, 1);
+  saveGroupsList(groups);
+  renderGroups();
+}
+function renderGroups(){
+  var groups = loadGroups();
+  document.getElementById('g-count').textContent = groups.length + ' groups';
+  var wrap = document.getElementById('groups-list');
+  if(!groups.length){ wrap.innerHTML='<div style="font-family:var(--mono);font-size:11px;color:var(--ink3);padding:12px 0">No groups added yet. Add your Victoria/Vancouver FB real estate groups below.</div>'; return; }
+  var html = '';
+  for(var i=0;i<groups.length;i++){
+    var g = groups[i];
+    html += '<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)">';
+    html += '<div style="flex:1"><div style="font-weight:700;font-size:13px">' + escapeHtml(g.name) + '</div>';
+    html += '<div style="font-family:var(--mono);font-size:10px;color:var(--ink3)">' + (g.url ? escapeHtml(g.url) : 'No URL') + '</div></div>';
+    html += '<button class="btn-s" onclick="removeGroup(' + i + ')" style="padding:4px 10px;font-size:10px">Remove</button></div>';
+  }
+  wrap.innerHTML = html;
+}
+renderGroups();
 
 renderHistory();
 updateStats();
