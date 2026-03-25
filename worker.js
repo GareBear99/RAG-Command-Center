@@ -44,7 +44,8 @@ export default {
     try {
       /* health — no rate limit */
       if (path === '/api/health') {
-return json({ status: 'ok', service: 'rag-command-center-api', ts: Date.now() });
+        const lastRun = await env.RG_DATA.get('compile:last_run');
+        return json({ status: 'ok', service: 'rag-command-center-api', ts: Date.now(), last_compile: lastRun });
       }
 
       /* global stats — no rate limit */
@@ -238,12 +239,20 @@ async function proxyFeed(body, env) {
 /* ═══════════════════════════════════════════
    AUTO-COMPILE — scrape public sources, score intent, store signals
    Sources: Victoria Open Data, Used Victoria, Reddit (via old.reddit)
+   Runs on cron (scheduled) AND on-demand via GET /api/compile
    ═══════════════════════════════════════════ */
 
 const VIC_HOODS = ['oak bay','saanich','langford','colwood','esquimalt','sooke','sidney','view royal','fairfield','james bay','fernwood','rockland','gonzales','jubilee','burnside','gorge','tillicum','hillside','quadra','vic west','north park','harris green','cadboro bay','gordon head','brentwood bay','cordova bay','bear mountain'];
 const BUY_KW = ['looking for a home','looking for a house','looking for a condo','looking for a place','want to buy a home','want to buy a house','house hunting','pre-approved','mortgage','first time buyer','first-time buyer','moving to victoria','relocating to victoria','buying a home','buying a house','looking to buy','budget for a home','down payment'];
 const SELL_KW = ['selling my home','selling my house','selling my condo','for sale by owner','fsbo','just listed','price reduced','open house','listing agent','selling property','want to sell','need to sell','thinking of selling','home for sale','house for sale'];
 const RE_REQUIRED = ['house','home','condo','apartment','property','real estate','mortgage','realtor','rent','lease','bedroom','sqft','square feet','listing','mls','strata','townhouse','duplex','lot','acre','land','zoning','assessed','renovate','flip','investment property'];
+
+/* Stale threshold — signals older than this are marked stale */
+const STALE_DAYS = 14;
+function isStaleSignal(compiledAt) {
+  if (!compiledAt) return true;
+  return (Date.now() - new Date(compiledAt).getTime()) > STALE_DAYS * 86400000;
+}
 
 function scorePost(text, author) {
   const lower = (text || '').toLowerCase();
@@ -333,18 +342,57 @@ async function compilePublicSources(env) {
     }
   } catch (e) { /* continue */ }
   
-  // Store results in KV
+  /* ── URL-based deduplication ──
+     Load existing signal URLs from KV to prevent storing the same post twice.
+     Possible duplicates (same author + similar text but different URL) are
+     flagged with duplicate_of instead of being silently dropped.            */
   const existing = await loadIndex(env, 'signal_index');
+  const existingSignals = (await Promise.all(
+    existing.slice(0, 200).map(id => env.RG_DATA.get('signal:' + id).then(v => v ? JSON.parse(v) : null))
+  )).filter(Boolean);
+  const existingUrls = new Set(existingSignals.map(s => s.url).filter(Boolean));
+  const existingTextKeys = new Map(existingSignals.map(s => [makeTextKey(s.text || s.raw_text || ''), s.id]));
+
   const newSignals = [];
+  let duplicateCount = 0;
   for (const r of results) {
+    /* Exact URL match → skip entirely (already stored) */
+    if (r.url && existingUrls.has(r.url)) { duplicateCount++; continue; }
+
+    /* Fuzzy text match → store but flag as possible duplicate with branch link */
+    const tKey = makeTextKey(r.text || '');
+    const possibleDupeOf = existingTextKeys.get(tKey) || null;
+
     const id = 'sig_' + genId();
-    await env.RG_DATA.put('signal:' + id, JSON.stringify({ ...r, id, compiled_at: new Date().toISOString() }), { expirationTtl: 2592000 });
+    const signal = {
+      ...r, id, compiled_at: new Date().toISOString(),
+      freshness: 'fresh',
+      ...(possibleDupeOf ? { duplicate_of: possibleDupeOf, duplicate_flag: 'possible' } : {})
+    };
+    await env.RG_DATA.put('signal:' + id, JSON.stringify(signal), { expirationTtl: 2592000 });
     newSignals.push(id);
+    if (r.url) existingUrls.add(r.url);
+    existingTextKeys.set(tKey, id);
   }
+
   const allIds = [...newSignals, ...existing].slice(0, 500);
   await env.RG_DATA.put('signal_index', JSON.stringify(allIds));
+
+  /* Bump last compile timestamp for health monitoring */
+  await env.RG_DATA.put('compile:last_run', new Date().toISOString());
   
-  return json({ success: true, compiled: results.length, sources: ['reddit_victoriabc', 'reddit_canadahousing', 'victoria_opendata'], signals: results });
+  return json({
+    success: true,
+    compiled: newSignals.length,
+    duplicates_skipped: duplicateCount,
+    sources: ['reddit_victoriabc', 'reddit_canadahousing', 'victoria_opendata'],
+    signals: results.filter(r => !r.url || !existingUrls.has(r.url) || newSignals.some(() => true))
+  });
+}
+
+/* Text key for fuzzy dedup — first 80 chars normalised */
+function makeTextKey(text) {
+  return (text || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 80);
 }
 
 async function listSignals(env) {
@@ -353,7 +401,14 @@ async function listSignals(env) {
   const items = (await Promise.all(
     ids.slice(0, limit).map(id => env.RG_DATA.get('signal:' + id).then(v => v ? JSON.parse(v) : null))
   )).filter(Boolean);
-  return json({ success: true, total: ids.length, signals: items });
+
+  /* Tag stale signals on read */
+  for (const s of items) {
+    s.freshness = isStaleSignal(s.compiled_at) ? 'stale' : 'fresh';
+  }
+
+  const lastRun = await env.RG_DATA.get('compile:last_run');
+  return json({ success: true, total: ids.length, last_compile: lastRun, signals: items });
 }
 
 /* ═══════════════════════════════════════════
@@ -473,4 +528,13 @@ function json(data, status = 200, extra = {}) {
     status,
     headers: { 'Content-Type': 'application/json', ...CORS, ...extra },
   });
+}
+
+/* ═══════════════════════════════════════════
+   SCHEDULED HANDLER — Cron-triggered auto-compile
+   Runs every hour to pull new signals automatically.
+   No duplicates: compilePublicSources() deduplicates by URL.
+   ═══════════════════════════════════════════ */
+export async function scheduled(event, env, ctx) {
+  ctx.waitUntil(compilePublicSources(env));
 }

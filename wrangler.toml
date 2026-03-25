@@ -10,6 +10,10 @@ workers_dev = true
 binding = "RG_DATA"
 id = "00eb93c98d324a80afb92bb214fa1fb3"
 
+# Cron trigger — auto-compile public signals every hour
+[triggers]
+crons = ["0 * * * *"]
+
 # Routes — configure after deploying with a custom domain
 # [env.production]
 # routes = [

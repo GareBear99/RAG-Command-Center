@@ -24,6 +24,11 @@ textarea.fi{min-height:140px;resize:vertical;line-height:1.6}
 .score-ring.hot{color:var(--hot);border-color:var(--hot);background:rgba(232,68,90,.08)}
 .score-ring.warm{color:var(--warm);border-color:var(--warm);background:rgba(212,168,67,.08)}
 .score-ring.cold{color:var(--cold);border-color:var(--cold);background:rgba(75,143,204,.08)}
+.score-ring.stale{color:var(--ink3);border-color:var(--ink3);background:rgba(142,151,168,.08)}
+.tag.stale{background:rgba(142,151,168,.08);color:var(--ink3);border-color:rgba(142,151,168,.15)}
+.tag.dupe{background:rgba(212,168,67,.06);color:var(--warm);border-color:rgba(212,168,67,.15)}
+.pulse-status{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;color:var(--green)}.pulse-status .dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 .history-item{padding:14px 18px;border-bottom:1px solid var(--border)}.history-item:last-child{border-bottom:none}
 .banner{border-radius:10px;padding:12px 14px;background:rgba(212,168,67,.08);border:1px solid rgba(212,168,67,.20);color:#d9c28d;font-size:12px;line-height:1.6;margin-bottom:16px}
 .stats-row{display:flex;gap:12px;margin-bottom:20px}.stat-mini{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px;flex:1}.stat-mini .lbl{font-family:var(--mono);font-size:9px;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}.stat-mini .val{font-family:var(--serif);font-size:28px;font-weight:600}
@@ -34,7 +39,8 @@ textarea.fi{min-height:140px;resize:vertical;line-height:1.6}
 <div class="main">
 <div class="page-hd"><h1 style="font-family:var(--serif)">AI Signal Paste</h1><p>paste any facebook post → AI scores intent, extracts keywords, detects neighbourhood</p></div>
 <div class="banner">Paste a Facebook group post from Victoria/Vancouver real estate groups. The AI engine will detect buyer/seller intent, extract budget and bed/bath requirements, identify the neighbourhood, and score the lead 0-100. Leads scoring 70+ auto-classify as <b>hot</b>.</div>
-<div class="stats-row"><div class="stat-mini"><div class="lbl">Signals Processed</div><div class="val" id="s-total">0</div></div><div class="stat-mini"><div class="lbl">Hot Leads Created</div><div class="val" style="color:var(--hot)" id="s-hot">0</div></div><div class="stat-mini"><div class="lbl">Warm Leads</div><div class="val" style="color:var(--warm)" id="s-warm">0</div></div><div class="stat-mini"><div class="lbl">Avg Intent Score</div><div class="val" id="s-avg">0</div></div></div>
+<div class="stats-row"><div class="stat-mini"><div class="lbl">Signals Processed</div><div class="val" id="s-total">0</div></div><div class="stat-mini"><div class="lbl">Hot Leads Created</div><div class="val" style="color:var(--hot)" id="s-hot">0</div></div><div class="stat-mini"><div class="lbl">Warm Leads</div><div class="val" style="color:var(--warm)" id="s-warm">0</div></div><div class="stat-mini"><div class="lbl">Stale (14d+)</div><div class="val" style="color:var(--ink3)" id="s-stale">0</div></div><div class="stat-mini"><div class="lbl">Avg Intent Score</div><div class="val" id="s-avg">0</div></div></div>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px"><div class="pulse-status" id="auto-status"><span class="dot"></span> Auto-compile active · polling every 5 min</div><div style="font-family:var(--mono);font-size:10px;color:var(--ink3)" id="last-compile">Last compile: —</div></div>
 <div class="card"><div class="card-hd"><h2>Paste Facebook Post</h2><span style="font-family:var(--mono);font-size:10px;color:var(--ink3)">Victoria · Vancouver · BC</span></div><div class="card-bd">
 <textarea class="fi" id="paste-input" placeholder="Paste a Facebook group post here...
 
@@ -233,22 +239,35 @@ function createLeadFromSignal(){
   setTimeout(()=>{ document.getElementById('r-create').textContent='Create Lead → CRM + Pipeline'; document.getElementById('r-create').disabled=false; }, 2000);
 }
 
+const STALE_DAYS = 14;
+function signalFreshness(s){
+  if(!s.created_at) return 'stale';
+  var age = (Date.now() - new Date(s.created_at).getTime()) / 86400000;
+  return age > STALE_DAYS ? 'stale' : (s.score>=70?'hot':(s.score>=40?'warm':'cold'));
+}
 function renderHistory(){
   const history = loadHistory();
   document.getElementById('h-count').textContent = history.length+' signals';
   const wrap = document.getElementById('history-list');
   if(!history.length){ wrap.innerHTML='<div style="padding:30px;text-align:center;font-family:var(--mono);font-size:11px;color:var(--ink3)">No signals processed yet. Paste a Facebook post above.</div>'; return; }
   wrap.innerHTML = history.slice(0,30).map(s => {
-    const band = s.score>=70?'hot':(s.score>=40?'warm':'cold');
-    return `<div class="history-item"><div style="display:flex;gap:12px;align-items:flex-start"><div class="score-ring ${band}" style="width:40px;height:40px;font-size:14px;border-width:2px;flex-shrink:0">${s.score}</div><div style="flex:1;min-width:0"><div style="font-weight:700;font-size:13px">${escapeHtml(s.intent||'').toUpperCase()} · ${s.neighbourhoods?.length?escapeHtml(s.neighbourhoods.join(', ')):'No area detected'}</div><div style="font-family:var(--mono);font-size:10px;color:var(--ink3);margin-top:4px">${escapeHtml(s.summary||'')}</div><div style="font-family:var(--mono);font-size:10px;color:var(--ink3);margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escapeHtml((s.raw_text||'').slice(0,120))}${(s.raw_text||'').length>120?'...':''}</div></div><div style="font-family:var(--mono);font-size:9px;color:var(--ink3);white-space:nowrap">${s.created_at?new Date(s.created_at).toLocaleDateString():''}</div></div></div>`;
+    const freshness = signalFreshness(s);
+    const band = freshness === 'stale' ? 'stale' : (s.score>=70?'hot':(s.score>=40?'warm':'cold'));
+    const dupeTag = s.duplicate_of ? '<span class="tag dupe">Possible Dupe → '+escapeHtml(String(s.duplicate_of).slice(0,12))+'</span>' : '';
+    const staleTag = freshness === 'stale' ? '<span class="tag stale">Stale</span>' : '';
+    const autoTag = s.auto_compiled ? '<span class="tag gold">Auto</span>' : '';
+    const srcTag = s.source_url ? '<a href="'+escapeHtml(s.source_url)+'" target="_blank" style="font-family:var(--mono);font-size:9px;color:var(--cold);text-decoration:underline;margin-left:6px">Source</a>' : '';
+    return `<div class="history-item"><div style="display:flex;gap:12px;align-items:flex-start"><div class="score-ring ${band}" style="width:40px;height:40px;font-size:14px;border-width:2px;flex-shrink:0">${s.score}</div><div style="flex:1;min-width:0"><div style="font-weight:700;font-size:13px">${escapeHtml(s.intent||'').toUpperCase()} · ${s.neighbourhoods?.length?escapeHtml(s.neighbourhoods.join(', ')):'No area detected'} ${staleTag}${dupeTag}${autoTag}</div><div style="font-family:var(--mono);font-size:10px;color:var(--ink3);margin-top:4px">${escapeHtml(s.summary||'')}${srcTag}</div><div style="font-family:var(--mono);font-size:10px;color:var(--ink3);margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escapeHtml((s.raw_text||'').slice(0,120))}${(s.raw_text||'').length>120?'...':''}</div></div><div style="font-family:var(--mono);font-size:9px;color:var(--ink3);white-space:nowrap">${s.created_at?new Date(s.created_at).toLocaleDateString():''}</div></div></div>`;
   }).join('');
 }
 
 function updateStats(){
   const history = loadHistory();
+  const staleCount = history.filter(s => signalFreshness(s) === 'stale').length;
   document.getElementById('s-total').textContent = history.length;
-  document.getElementById('s-hot').textContent = history.filter(s=>s.score>=70).length;
-  document.getElementById('s-warm').textContent = history.filter(s=>s.score>=40&&s.score<70).length;
+  document.getElementById('s-hot').textContent = history.filter(s=>s.score>=70 && signalFreshness(s)!=='stale').length;
+  document.getElementById('s-warm').textContent = history.filter(s=>s.score>=40&&s.score<70 && signalFreshness(s)!=='stale').length;
+  document.getElementById('s-stale').textContent = staleCount;
   document.getElementById('s-avg').textContent = history.length ? Math.round(history.reduce((s,h)=>s+h.score,0)/history.length) : 0;
 }
 
@@ -294,38 +313,78 @@ renderGroups();
 renderHistory();
 updateStats();
 
-/* Auto-compile from public sources via Cloudflare Worker */
-(async function(){
+/* ═══════════ AUTO-COMPILE ENGINE ═══════════
+   Fetches signals from Cloudflare Worker /api/compile.
+   Deduplicates locally by source_url before inserting.
+   Flags possible duplicates (same text prefix) with branch link.
+   Runs on page load + every 5 minutes automatically.           */
+var COMPILE_API = 'https://rag-command-center-api.admension.workers.dev';
+var COMPILE_INTERVAL_MS = 5 * 60 * 1000; /* 5 minutes */
+
+async function autoCompile(){
   try {
-    var API = 'https://rag-command-center-api.admension.workers.dev';
-    var res = await fetch(API + '/api/compile');
-    if(res.ok){
-      var data = await res.json();
-      if(data.signals && data.signals.length){
-        var history = loadHistory();
-        var existingTexts = new Set(history.map(function(h){ return (h.raw_text||h.text||'').slice(0,50); }));
-        var added = 0;
-        data.signals.forEach(function(s){
-          if(existingTexts.has((s.text||'').slice(0,50))) return;
-          history.unshift({
-            intent: s.intent||'asking',
-            score: s.score||0,
-            neighbourhoods: s.neighbourhoods||[],
-            keywords: [s.source||'auto', s.intent||''],
-            budget: s.budget,
-            beds: s.beds,
-            timeline: null,
-            preapproved: false,
-            summary: (s.source||'') + ' · ' + (s.intent||'') + ' · score ' + s.score,
-            raw_text: s.text||'',
-            created_at: new Date().toISOString(),
-            id: 'auto_' + Date.now().toString(36) + Math.random().toString(36).slice(2,5),
-            auto_compiled: true,
-            source_url: s.url||''
-          })          })          })                 if(added){ saveHistory(history); renderHistory(); updateStats(); }
-        console.log('Auto-compiled ' + added + ' signals from ' + data.sources.join(', '));
-      }
+    var res = await fetch(COMPILE_API + '/api/compile');
+    if(!res.ok) return;
+    var data = await res.json();
+    if(data.last_compile || data.compiled !== undefined){
+      var el = document.getElementById('last-compile');
+      if(el) el.textContent = 'Last compile: ' + (data.last_compile ? new Date(data.last_compile).toLocaleString() : 'just now') + ' · ' + (data.compiled||0) + ' new · ' + (data.duplicates_skipped||0) + ' dupes skipped';
     }
+    if(!data.signals || !data.signals.length) return;
+
+    var history = loadHistory();
+    /* Build dedup sets: source_url (exact) + text prefix (fuzzy) */
+    var existingUrls = new Set(history.map(function(h){ return h.source_url || ''; }).filter(Boolean));
+    var existingTextKeys = {};
+    history.forEach(function(h){ var key = (h.raw_text||h.text||'').toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,80); if(key) existingTextKeys[key] = h.id; });
+
+    var added = 0;
+    data.signals.forEach(function(s){
+      /* Exact URL dedup — skip entirely */
+      if(s.url && existingUrls.has(s.url)) return;
+
+      /* Fuzzy text dedup — store but flag as possible duplicate */
+      var tKey = (s.text||'').toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,80);
+      var possibleDupeOf = existingTextKeys[tKey] || null;
+
+      var signal = {
+        intent: s.intent||'asking',
+        score: s.score||0,
+        credibility: s.credibility||null,
+        neighbourhoods: s.neighbourhoods||[],
+        keywords: [s.source||'auto', s.intent||''],
+        budget: s.budget,
+        beds: s.beds,
+        timeline: null,
+        preapproved: false,
+        summary: (s.source||'') + ' · ' + (s.intent||'') + ' · score ' + s.score + (s.credibility ? ' · cred ' + s.credibility : ''),
+        raw_text: s.text||'',
+        created_at: s.compiled_at || new Date().toISOString(),
+        id: 'auto_' + Date.now().toString(36) + Math.random().toString(36).slice(2,5),
+        auto_compiled: true,
+        source_url: s.url||'',
+        freshness: s.freshness || 'fresh'
+      };
+      if(possibleDupeOf){
+        signal.duplicate_of = possibleDupeOf;
+        signal.duplicate_flag = 'possible';
+      }
+      history.unshift(signal);
+      if(s.url) existingUrls.add(s.url);
+      existingTextKeys[tKey] = signal.id;
+      added++;
+    });
+    if(added){
+      saveHistory(history);
+      renderHistory();
+      updateStats();
+    }
+    console.log('Auto-compiled ' + added + ' new signals, ' + (data.duplicates_skipped||0) + ' dupes skipped from ' + (data.sources||[]).join(', '));
   } catch(e){ console.log('Auto-compile skipped:', e.message); }
-})();
+}
+
+/* Run immediately on page load */
+autoCompile();
+/* Then poll every 5 minutes while page is open */
+setInterval(autoCompile, COMPILE_INTERVAL_MS);
 </script></body></html>

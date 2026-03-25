@@ -152,6 +152,7 @@ a { color: inherit; text-decoration: none; }
 .cq-ring.hot { background: rgba(232,68,90,.1); border: 1.5px solid rgba(232,68,90,.35); color: var(--hot); }
 .cq-ring.warm { background: rgba(212,168,67,.1); border: 1.5px solid rgba(212,168,67,.35); color: var(--warm); }
 .cq-ring.cold { background: rgba(75,143,204,.1); border: 1.5px solid rgba(75,143,204,.35); color: var(--cold); }
+.cq-ring.stale { background: rgba(142,151,168,.08); border: 1.5px solid rgba(142,151,168,.25); color: var(--ink3); }
 .cq-info { flex: 1; min-width: 0; }
 .cq-name { font-weight: 600; font-size: 13.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 2px; }
 .cq-meta { font-family: var(--mono); font-size: 10px; color: var(--ink3); }
@@ -296,6 +297,7 @@ tbody tr:hover { background: var(--panel2); }
 .lead-card.hot { border-left: 3px solid var(--hot); }
 .lead-card.warm { border-left: 3px solid var(--warm); }
 .lead-card.cold { border-left: 3px solid var(--cold); }
+.lead-card.stale { border-left: 3px solid var(--ink3); opacity: .65; }
 .lead-main { display: flex; align-items: center; gap: 14px; padding: 14px 18px; }
 .lead-badge {
   width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
@@ -305,6 +307,7 @@ tbody tr:hover { background: var(--panel2); }
 .lead-badge.hot { background: rgba(232,68,90,.1); border: 1.5px solid rgba(232,68,90,.3); color: var(--hot); }
 .lead-badge.warm { background: rgba(212,168,67,.1); border: 1.5px solid rgba(212,168,67,.3); color: var(--warm); }
 .lead-badge.cold { background: rgba(75,143,204,.1); border: 1.5px solid rgba(75,143,204,.3); color: var(--cold); }
+.lead-badge.stale { background: rgba(142,151,168,.1); border: 1.5px solid rgba(142,151,168,.3); color: var(--ink3); }
 .lead-info { flex: 1; min-width: 0; }
 .lead-name { font-weight: 700; font-size: 14px; margin-bottom: 3px; }
 .lead-meta { font-family: var(--mono); font-size: 10px; color: var(--ink3); display: flex; gap: 14px; flex-wrap: wrap; }
@@ -326,6 +329,7 @@ tbody tr:hover { background: var(--panel2); }
 .lead-task-bar.hot { background: rgba(232,68,90,.04); color: var(--hot); }
 .lead-task-bar.warm { background: rgba(212,168,67,.04); color: var(--warm); }
 .lead-task-bar.cold { color: var(--ink3); }
+.lead-task-bar.stale { background: rgba(142,151,168,.04); color: var(--ink3); font-style: italic; }
 
 /* ── Add listing / lead form ──────────────────────────────────────────────── */
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -589,6 +593,7 @@ body.theme-light .topbar, body.theme-light .card, body.theme-light .stat-card{ b
   <div class="stats-grid" id="stats-row">
     <div class="stat-card"><div class="lbl">Hot Leads</div><div class="val c-hot" id="s-hot">–</div><div class="sub" id="s-today">– new today</div></div>
     <div class="stat-card"><div class="lbl">Warm Leads</div><div class="val c-warm" id="s-warm">–</div><div class="sub" id="s-total-leads">– total leads</div></div>
+    <div class="stat-card"><div class="lbl">Stale Leads</div><div class="val" style="color:var(--ink3)" id="s-stale">–</div><div class="sub">7+ days no action</div></div>
     <div class="stat-card"><div class="lbl">Active Listings</div><div class="val c-green" id="s-active">–</div><div class="sub" id="s-props">– properties</div></div>
     <div class="stat-card"><div class="lbl">Top Deal Score</div><div class="val" id="s-top">–</div><div class="sub">out of 100</div></div>
     <div class="stat-card"><div class="lbl">Price Drops</div><div class="val c-warm" id="s-drops">–</div><div class="sub">listings reduced</div></div>
@@ -690,6 +695,7 @@ body.theme-light .topbar, body.theme-light .card, body.theme-light .stat-card{ b
     <button class="lead-tab" onclick="setLeadTab('hot',this)">🔥 Hot <span class="lead-tab-cnt" id="lt-hot">–</span></button>
     <button class="lead-tab" onclick="setLeadTab('warm',this)">🌡 Warm <span class="lead-tab-cnt" id="lt-warm">–</span></button>
     <button class="lead-tab" onclick="setLeadTab('cold',this)">🧊 Cold <span class="lead-tab-cnt" id="lt-cold">–</span></button>
+    <button class="lead-tab" onclick="setLeadTab('stale',this)">⏳ Stale <span class="lead-tab-cnt" id="lt-stale">–</span></button>
   </div>
   <div class="lead-stack" id="leads-stack"></div>
 </section>
@@ -1504,18 +1510,34 @@ function nav(id, btn) {
 /* ════════════════════════════════════════════════════════════
    RENDER — DASHBOARD
 ════════════════════════════════════════════════════════════ */
+const LEAD_STALE_DAYS = 7; /* leads older than 7 days without action → stale */
+function applyLeadFreshness(leads){
+  var nowMs = Date.now();
+  leads.forEach(function(l){
+    if(l.score === 'stale') return; /* already stale */
+    var age = (nowMs - new Date(l.created_at || 0).getTime()) / 86400000;
+    if(age > LEAD_STALE_DAYS){
+      l.original_score = l.original_score || l.score;
+      l.score = 'stale';
+    }
+  });
+  return leads;
+}
 function renderDashboard() {
   const listings = scoreListings(loadListings());
   const marketBench = buildListingMarketBenchmarks(listings);
-  const leads = loadLeads();
+  const leads = applyLeadFreshness(loadLeads());
 
   const hot = leads.filter(l=>l.score==='hot');
   const warm = leads.filter(l=>l.score==='warm');
+  const staleLeads = leads.filter(l=>l.score==='stale');
+  const cold = leads.filter(l=>l.score==='cold');
   const drops = listings.filter(l=>(l.deal_explanation?.components?.price_drop?.score||0)>0.1);
   const staleCritical = listings.filter(l=>l.data_quality?.critical_stale).length;
 
   document.getElementById('s-hot').textContent = hot.length;
   document.getElementById('s-warm').textContent = warm.length;
+  var staleEl = document.getElementById('s-stale'); if(staleEl) staleEl.textContent = staleLeads.length;
   document.getElementById('s-today').textContent = leads.filter(l=>l.created_at?.startsWith(today())).length + ' new today';
   document.getElementById('s-total-leads').textContent = leads.length + ' total leads';
   document.getElementById('s-active').textContent = listings.length;
@@ -1658,15 +1680,17 @@ function setLeadTab(tab, btn) {
 }
 
 function renderLeadsView() {
-  const leads = loadLeads();
+  const leads = applyLeadFreshness(loadLeads());
   const hot = leads.filter(l=>l.score==='hot');
   const warm = leads.filter(l=>l.score==='warm');
   const cold = leads.filter(l=>l.score==='cold');
+  const staleLeads = leads.filter(l=>l.score==='stale');
 
   document.getElementById('lt-all').textContent = leads.length;
   document.getElementById('lt-hot').textContent = hot.length;
   document.getElementById('lt-warm').textContent = warm.length;
   document.getElementById('lt-cold').textContent = cold.length;
+  var staleTabEl = document.getElementById('lt-stale'); if(staleTabEl) staleTabEl.textContent = staleLeads.length;
 
   let filtered = leads;
   if (currentLeadTab!=='all') filtered = leads.filter(l=>l.score===currentLeadTab);

@@ -14,9 +14,26 @@
 const AutoLeads = (function(){
   const KEY = 'rag_auto_leads';
   const LAST_RUN = 'rag_autolead_lastrun';
+  const STALE_DAYS = 7; /* leads older than 7 days with no interaction → stale */
   
   function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(e){ return []; } }
   function save(leads){ localStorage.setItem(KEY, JSON.stringify(leads.slice(0,500))); }
+  
+  /** Apply time-based freshness decay to all leads */
+  function applyFreshness(leads){
+    var now = Date.now();
+    leads.forEach(function(l){
+      var age = (now - new Date(l.created_at || 0).getTime()) / 86400000;
+      if(age > STALE_DAYS && l.score !== 'stale'){
+        l.original_score = l.original_score || l.score;
+        l.score = 'stale';
+        l.freshness = 'stale';
+      } else {
+        l.freshness = l.score === 'hot' ? 'hot' : (l.score === 'warm' ? 'warm' : 'cold');
+      }
+    });
+    return leads;
+  }
   
   function generate(listings){
     if (!listings || !listings.length) return [];
@@ -140,9 +157,24 @@ const AutoLeads = (function(){
     
     // Merge with existing, dedupe
     const all = [...newLeads, ...existing];
+    // Apply stale decay before saving
+    applyFreshness(all);
     save(all);
     localStorage.setItem(LAST_RUN, new Date().toISOString());
     return all;
+  }
+  
+  /** Get lead counts by category including stale */
+  function counts(leads){
+    if(!leads) leads = load();
+    applyFreshness(leads);
+    return {
+      total: leads.length,
+      hot: leads.filter(function(l){ return l.score === 'hot'; }).length,
+      warm: leads.filter(function(l){ return l.score === 'warm'; }).length,
+      cold: leads.filter(function(l){ return l.score === 'cold'; }).length,
+      stale: leads.filter(function(l){ return l.score === 'stale'; }).length
+    };
   }
   
   // Neighbourhood momentum analysis
@@ -166,5 +198,5 @@ const AutoLeads = (function(){
     return Object.values(hoods).sort((a,b) => b.avgScore - a.avgScore);
   }
   
-  return { load, save, generate, analyseNeighbourhoods };
+  return { load, save, generate, analyseNeighbourhoods, applyFreshness, counts, STALE_DAYS };
 })();
