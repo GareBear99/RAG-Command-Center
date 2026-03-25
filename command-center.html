@@ -897,8 +897,8 @@ const DB = {
   set(key,val) { localStorage.setItem('rrg_'+key, JSON.stringify(val)); },
 };
 
-function loadListings() { return DB.get('listings') || []; }
-function loadLeads() { return DB.get('leads') || []; }
+function loadListings() { var ls = DB.get('listings'); if(ls&&ls.length) return ls; var b=window.GRR_BOOTSTRAP; return (b&&b.internal&&b.internal.canonical_listings)?b.internal.canonical_listings:[]; }
+function loadLeads() { var ls = DB.get('leads'); if(ls&&ls.length) return ls; var b=window.GRR_BOOTSTRAP; return (b&&b.internal&&b.internal.leads)?b.internal.leads:[]; }
 const CANADA_CITY_OPTIONS = {
   BC:['Vancouver','Surrey','Burnaby','Richmond','Coquitlam','Kelowna','Victoria','Nanaimo','Kamloops','Prince George'],
   AB:['Calgary','Edmonton','Red Deer','Lethbridge','Medicine Hat','Grande Prairie','Airdrie','Spruce Grove','St. Albert','Fort McMurray'],
