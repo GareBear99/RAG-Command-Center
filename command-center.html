@@ -447,6 +447,76 @@ tbody tr:hover { background: var(--panel2); }
 }
 .toast.show { opacity: 1; }
 
+/* ── EVE Chat Panel ──────────────────────────────────────────────────────── */
+.eve-fab {
+  position: fixed; bottom: 28px; right: 28px;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: linear-gradient(135deg, #d4a843, #c49a35); border: none;
+  color: #000; font-size: 20px; font-weight: 800;
+  box-shadow: 0 4px 24px rgba(212,168,67,.4);
+  z-index: 800; transition: all .2s; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--display);
+}
+.eve-fab:hover { transform: scale(1.1); box-shadow: 0 8px 36px rgba(212,168,67,.5); }
+.eve-panel {
+  display: none; position: fixed; bottom: 96px; right: 28px;
+  width: 420px; max-height: 520px; background: var(--panel);
+  border: 1px solid var(--border2); border-radius: 16px;
+  box-shadow: 0 24px 64px rgba(0,0,0,.6); z-index: 801;
+  flex-direction: column; overflow: hidden;
+  animation: modalIn .18s ease;
+}
+.eve-panel.open { display: flex; }
+.eve-hd {
+  padding: 16px 18px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 10px;
+}
+.eve-avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--accent); display: flex; align-items: center;
+  justify-content: center; font-weight: 800; font-size: 12px; color: #000;
+}
+.eve-title { font-weight: 700; font-size: 14px; }
+.eve-sub { font-family: var(--mono); font-size: 9px; color: var(--ink3); }
+.eve-close { margin-left: auto; background: var(--panel2); border: 1px solid var(--border2); width: 28px; height: 28px; border-radius: 50%; color: var(--ink3); font-size: 14px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.eve-close:hover { background: var(--hot); color: #fff; border-color: var(--hot); }
+.eve-body {
+  flex: 1; overflow-y: auto; padding: 14px 18px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.eve-msg {
+  max-width: 92%; padding: 10px 14px; border-radius: 12px;
+  font-size: 12px; line-height: 1.65; white-space: pre-wrap;
+  font-family: var(--mono);
+}
+.eve-msg.user {
+  align-self: flex-end; background: rgba(212,168,67,.12);
+  border: 1px solid rgba(212,168,67,.2); color: var(--ink);
+}
+.eve-msg.eve {
+  align-self: flex-start; background: var(--panel2);
+  border: 1px solid var(--border2); color: var(--ink2);
+}
+.eve-msg.eve strong, .eve-msg.eve b { color: var(--ink); }
+.eve-input-row {
+  padding: 12px 14px; border-top: 1px solid var(--border);
+  display: flex; gap: 8px;
+}
+.eve-input {
+  flex: 1; padding: 10px 12px; border: 1px solid var(--border2);
+  border-radius: 8px; background: var(--panel2); color: var(--ink);
+  font-family: var(--mono); font-size: 12px; outline: none;
+}
+.eve-input:focus { border-color: var(--accent); }
+.eve-send {
+  padding: 10px 16px; background: var(--accent); border: none;
+  border-radius: 8px; color: #000; font-weight: 700; font-size: 12px;
+  cursor: pointer; transition: background .15s;
+}
+.eve-send:hover { background: #c49a35; }
+@media(max-width:500px){ .eve-panel { width: calc(100vw - 24px); right: 12px; bottom: 84px; } }
+
 /* ── Responsive ───────────────────────────────────────────────────────────── */
 @media(max-width:900px){
   .stats-grid { grid-template-columns: repeat(3,1fr); }
@@ -481,7 +551,7 @@ body.theme-light .pulse-dot{ box-shadow:0 0 8px rgba(46,201,122,.35); }
 body.theme-light .topbar, body.theme-light .card, body.theme-light .stat-card{ box-shadow:0 6px 18px rgba(12,13,16,.04); }
 
 </style>
-<script src="data/bootstrap.js"></script><script src="assets/js/resolver.js"></script><script src="assets/js/compiler.js"></script><script src="assets/js/utils.js"></script><script src="assets/js/gps-fallback-map.js"></script><script src="assets/js/auth.js"></script></head>
+<script src="data/bootstrap.js"></script><script src="assets/js/resolver.js"></script><script src="assets/js/compiler.js"></script><script src="assets/js/utils.js"></script><script src="assets/js/gps-fallback-map.js"></script><script src="assets/js/auth.js"></script><script src="assets/js/eve.js"></script></head>
 <body>
 <div id="app">
 
@@ -716,6 +786,63 @@ body.theme-light .topbar, body.theme-light .card, body.theme-light .stat-card{ b
 
 <!-- ── Toast ── -->
 <div class="toast" id="toast"></div>
+
+<!-- ── EVE Chat ── -->
+<button class="eve-fab" onclick="toggleEve()" title="Ask EVE">EVE</button>
+<div class="eve-panel" id="evePanel">
+  <div class="eve-hd">
+    <div class="eve-avatar">E</div>
+    <div><div class="eve-title">EVE</div><div class="eve-sub">RAG Command Center AI</div></div>
+    <button class="eve-close" onclick="toggleEve()">✕</button>
+  </div>
+  <div class="eve-body" id="eveBody">
+    <div class="eve-msg eve">Hey — I'm EVE. I'm hooked into your listings, leads, pipeline, signals, and commissions. Ask me anything about your platform or what to do next.</div>
+  </div>
+  <div class="eve-input-row">
+    <input class="eve-input" id="eveInput" placeholder="Ask EVE anything…" onkeydown="if(event.key==='Enter')sendEve()">
+    <button class="eve-send" onclick="sendEve()">Send</button>
+  </div>
+</div>
+<script>
+function toggleEve(){
+  document.getElementById('evePanel').classList.toggle('open');
+  if(document.getElementById('evePanel').classList.contains('open')){
+    document.getElementById('eveInput').focus();
+    loadEveHistory();
+  }
+}
+async function sendEve(){
+  const input = document.getElementById('eveInput');
+  const text = input.value.trim();
+  if(!text) return;
+  input.value = '';
+  appendEveMsg(text, 'user');
+  const response = await EVE.respond(text);
+  appendEveMsg(response, 'eve');
+  // Save history
+  const history = EVE.loadChat();
+  history.push({role:'user',text,ts:Date.now()});
+  history.push({role:'eve',text:response,ts:Date.now()});
+  EVE.saveChat(history);
+}
+function appendEveMsg(text, role){
+  const body = document.getElementById('eveBody');
+  const div = document.createElement('div');
+  div.className = 'eve-msg ' + role;
+  // Simple markdown bold
+  div.innerHTML = escapeHtml(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+  body.appendChild(div);
+  body.scrollTop = body.scrollHeight;
+}
+function loadEveHistory(){
+  const body = document.getElementById('eveBody');
+  const history = EVE.loadChat();
+  if(!history.length) return;
+  // Only load if body has just the welcome message
+  if(body.children.length > 1) return;
+  history.slice(-20).forEach(m => appendEveMsg(m.text, m.role));
+}
+</script>
 
 <script>
 /* ════════════════════════════════════════════════════════════
