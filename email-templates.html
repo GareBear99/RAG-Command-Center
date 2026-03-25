@@ -1,0 +1,143 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Email Templates — RAG Command Center</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0c0d10;--panel:#131417;--panel2:#191b20;--border:#22252d;--border2:#2a2e38;--accent:#d4a843;--hot:#e8445a;--green:#2ec97a;--ink:#eaecf0;--ink2:#8e97a8;--ink3:#50586a;--mono:'DM Mono',monospace;--serif:'Fraunces',Georgia,serif;--display:'Syne',sans-serif;--radius:10px}
+html{font-family:var(--display);background:var(--bg);color:var(--ink)}body{min-height:100vh}button{font-family:inherit;cursor:pointer}input,select,textarea{font-family:inherit}a{color:inherit;text-decoration:none}
+.topbar{height:52px;background:var(--panel);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 24px;position:sticky;top:0;z-index:200}
+.topbar-logo{display:flex;align-items:center;gap:10px}.logo-hex{width:28px;height:28px;background:var(--accent);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:8px;color:#000}
+.topbar-name{font-weight:700;font-size:14px}.topbar-sub{font-family:var(--mono);font-size:9px;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase}
+.topbar-tabs{display:flex;gap:2px}.tab-btn{padding:6px 16px;border-radius:6px;background:transparent;border:1px solid transparent;font-size:12px;font-weight:600;color:var(--ink3);transition:all .15s}.tab-btn:hover{color:var(--ink);background:var(--panel2)}.tab-btn.active{color:var(--accent);background:rgba(212,168,67,.08);border-color:rgba(212,168,67,.2)}
+.main{padding:28px;max-width:1200px;margin:0 auto}
+.page-hd{margin-bottom:20px}.page-hd h1{font-family:var(--serif);font-size:28px;font-weight:600;margin-bottom:3px}.page-hd p{font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:20px}
+.card-hd{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--border)}.card-hd h2{font-size:13px;font-weight:600}
+.card-bd{padding:18px}
+.fi{padding:10px 12px;border:1px solid var(--border2);border-radius:7px;background:var(--panel2);color:var(--ink);font-family:var(--mono);font-size:12px;outline:none;width:100%}.fi:focus{border-color:var(--accent)}
+textarea.fi{min-height:200px;resize:vertical;line-height:1.6}
+.btn-p{padding:10px 20px;background:var(--accent);border:none;border-radius:7px;color:#000;font-weight:700;font-size:13px}.btn-p:hover{background:#c49a35}
+.btn-s{padding:9px 16px;background:var(--panel2);border:1px solid var(--border2);border-radius:7px;color:var(--ink2);font-size:12px;font-weight:600}
+.tag{font-family:var(--mono);font-size:9px;padding:3px 8px;border-radius:4px;background:rgba(212,168,67,.08);color:var(--accent);border:1px solid rgba(212,168,67,.2);cursor:pointer;display:inline-block;margin:3px}
+.tag:hover{background:rgba(212,168,67,.15)}
+.tmpl-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:20px}
+.tmpl-card{background:var(--panel2);border:1px solid var(--border2);border-radius:10px;padding:16px;cursor:pointer;transition:all .15s}
+.tmpl-card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.tmpl-card h3{font-size:14px;font-weight:700;margin-bottom:4px}.tmpl-card p{font-family:var(--mono);font-size:10px;color:var(--ink3);line-height:1.5}
+.preview{background:#fff;color:#222;border-radius:10px;padding:24px;margin-top:16px;font-family:Arial,sans-serif;font-size:14px;line-height:1.7;min-height:200px;border:1px solid var(--border2)}
+.preview h2{color:#13100d;margin-bottom:12px}.preview a{color:#c8922f}
+.banner{border-radius:10px;padding:12px 14px;background:rgba(212,168,67,.08);border:1px solid rgba(212,168,67,.20);color:#d9c28d;font-size:12px;line-height:1.6;margin-bottom:16px}
+</style>
+<script src="data/bootstrap.js"></script><script src="assets/js/utils.js"></script></head><body>
+<header class="topbar"><div class="topbar-logo"><div class="logo-hex">RAG</div><div><div class="topbar-name">RAG Command Center</div><div class="topbar-sub">Email Templates</div></div></div>
+<nav class="topbar-tabs"><a class="tab-btn" href="command-center.html">Dashboard</a><a class="tab-btn" href="contacts.html">Contacts</a><a class="tab-btn active" href="email-templates.html">Email</a><a class="tab-btn" href="signals.html">Signals</a><a class="tab-btn" href="settings.html">Settings</a></nav></header>
+<div class="main">
+<div class="page-hd"><h1 style="font-family:var(--serif)">Email Templates</h1><p>compose · personalize · preview · copy</p></div>
+<div class="banner">Use tokens like <b>{{first_name}}</b>, <b>{{property_address}}</b>, <b>{{deal_score}}</b>, <b>{{price}}</b>, <b>{{city}}</b> in your templates. Click a token below to insert it. Preview renders with sample data.</div>
+
+<div class="card"><div class="card-hd"><h2>Quick Templates</h2></div><div class="card-bd">
+<div class="tmpl-grid">
+<div class="tmpl-card" onclick="loadTemplate('new_listing')"><h3>🏠 New Listing Alert</h3><p>Notify buyers about a new listing matching their criteria.</p></div>
+<div class="tmpl-card" onclick="loadTemplate('price_drop')"><h3>↓ Price Drop Alert</h3><p>Alert interested buyers about a price reduction.</p></div>
+<div class="tmpl-card" onclick="loadTemplate('market_report')"><h3>📊 Market Report</h3><p>Monthly market stats for a specific city or area.</p></div>
+<div class="tmpl-card" onclick="loadTemplate('open_house')"><h3>🏡 Open House Invite</h3><p>Invite contacts to an upcoming open house event.</p></div>
+</div>
+</div></div>
+
+<div class="card"><div class="card-hd"><h2>Compose</h2><span style="font-family:var(--mono);font-size:10px;color:var(--ink3)">Insert tokens:</span></div><div class="card-bd">
+<div style="margin-bottom:12px">
+<span class="tag" onclick="insertToken('{{first_name}}')">{{first_name}}</span>
+<span class="tag" onclick="insertToken('{{last_name}}')">{{last_name}}</span>
+<span class="tag" onclick="insertToken('{{property_address}}')">{{property_address}}</span>
+<span class="tag" onclick="insertToken('{{city}}')">{{city}}</span>
+<span class="tag" onclick="insertToken('{{price}}')">{{price}}</span>
+<span class="tag" onclick="insertToken('{{deal_score}}')">{{deal_score}}</span>
+<span class="tag" onclick="insertToken('{{beds}}')">{{beds}}</span>
+<span class="tag" onclick="insertToken('{{baths}}')">{{baths}}</span>
+<span class="tag" onclick="insertToken('{{sqft}}')">{{sqft}}</span>
+<span class="tag" onclick="insertToken('{{agent_name}}')">{{agent_name}}</span>
+<span class="tag" onclick="insertToken('{{agent_phone}}')">{{agent_phone}}</span>
+</div>
+<div style="margin-bottom:12px"><label style="font-family:var(--mono);font-size:10px;color:var(--ink3)">Subject Line</label><input class="fi" id="et-subject" placeholder="New listing in {{city}} — {{beds}} bed, {{price}}"></div>
+<div><label style="font-family:var(--mono);font-size:10px;color:var(--ink3)">Body</label><textarea class="fi" id="et-body" placeholder="Hi {{first_name}},
+
+I wanted to let you know about a property that just hit the market..."></textarea></div>
+<div style="display:flex;gap:10px;margin-top:14px">
+<button class="btn-p" onclick="previewEmail()">Preview</button>
+<button class="btn-s" onclick="copyEmail()">Copy to Clipboard</button>
+<button class="btn-s" onclick="saveTemplate()">Save as Template</button>
+</div>
+<div class="preview" id="et-preview" style="display:none"></div>
+</div></div>
+
+<div class="card"><div class="card-hd"><h2>Saved Templates</h2><span style="font-family:var(--mono);font-size:10px;color:var(--ink3)" id="st-count">0 saved</span></div><div id="saved-list" class="card-bd"></div></div>
+</div>
+<script>
+const ET_KEY = 'rag_email_templates';
+const TEMPLATES = {
+  new_listing: {
+    subject: 'New listing in {{city}} — {{beds}} bed, {{price}}',
+    body: 'Hi {{first_name}},\n\nA new property just hit the market that matches what you\'re looking for:\n\n📍 {{property_address}}, {{city}}\n💰 {{price}}\n🛏 {{beds}} bed · {{baths}} bath · {{sqft}} sqft\n📈 Deal Score: {{deal_score}}%\n\nThis one scored well on our deal engine — it\'s priced competitively for the area. Let me know if you\'d like to schedule a showing.\n\nBest,\n{{agent_name}}\n{{agent_phone}}'
+  },
+  price_drop: {
+    subject: 'Price reduced — {{property_address}} now {{price}}',
+    body: 'Hi {{first_name}},\n\nGood news — a property you may be interested in just had a price reduction:\n\n📍 {{property_address}}, {{city}}\n💰 Now {{price}} (reduced)\n📈 Deal Score: {{deal_score}}%\n\nPrice drops like this often signal a motivated seller. This could be a great opportunity to make a competitive offer.\n\nWant to take a closer look? I can set up a showing this week.\n\n{{agent_name}}\n{{agent_phone}}'
+  },
+  market_report: {
+    subject: '{{city}} Market Update — What\'s happening right now',
+    body: 'Hi {{first_name}},\n\nHere\'s a quick snapshot of the {{city}} real estate market:\n\n• Active listings in our system\n• Average price per sqft trends\n• Recent price drops and motivated sellers\n• Below-market opportunities flagged by our deal engine\n\nOur platform tracks real municipal assessment data across Canadian cities and scores every listing with a transparent 6-component deal engine.\n\nWant to discuss what this means for your buying or selling plans? Let\'s connect.\n\n{{agent_name}}\n{{agent_phone}}'
+  },
+  open_house: {
+    subject: 'You\'re invited — Open House at {{property_address}}',
+    body: 'Hi {{first_name}},\n\nYou\'re invited to an open house this weekend:\n\n📍 {{property_address}}, {{city}}\n💰 {{price}}\n🛏 {{beds}} bed · {{baths}} bath · {{sqft}} sqft\n📈 Deal Score: {{deal_score}}%\n\n📅 Date: [DATE]\n⏰ Time: [TIME]\n\nCome see it in person. No appointment needed — just drop by during the open house hours.\n\nSee you there,\n{{agent_name}}\n{{agent_phone}}'
+  }
+};
+const SAMPLE = {first_name:'Sarah',last_name:'Chen',property_address:'1842 Fairfield Rd',city:'Victoria',price:'$485,000',deal_score:'78',beds:'3',baths:'2',sqft:'1,640',agent_name:'Amit Khatkar',agent_phone:'250-507-8949'};
+
+function loadTemplate(key){
+  const t = TEMPLATES[key];
+  if(!t) return;
+  document.getElementById('et-subject').value = t.subject;
+  document.getElementById('et-body').value = t.body;
+}
+function insertToken(token){
+  const el = document.getElementById('et-body');
+  const start = el.selectionStart;
+  const val = el.value;
+  el.value = val.slice(0,start) + token + val.slice(el.selectionEnd);
+  el.focus();
+  el.selectionStart = el.selectionEnd = start + token.length;
+}
+function renderTokens(text){
+  return text.replace(/\{\{(\w+)\}\}/g, (m,k) => SAMPLE[k] || m);
+}
+function previewEmail(){
+  const subject = document.getElementById('et-subject').value;
+  const body = document.getElementById('et-body').value;
+  const preview = document.getElementById('et-preview');
+  preview.style.display = 'block';
+  preview.innerHTML = `<div style="background:#f5f1e9;padding:12px 16px;border-radius:8px;margin-bottom:16px;font-weight:700">Subject: ${escapeHtml(renderTokens(subject))}</div><div style="white-space:pre-wrap">${escapeHtml(renderTokens(body)).replace(/\n/g,'<br>')}</div>`;
+}
+function copyEmail(){
+  const subject = renderTokens(document.getElementById('et-subject').value);
+  const body = renderTokens(document.getElementById('et-body').value);
+  navigator.clipboard.writeText(`Subject: ${subject}\n\n${body}`).then(()=>alert('Copied to clipboard!')).catch(()=>alert('Copy failed — select and copy manually.'));
+}
+function loadSaved(){ try{ return JSON.parse(localStorage.getItem(ET_KEY)||'[]'); }catch{ return []; } }
+function saveTemplate(){
+  const subject = document.getElementById('et-subject').value.trim();
+  const body = document.getElementById('et-body').value.trim();
+  if(!subject||!body){ alert('Enter subject and body first.'); return; }
+  const saved = loadSaved();
+  saved.unshift({ subject, body, created_at: new Date().toISOString() });
+  localStorage.setItem(ET_KEY, JSON.stringify(saved.slice(0,50)));
+  renderSaved();
+}
+function renderSaved(){
+  const saved = loadSaved();
+  document.getElementById('st-count').textContent = saved.length + ' saved';
+  const wrap = document.getElementById('saved-list');
+  if(!saved.length){ wrap.innerHTML='<div style="text-align:center;padding:30px;font-family:var(--mono);font-size:11px;color:var(--ink3)">No saved templates yet.</div>'; return; }
+  wrap.innerHTML = saved.map((t,i) => `<div class="tmpl-card" onclick="document.getElementById('et-subject').value=${JSON.stringify(t.subject)};document.getElementById('et-body').value=${JSON.stringify(t.body)}"><h3>${escapeHtml(t.subject.slice(0,60))}</h3><p>${new Date(t.created_at).toLocaleDateString()} · ${t.body.length} chars</p></div>`).join('');
+}
+renderSaved();
+</script></body></html>

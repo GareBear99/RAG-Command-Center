@@ -311,9 +311,37 @@ async function renderPublicListings(targetId, onlyId){
         <div class=\"row\"><div><div class=\"price\">$${escapeHtml(l.price_label || Number(l.list_price||0).toLocaleString())}</div><div class=\"addr\">${escapeHtml(l.address||'')}</div><div class=\"meta\">${escapeHtml(l.city||'')}, ${escapeHtml(l.province||'')} · ${escapeHtml(listingPostedLabel(l))}${publicListingFactLine(l, benchmarks) ? ` · ${escapeHtml(publicListingFactLine(l, benchmarks))}` : ''}</div></div><div><span class=\"pill\" style=\"color:#8f6a14;border-color:#e8c56f;background:#fff7e2\">Deal ${Number(l.deal_score||0)}%</span>${(() => { const m = publicListingMarketPosition(l, benchmarks); return m?.label ? `<span class=\"pill\" style=\"margin-left:8px;color:${m.direction==='below'?'#1f7a46':(m.direction==='above'?'#8a4a12':'#41536a')};border-color:${m.direction==='below'?'#95dbb2':(m.direction==='above'?'#f1c28f':'#c9d3de')};background:${m.direction==='below'?'#ebfff3':(m.direction==='above'?'#fff4ea':'#f4f8fc')}\">${escapeHtml(m.label)}</span>` : ''; })()}</div></div>
         <div class="dealbox">${escapeHtml(l.public_summary||'')}</div>
         ${l.source_inconsistency?.public_note ? `<div class="banner" style="margin-top:14px">Source note: ${escapeHtml(l.source_inconsistency.public_note)}</div>`:''}
-        <div class="foot"><a class="btn ghost" href="listing-detail.html?id=${encodeURIComponent(l.id)}">View Listing</a><button class="btn gold" onclick="openInquiry('${escapeAttr(l.id)}')">Ask RAG</button></div>
+        <div class="foot"><a class="btn ghost" href="listing-detail.html?id=${encodeURIComponent(l.id)}">View Listing</a><button class="btn ghost" onclick="shareListing('${escapeAttr(l.id)}','${escapeAttr(l.address||'')}','${escapeAttr(l.city||'')}',${l.list_price||0})">Share</button><button class="btn gold" onclick="openInquiry('${escapeAttr(l.id)}')">Ask RAG</button></div>
       </div>
     </article>`).join('');
+}
+
+/* Social share */
+function shareListing(id, address, city, price){
+  const url = window.location.origin + window.location.pathname.replace(/[^/]*$/,'') + 'listing-detail.html?id=' + encodeURIComponent(id);
+  const text = `Check out this listing: ${address}, ${city} — $${Number(price).toLocaleString()}`;
+  if(navigator.share){
+    navigator.share({title:text, url}).catch(()=>{});
+  } else {
+    const fb = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+    window.open(fb, '_blank', 'width=600,height=400');
+  }
+}
+
+/* Listing alert subscriptions */
+const ALERT_KEY = 'rag_listing_alerts';
+function loadAlerts(){ try{ return JSON.parse(localStorage.getItem(ALERT_KEY)||'[]'); }catch{ return []; } }
+function saveAlert(sub){
+  const alerts = loadAlerts();
+  alerts.unshift(Object.assign({ id:'alert_'+Date.now().toString(36), created_at:new Date().toISOString(), status:'active' }, sub));
+  localStorage.setItem(ALERT_KEY, JSON.stringify(alerts.slice(0,200)));
+  /* Also send to Cloudflare backend */
+  const API_BASE = 'https://rag-command-center-api.admension.workers.dev';
+  fetch(`${API_BASE}/api/inquiries`, {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({ name:sub.email, email:sub.email, intent:'listing_alert', market:sub.city||'', budget:sub.max_price||'', notes:`Alert: ${sub.min_beds||'any'}+ bed, ${sub.type||'any'} type, $${sub.max_price||'any'} max`, source:'alert_subscribe' })
+  }).catch(()=>{});
+  return alerts;
 }
 
 function openInquiry(listingId='general'){ const modal = document.getElementById('inquiryModal'); if(!modal) return; modal.dataset.listingId = listingId; modal.style.display = 'flex'; }

@@ -1,0 +1,121 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Market Analytics — RAG Command Center</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0c0d10;--panel:#131417;--panel2:#191b20;--border:#22252d;--border2:#2a2e38;--accent:#d4a843;--hot:#e8445a;--green:#2ec97a;--cold:#4b8fcc;--ink:#eaecf0;--ink2:#8e97a8;--ink3:#50586a;--mono:'DM Mono',monospace;--serif:'Fraunces',Georgia,serif;--display:'Syne',sans-serif;--radius:10px}
+html{font-family:var(--display);background:var(--bg);color:var(--ink)}body{min-height:100vh}button{font-family:inherit;cursor:pointer}a{color:inherit;text-decoration:none}
+.topbar{height:52px;background:var(--panel);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 24px;position:sticky;top:0;z-index:200}
+.topbar-logo{display:flex;align-items:center;gap:10px}.logo-hex{width:28px;height:28px;background:var(--accent);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:8px;color:#000}
+.topbar-name{font-weight:700;font-size:14px}.topbar-sub{font-family:var(--mono);font-size:9px;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase}
+.topbar-tabs{display:flex;gap:2px}.tab-btn{padding:6px 16px;border-radius:6px;background:transparent;border:1px solid transparent;font-size:12px;font-weight:600;color:var(--ink3);transition:all .15s}.tab-btn:hover{color:var(--ink);background:var(--panel2)}.tab-btn.active{color:var(--accent);background:rgba(212,168,67,.08);border-color:rgba(212,168,67,.2)}
+.main{padding:28px;max-width:1360px;margin:0 auto}
+.page-hd{margin-bottom:20px}.page-hd h1{font-family:var(--serif);font-size:28px;font-weight:600;margin-bottom:3px}.page-hd p{font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase}
+.stats-row{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap}.stat-mini{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px;flex:1;min-width:140px}.stat-mini .lbl{font-family:var(--mono);font-size:9px;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}.stat-mini .val{font-family:var(--serif);font-size:28px;font-weight:600}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:20px}
+.card-hd{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--border)}.card-hd h2{font-size:13px;font-weight:600}
+.card-bd{padding:18px}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.city-card{background:var(--panel2);border:1px solid var(--border2);border-radius:10px;padding:16px}
+.city-card h3{font-size:15px;font-weight:700;margin-bottom:8px}
+.city-stat{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--ink2)}
+.city-stat:last-child{border-bottom:none}
+.city-stat .v{color:var(--ink);font-weight:600}
+canvas{display:block;width:100%;height:60px;margin-top:8px}
+</style>
+<script src="data/bootstrap.js"></script><script src="assets/js/utils.js"></script></head><body>
+<header class="topbar"><div class="topbar-logo"><div class="logo-hex">RAG</div><div><div class="topbar-name">RAG Command Center</div><div class="topbar-sub">Market Analytics</div></div></div>
+<nav class="topbar-tabs"><a class="tab-btn" href="command-center.html">Dashboard</a><a class="tab-btn active" href="analytics.html">Analytics</a><a class="tab-btn" href="contacts.html">Contacts</a><a class="tab-btn" href="pipeline.html">Pipeline</a><a class="tab-btn" href="signals.html">Signals</a><a class="tab-btn" href="settings.html">Settings</a></nav></header>
+<div class="main">
+<div class="page-hd"><h1 style="font-family:var(--serif)">Market Analytics</h1><p>price benchmarks · dom · volume · deal density by city</p></div>
+<div class="stats-row" id="global-stats"></div>
+<div class="card"><div class="card-hd"><h2>City Market Breakdown</h2><span style="font-family:var(--mono);font-size:10px;color:var(--ink3)" id="city-count">0 cities</span></div><div class="card-bd"><div class="city-grid" id="city-grid"></div></div></div>
+</div>
+<script>
+(async function(){
+  const data = await GRR.loadData();
+  const listings = data.internal.canonicalListings || [];
+  if(!listings.length){
+    document.getElementById('global-stats').innerHTML = '<div class="stat-mini" style="flex:none;width:100%"><div class="lbl">NO DATA</div><div class="val" style="font-size:16px;color:var(--ink3)">Import listings via Settings first, then Reconcile + Compile.</div></div>';
+    return;
+  }
+
+  // Global stats
+  const totalPrice = listings.reduce((s,l)=>s+Number(l.list_price||0),0);
+  const withSqft = listings.filter(l=>Number(l.sqft||0)>0 && Number(l.list_price||0)>0);
+  const avgPpsf = withSqft.length ? Math.round(withSqft.reduce((s,l)=>s+Number(l.list_price)/Number(l.sqft),0)/withSqft.length) : 0;
+  const priceDrops = listings.filter(l=>l.flags&&l.flags.price_drop).length;
+  const belowMarket = listings.filter(l=>l.flags&&l.flags.below_market).length;
+  const avgScore = Math.round(listings.reduce((s,l)=>s+Number(l.deal_score||0),0)/listings.length);
+  const provinces = new Set(listings.map(l=>String(l.province||'').toUpperCase()).filter(Boolean));
+
+  document.getElementById('global-stats').innerHTML = [
+    ['Total Listings', listings.length, ''],
+    ['Avg $/sqft', '$'+avgPpsf, ''],
+    ['Avg Deal Score', avgScore+'%', ''],
+    ['Price Drops', priceDrops, ''],
+    ['Below Market', belowMarket, ''],
+    ['Provinces', provinces.size, ''],
+    ['Total Value', '$'+(totalPrice>=1e9?(totalPrice/1e9).toFixed(1)+'B':(totalPrice/1e6).toFixed(0)+'M'), '']
+  ].map(([lbl,val])=>`<div class="stat-mini"><div class="lbl">${lbl}</div><div class="val">${val}</div></div>`).join('');
+
+  // City breakdown
+  const cities = {};
+  listings.forEach(l => {
+    const key = (l.city||'Unknown').trim();
+    if(!cities[key]) cities[key] = { name:key, province:l.province||'', listings:[], prices:[], sqfts:[], scores:[] };
+    cities[key].listings.push(l);
+    if(Number(l.list_price||0)>0) cities[key].prices.push(Number(l.list_price));
+    if(Number(l.sqft||0)>0 && Number(l.list_price||0)>0) cities[key].sqfts.push(Number(l.list_price)/Number(l.sqft));
+    cities[key].scores.push(Number(l.deal_score||0));
+  });
+
+  const sorted = Object.values(cities).sort((a,b)=>b.listings.length-a.listings.length);
+  document.getElementById('city-count').textContent = sorted.length + ' cities';
+
+  const grid = document.getElementById('city-grid');
+  grid.innerHTML = sorted.map((c,i) => {
+    const med = arr => { const s=[...arr].sort((a,b)=>a-b); const m=Math.floor(s.length/2); return s.length%2?s[m]:(s[m-1]+s[m])/2; };
+    const medPrice = c.prices.length ? med(c.prices) : 0;
+    const medPpsf = c.sqfts.length ? Math.round(med(c.sqfts)) : 0;
+    const avgS = Math.round(c.scores.reduce((a,b)=>a+b,0)/c.scores.length);
+    const drops = c.listings.filter(l=>l.flags&&l.flags.price_drop).length;
+    const below = c.listings.filter(l=>l.flags&&l.flags.below_market).length;
+    const licensed = isLicensedCity(c.name, c.province);
+    const badge = licensed===3 ? ' <span style="color:var(--accent);font-size:10px">★ Licensed</span>' : (licensed===2 ? ' <span style="color:var(--ink3);font-size:10px">Provincial</span>' : '');
+    return `<div class="city-card">
+      <h3>${escapeHtml(c.name)}, ${escapeHtml(c.province)}${badge}</h3>
+      <div class="city-stat"><span>Listings</span><span class="v">${c.listings.length}</span></div>
+      <div class="city-stat"><span>Median Price</span><span class="v">$${medPrice>=1000?Math.round(medPrice/1000)+'K':medPrice.toLocaleString()}</span></div>
+      <div class="city-stat"><span>Median $/sqft</span><span class="v">${medPpsf?'$'+medPpsf:'—'}</span></div>
+      <div class="city-stat"><span>Avg Deal Score</span><span class="v">${avgS}%</span></div>
+      <div class="city-stat"><span>Price Drops</span><span class="v">${drops}</span></div>
+      <div class="city-stat"><span>Below Market</span><span class="v">${below}</span></div>
+      <canvas id="spark-${i}" width="260" height="60"></canvas>
+    </div>`;
+  }).join('');
+
+  // Draw sparklines
+  sorted.forEach((c,i) => {
+    const canvas = document.getElementById('spark-'+i);
+    if(!canvas || !c.prices.length) return;
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width = canvas.offsetWidth * 2;
+    const h = canvas.height = 120;
+    ctx.scale(1,1);
+    const prices = c.prices.slice(0,50);
+    const min = Math.min(...prices);
+    const max = Math.max(...prices);
+    const range = max-min||1;
+    const step = w/(prices.length-1||1);
+    ctx.beginPath();
+    ctx.strokeStyle = '#d4a843';
+    ctx.lineWidth = 2;
+    prices.forEach((p,j) => {
+      const x = j*step;
+      const y = h - ((p-min)/range)*(h-10) - 5;
+      j===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    });
+    ctx.stroke();
+  });
+})();
+</script></body></html>
