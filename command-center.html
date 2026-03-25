@@ -898,7 +898,7 @@ const DB = {
 };
 
 function loadListings() { var ls = DB.get('listings'); if(ls&&ls.length) return ls; var b=window.GRR_BOOTSTRAP; return (b&&b.internal&&b.internal.canonical_listings)?b.internal.canonical_listings:[]; }
-function loadLeads() { var ls = DB.get('leads'); if(ls&&ls.length) return ls; var b=window.GRR_BOOTSTRAP; return (b&&b.internal&&b.internal.leads)?b.internal.leads:[]; }
+function loadLeads() { var ls = DB.get('leads') || []; var boot = window.GRR_BOOTSTRAP; if(!ls.length && boot && boot.internal && boot.internal.leads) ls = boot.internal.leads; var auto = []; try { auto = JSON.parse(localStorage.getItem('rag_auto_leads')||'[]'); } catch(e){} if(auto.length){ auto.forEach(function(a){ ls.push({ lead_id:a.id, name:a.title||'Auto Lead', phone:'', email:'', intent:a.type||'auto', budget_max:a.price||null, target_areas:[a.neighbourhood||a.city||'Victoria'], timeline:a.action||'', preapproved:false, source:'auto_intelligence', status:'new', score:a.score||'warm', licensed_priority:3, routing_queue:'victoria_licensed', notes:a.detail||'', task:a.action||'Review this lead', created_at:a.created_at||new Date().toISOString() }); }); } return ls; }
 const CANADA_CITY_OPTIONS = {
   BC:['Vancouver','Surrey','Burnaby','Richmond','Coquitlam','Kelowna','Victoria','Nanaimo','Kamloops','Prince George'],
   AB:['Calgary','Edmonton','Red Deer','Lethbridge','Medicine Hat','Grande Prairie','Airdrie','Spruce Grove','St. Albert','Fort McMurray'],
