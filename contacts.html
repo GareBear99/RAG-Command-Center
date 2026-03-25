@@ -27,7 +27,7 @@ table{width:100%;border-collapse:collapse}th{font-family:var(--mono);font-size:9
 </style>
 <script src="data/bootstrap.js"></script><script src="assets/js/utils.js"></script></head><body>
 <header class="topbar"><div class="topbar-logo"><div class="logo-hex">RAG</div><div><div class="topbar-name">RAG Command Center</div><div class="topbar-sub">CRM · Contacts</div></div></div>
-<nav class="topbar-tabs"><a class="tab-btn" href="command-center.html">Dashboard</a><a class="tab-btn active" href="contacts.html">Contacts</a><a class="tab-btn" href="pipeline.html">Pipeline</a><a class="tab-btn" href="commission.html">Commissions</a><a class="tab-btn" href="settings.html">Settings</a></nav></header>
+<nav class="topbar-tabs"><a class="tab-btn" href="command-center.html">Dashboard</a><a class="tab-btn active" href="contacts.html">Contacts</a><a class="tab-btn" href="pipeline.html">Pipeline</a><a class="tab-btn" href="signals.html">Signals</a><a class="tab-btn" href="commission.html">Commissions</a><a class="tab-btn" href="settings.html">Settings</a></nav></header>
 <div class="main">
 <div class="page-hd"><h1 style="font-family:var(--serif)">Contacts</h1><p>CRM · manage clients, leads, and relationships</p></div>
 <div class="stats-row"><div class="stat-mini"><div class="lbl">Total Contacts</div><div class="val" id="s-total">0</div></div><div class="stat-mini"><div class="lbl">Buyers</div><div class="val" id="s-buyers">0</div></div><div class="stat-mini"><div class="lbl">Sellers</div><div class="val" id="s-sellers">0</div></div><div class="stat-mini"><div class="lbl">Investors</div><div class="val" id="s-investors">0</div></div></div>
@@ -112,5 +112,40 @@ function renderContacts(){
     <td>${(c.tags||[]).map(t=>`<span class="tag green">${escapeHtml(t)}</span>`).join(' ')}</td>
   </tr>`).join('');
 }
-renderContacts();
-</script></body></html>
+/* Auto-import pipeline leads into CRM contacts */
+(async function(){
+  try {
+    const data = await GRR.loadData();
+    const leads = data.internal.leads || [];
+    const state = GRR.loadState();
+    const inquiries = state.inquiries || [];
+    const all = [...leads, ...inquiries.map(i=>({name:i.name,email:i.email,phone:i.phone||'',intent:i.intent||'inquiry',market:i.market||'',budget:i.budget||'',notes:i.notes||'',source:i.source||'website',created_at:i.created_at||'',score_band:i.score_band||'warm'}))];
+    if(!all.length){ renderContacts(); return; }
+    const contacts = loadContacts();
+    const existingEmails = new Set(contacts.map(c=>(c.email||'').toLowerCase()).filter(Boolean));
+    const existingNames = new Set(contacts.map(c=>(c.name||'').toLowerCase()));
+    let imported = 0;
+    all.forEach(l => {
+      const email = (l.email||'').toLowerCase();
+      const name = (l.name||l.full_name||'').trim();
+      if(!name) return;
+      if(email && existingEmails.has(email)) return;
+      if(existingNames.has(name.toLowerCase())) return;
+      contacts.push({
+        id: 'c_'+Date.now().toString(36)+Math.random().toString(36).slice(2,6),
+        name, phone: l.phone||'', email: l.email||'',
+        type: (l.intent||'').toLowerCase().includes('sell') ? 'seller' : 'buyer',
+        agent: '', budget: l.budget_max||l.budget||null,
+        source: l.source||'pipeline', tags: (l.target_areas||[]).concat(l.market?[l.market]:[]),
+        notes: l.notes||l.message||'', score: l.score_band||l.score||'warm',
+        interactions: [], created_at: l.created_at||new Date().toISOString(), last_contact: null
+      });
+      if(email) existingEmails.add(email);
+      existingNames.add(name.toLowerCase());
+      imported++;
+    });
+    if(imported) saveContacts(contacts);
+  } catch(e){ console.warn('Pipeline import:', e); }
+  renderContacts();
+})();
+</script>

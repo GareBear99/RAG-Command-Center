@@ -240,6 +240,43 @@ function grrMarketPosition(listing, benchmarks, ppsfFn, citySlugFn){
   return { deltaPctRaw, absPct, direction, baselinePpsf:Math.round(src.median), expectedValue:sqft>0?Math.round(src.median*sqft):null, label:direction==='at'?'At market':`${absPct}% ${direction} market` };
 }
 
+/* ════════════════════════════════════════════════════════════
+   CANONICAL TYPE CATEGORY
+   Maps raw property_type values to filter categories.
+════════════════════════════════════════════════════════════ */
+function canonicalTypeCategory(v){
+  const t = String(v||'').trim().toLowerCase();
+  if (!t) return '';
+  if (['li','lo','industrial','commercial','com lease'].includes(t)) return 'commercial';
+  if (t === 'strata' || t === 'condo' || t === 'apartment') return 'strata';
+  if (['land','vacant','lot','acreage','lot-land'].includes(t)) return 'land';
+  return 'residential';
+}
+
+/* ════════════════════════════════════════════════════════════
+   LICENSED MARKET SETTINGS
+   Configurable via Settings page, stored in localStorage.
+════════════════════════════════════════════════════════════ */
+const RAG_LICENSED_KEY = 'rag_licensed_markets';
+function loadLicensedMarkets(){
+  try {
+    const raw = JSON.parse(localStorage.getItem(RAG_LICENSED_KEY));
+    if (raw && Array.isArray(raw.cities)) return raw;
+  } catch(e){}
+  return { province: 'BC', cities: ['vancouver','victoria'] };
+}
+function saveLicensedMarkets(settings){
+  localStorage.setItem(RAG_LICENSED_KEY, JSON.stringify(settings));
+}
+function isLicensedCity(city, province){
+  const m = loadLicensedMarkets();
+  const p = String(province||'').toUpperCase();
+  const c = String(city||'').trim().toLowerCase();
+  if (p === m.province.toUpperCase() && m.cities.includes(c)) return 3; // primary
+  if (p === m.province.toUpperCase()) return 2; // provincial
+  return 1; // national
+}
+
 window.GRRTheme = (function(){
   const KEYS = { public:'gr_theme_public', command:'gr_theme_command' };
   const DEFAULTS = { public:'light', command:'dark' };

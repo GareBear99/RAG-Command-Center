@@ -1,0 +1,257 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Signal Paste — RAG Command Center</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0c0d10;--panel:#131417;--panel2:#191b20;--border:#22252d;--border2:#2a2e38;--accent:#d4a843;--hot:#e8445a;--warm:#d4a843;--cold:#4b8fcc;--green:#2ec97a;--ink:#eaecf0;--ink2:#8e97a8;--ink3:#50586a;--mono:'DM Mono',monospace;--serif:'Fraunces',Georgia,serif;--display:'Syne',sans-serif;--radius:10px}
+html{font-family:var(--display);background:var(--bg);color:var(--ink)}body{min-height:100vh}button{font-family:inherit;cursor:pointer}input,select,textarea{font-family:inherit}a{color:inherit;text-decoration:none}
+.topbar{height:52px;background:var(--panel);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 24px;position:sticky;top:0;z-index:200}
+.topbar-logo{display:flex;align-items:center;gap:10px}.logo-hex{width:28px;height:28px;background:var(--accent);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:8px;color:#000}
+.topbar-name{font-weight:700;font-size:14px}.topbar-sub{font-family:var(--mono);font-size:9px;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase}
+.topbar-tabs{display:flex;gap:2px}.tab-btn{padding:6px 16px;border-radius:6px;background:transparent;border:1px solid transparent;font-size:12px;font-weight:600;color:var(--ink3);transition:all .15s}.tab-btn:hover{color:var(--ink);background:var(--panel2)}.tab-btn.active{color:var(--accent);background:rgba(212,168,67,.08);border-color:rgba(212,168,67,.2)}
+.main{padding:28px;max-width:1200px;margin:0 auto}
+.page-hd{margin-bottom:20px}.page-hd h1{font-family:var(--serif);font-size:28px;font-weight:600;margin-bottom:3px}.page-hd p{font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:20px}
+.card-hd{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--border)}.card-hd h2{font-size:13px;font-weight:600}
+.card-bd{padding:18px}
+.fi{padding:10px 12px;border:1px solid var(--border2);border-radius:7px;background:var(--panel2);color:var(--ink);font-family:var(--mono);font-size:12px;outline:none;width:100%}.fi:focus{border-color:var(--accent)}
+textarea.fi{min-height:140px;resize:vertical;line-height:1.6}
+.btn-p{padding:11px 22px;background:var(--accent);border:none;border-radius:7px;color:#000;font-weight:700;font-size:13px;transition:all .15s}.btn-p:hover{background:#c49a35}
+.btn-s{padding:9px 16px;background:var(--panel2);border:1px solid var(--border2);border-radius:7px;color:var(--ink2);font-size:12px;font-weight:600}
+.tag{font-family:var(--mono);font-size:9px;padding:2px 7px;border-radius:4px;border:1px solid transparent;white-space:nowrap;display:inline-block;margin:2px}
+.tag.hot{background:rgba(232,68,90,.08);color:var(--hot);border-color:rgba(232,68,90,.2)}.tag.warm{background:rgba(212,168,67,.08);color:var(--warm);border-color:rgba(212,168,67,.2)}.tag.cold{background:rgba(75,143,204,.08);color:var(--cold);border-color:rgba(75,143,204,.2)}.tag.green{background:rgba(46,201,122,.08);color:var(--green);border-color:rgba(46,201,122,.2)}.tag.gold{background:rgba(212,168,67,.08);color:var(--accent);border-color:rgba(212,168,67,.2)}
+.result-box{background:var(--panel2);border:1px solid var(--border2);border-radius:10px;padding:18px;margin-top:16px;display:none}
+.score-ring{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:24px;font-weight:700;border:3px solid;flex-shrink:0}
+.score-ring.hot{color:var(--hot);border-color:var(--hot);background:rgba(232,68,90,.08)}
+.score-ring.warm{color:var(--warm);border-color:var(--warm);background:rgba(212,168,67,.08)}
+.score-ring.cold{color:var(--cold);border-color:var(--cold);background:rgba(75,143,204,.08)}
+.history-item{padding:14px 18px;border-bottom:1px solid var(--border)}.history-item:last-child{border-bottom:none}
+.banner{border-radius:10px;padding:12px 14px;background:rgba(212,168,67,.08);border:1px solid rgba(212,168,67,.20);color:#d9c28d;font-size:12px;line-height:1.6;margin-bottom:16px}
+.stats-row{display:flex;gap:12px;margin-bottom:20px}.stat-mini{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px;flex:1}.stat-mini .lbl{font-family:var(--mono);font-size:9px;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}.stat-mini .val{font-family:var(--serif);font-size:28px;font-weight:600}
+</style>
+<script src="data/bootstrap.js"></script><script src="assets/js/utils.js"></script></head><body>
+<header class="topbar"><div class="topbar-logo"><div class="logo-hex">RAG</div><div><div class="topbar-name">RAG Command Center</div><div class="topbar-sub">AI Signal Paste · FB Group Leads</div></div></div>
+<nav class="topbar-tabs"><a class="tab-btn" href="command-center.html">Dashboard</a><a class="tab-btn" href="contacts.html">Contacts</a><a class="tab-btn" href="pipeline.html">Pipeline</a><a class="tab-btn active" href="signals.html">Signals</a><a class="tab-btn" href="commission.html">Commissions</a><a class="tab-btn" href="settings.html">Settings</a></nav></header>
+<div class="main">
+<div class="page-hd"><h1 style="font-family:var(--serif)">AI Signal Paste</h1><p>paste any facebook post → AI scores intent, extracts keywords, detects neighbourhood</p></div>
+<div class="banner">Paste a Facebook group post from Victoria/Vancouver real estate groups. The AI engine will detect buyer/seller intent, extract budget and bed/bath requirements, identify the neighbourhood, and score the lead 0-100. Leads scoring 70+ auto-classify as <b>hot</b>.</div>
+<div class="stats-row"><div class="stat-mini"><div class="lbl">Signals Processed</div><div class="val" id="s-total">0</div></div><div class="stat-mini"><div class="lbl">Hot Leads Created</div><div class="val" style="color:var(--hot)" id="s-hot">0</div></div><div class="stat-mini"><div class="lbl">Warm Leads</div><div class="val" style="color:var(--warm)" id="s-warm">0</div></div><div class="stat-mini"><div class="lbl">Avg Intent Score</div><div class="val" id="s-avg">0</div></div></div>
+<div class="card"><div class="card-hd"><h2>Paste Facebook Post</h2><span style="font-family:var(--mono);font-size:10px;color:var(--ink3)">Victoria · Vancouver · BC</span></div><div class="card-bd">
+<textarea class="fi" id="paste-input" placeholder="Paste a Facebook group post here...
+
+Example: 'Looking for a 3 bedroom home in Langford, budget around $650K. Pre-approved, hoping to move in by summer. Any leads appreciated!'"></textarea>
+<div style="display:flex;gap:10px;margin-top:12px"><button class="btn-p" onclick="analyzeSignal()">🔍 Analyze Signal</button><button class="btn-s" onclick="document.getElementById('paste-input').value=''">Clear</button></div>
+<div class="result-box" id="result-box">
+<div style="display:flex;gap:18px;align-items:flex-start">
+<div class="score-ring" id="r-ring">0</div>
+<div style="flex:1">
+<div style="font-weight:700;font-size:16px;margin-bottom:4px" id="r-intent">—</div>
+<div style="font-family:var(--mono);font-size:11px;color:var(--ink3);margin-bottom:8px" id="r-summary">—</div>
+<div id="r-tags" style="margin-bottom:8px"></div>
+<div style="font-family:var(--mono);font-size:10px;color:var(--ink3)" id="r-details">—</div>
+</div>
+</div>
+<div style="display:flex;gap:10px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border2)">
+<button class="btn-p" id="r-create" onclick="createLeadFromSignal()" style="display:none">Create Lead → CRM + Pipeline</button>
+<button class="btn-s" onclick="document.getElementById('result-box').style.display='none'">Dismiss</button>
+</div>
+</div>
+</div></div>
+<div class="card"><div class="card-hd"><h2>Signal History</h2><span style="font-family:var(--mono);font-size:10px;color:var(--ink3)" id="h-count">0 signals</span></div><div id="history-list"></div></div>
+</div>
+<script>
+/* ═══════════ NEIGHBOURHOOD DICTIONARIES ═══════════ */
+const VICTORIA_HOODS = ['oak bay','saanich','langford','colwood','esquimalt','sooke','sidney','view royal','metchosin','highlands','central saanich','north saanich','duncan','nanaimo','brentwood bay','cordova bay','gordon head','cadboro bay','fairfield','james bay','fernwood','hillside','quadra','burnside','tillicum','marigold','interurban','bear mountain','goldstream','happy valley','luxton','glen lake','royal roads','uvic'];
+const VANCOUVER_HOODS = ['downtown','kitsilano','mount pleasant','commercial drive','east van','east vancouver','strathcona','fairview','kerrisdale','dunbar','point grey','marpole','sunset','renfrew','hastings-sunrise','grandview-woodland','west end','coal harbour','yaletown','gastown','chinatown','south granville','shaughnessy','arbutus','riley park','south cambie','main street','broadway','ubc','metrotown','burnaby','surrey','richmond','coquitlam','new westminster','north vancouver','west vancouver','white rock','delta','langley','abbotsford','maple ridge','port moody','port coquitlam','tri-cities'];
+const ALL_HOODS = [...VICTORIA_HOODS, ...VANCOUVER_HOODS];
+
+/* ═══════════ INTENT KEYWORDS ═══════════ */
+const BUY_WORDS = ['looking for','searching for','want to buy','hoping to find','need a','house hunting','home search','pre-approved','pre approved','preapproved','mortgage approved','first time buyer','first-time buyer','fthb','move in by','budget','price range','under $','max $','up to $','looking to purchase','ISO','in search of','anyone selling','any leads','any recommendations'];
+const SELL_WORDS = ['selling','for sale','just listed','price reduced','open house','listing','motivated seller','must sell','accepting offers','reduced to','priced at','asking $','MLS#','mls ','listed at','below assessed','appraised at'];
+const RENT_WORDS = ['looking to rent','for rent','rental','tenant','renting','lease','available for rent','month to month','seeking rental','room for rent'];
+const INVEST_WORDS = ['investment','investor','cash flow','cap rate','roi','rental income','multi-family','duplex','triplex','revenue property','flip','fixer-upper','fixer upper','below market','motivated','foreclosure','distressed'];
+
+/* ═══════════ EXTRACTION ENGINE ═══════════ */
+function analyzeText(text){
+  const lower = text.toLowerCase();
+  const result = { intent:'unknown', score:0, neighbourhoods:[], keywords:[], budget:null, beds:null, baths:null, timeline:null, preapproved:false, summary:'' };
+
+  // Intent detection
+  const buyHits = BUY_WORDS.filter(w=>lower.includes(w)).length;
+  const sellHits = SELL_WORDS.filter(w=>lower.includes(w)).length;
+  const rentHits = RENT_WORDS.filter(w=>lower.includes(w)).length;
+  const investHits = INVEST_WORDS.filter(w=>lower.includes(w)).length;
+  const max = Math.max(buyHits, sellHits, rentHits, investHits);
+  if(max===0) result.intent = 'asking';
+  else if(investHits===max) result.intent = 'investing';
+  else if(buyHits===max) result.intent = 'buying';
+  else if(sellHits===max) result.intent = 'selling';
+  else result.intent = 'renting';
+
+  // Neighbourhood detection
+  ALL_HOODS.forEach(h => { if(lower.includes(h)) result.neighbourhoods.push(h); });
+
+  // Budget extraction
+  const budgetMatch = text.match(/\$\s*([\d,.]+)\s*[kK]/);
+  if(budgetMatch) result.budget = Math.round(parseFloat(budgetMatch[1].replace(/,/g,''))*1000);
+  else {
+    const budgetMatch2 = text.match(/\$\s*([\d,.]+)/);
+    if(budgetMatch2){ const v=parseFloat(budgetMatch2[1].replace(/,/g,'')); if(v>10000) result.budget=Math.round(v); }
+  }
+
+  // Beds/baths
+  const bedMatch = text.match(/(\d+)\s*(?:bed|br|bedroom)/i);
+  if(bedMatch) result.beds = parseInt(bedMatch[1]);
+  const bathMatch = text.match(/(\d+)\s*(?:bath|ba|bathroom)/i);
+  if(bathMatch) result.baths = parseInt(bathMatch[1]);
+
+  // Timeline
+  if(lower.includes('asap')||lower.includes('immediately')||lower.includes('urgent')) result.timeline = 'ASAP';
+  else if(lower.match(/(\d+)\s*month/)) result.timeline = lower.match(/(\d+)\s*month/)[0];
+  else if(lower.includes('summer')) result.timeline = 'Summer 2026';
+  else if(lower.includes('spring')) result.timeline = 'Spring 2026';
+  else if(lower.includes('fall')||lower.includes('autumn')) result.timeline = 'Fall 2026';
+
+  // Pre-approved
+  if(lower.includes('pre-approved')||lower.includes('preapproved')||lower.includes('pre approved')||lower.includes('mortgage approved')) result.preapproved = true;
+
+  // Score calculation (0-100)
+  let score = 20; // base
+  if(result.intent==='buying') score += 25;
+  else if(result.intent==='selling') score += 20;
+  else if(result.intent==='investing') score += 22;
+  else if(result.intent==='renting') score += 10;
+  if(result.neighbourhoods.length) score += 15;
+  if(result.budget) score += 10;
+  if(result.beds) score += 5;
+  if(result.preapproved) score += 15;
+  if(result.timeline==='ASAP') score += 10;
+  else if(result.timeline) score += 5;
+  if(text.length > 100) score += 3;
+  if(text.length > 200) score += 2;
+  // licensed area bonus
+  const m = loadLicensedMarkets();
+  const inLicensed = result.neighbourhoods.some(n => VICTORIA_HOODS.includes(n) || VANCOUVER_HOODS.includes(n));
+  if(inLicensed) score += 5;
+  result.score = Math.min(100, score);
+
+  // Summary
+  const parts = [];
+  parts.push(result.intent.charAt(0).toUpperCase()+result.intent.slice(1)+' intent');
+  if(result.neighbourhoods.length) parts.push(result.neighbourhoods.map(n=>n.split(' ').map(w=>w[0].toUpperCase()+w.slice(1)).join(' ')).join(', '));
+  if(result.budget) parts.push('$'+result.budget.toLocaleString()+' budget');
+  if(result.beds) parts.push(result.beds+' bed');
+  if(result.preapproved) parts.push('Pre-approved');
+  if(result.timeline) parts.push(result.timeline);
+  result.summary = parts.join(' · ');
+
+  // Keywords
+  if(result.intent!=='unknown') result.keywords.push(result.intent);
+  result.neighbourhoods.forEach(n=>result.keywords.push(n));
+  if(result.preapproved) result.keywords.push('pre-approved');
+  if(result.budget) result.keywords.push('$'+result.budget.toLocaleString());
+  if(result.beds) result.keywords.push(result.beds+'bed');
+
+  return result;
+}
+
+/* ═══════════ UI ═══════════ */
+const SIG_KEY = 'rag_signal_history';
+function loadHistory(){ try{ return JSON.parse(localStorage.getItem(SIG_KEY)||'[]'); }catch{ return []; } }
+function saveHistory(arr){ localStorage.setItem(SIG_KEY, JSON.stringify(arr.slice(0,200))); }
+
+let lastResult = null;
+function analyzeSignal(){
+  const text = document.getElementById('paste-input').value.trim();
+  if(!text){ alert('Paste a Facebook post first.'); return; }
+  lastResult = analyzeText(text);
+  lastResult.raw_text = text;
+  lastResult.created_at = new Date().toISOString();
+
+  const box = document.getElementById('result-box');
+  box.style.display = 'block';
+  const band = lastResult.score >= 70 ? 'hot' : (lastResult.score >= 40 ? 'warm' : 'cold');
+  document.getElementById('r-ring').textContent = lastResult.score;
+  document.getElementById('r-ring').className = 'score-ring '+band;
+  document.getElementById('r-intent').textContent = lastResult.intent.toUpperCase()+' INTENT — '+(band==='hot'?'🔥 HOT LEAD':(band==='warm'?'🌡 WARM':'🧊 COLD'));
+  document.getElementById('r-summary').textContent = lastResult.summary;
+  document.getElementById('r-tags').innerHTML = lastResult.keywords.map(k=>`<span class="tag ${band}">${escapeHtml(k)}</span>`).join('');
+  const details = [];
+  if(lastResult.budget) details.push('Budget: $'+lastResult.budget.toLocaleString());
+  if(lastResult.beds) details.push('Beds: '+lastResult.beds);
+  if(lastResult.baths) details.push('Baths: '+lastResult.baths);
+  if(lastResult.timeline) details.push('Timeline: '+lastResult.timeline);
+  if(lastResult.preapproved) details.push('✓ Pre-approved');
+  if(lastResult.neighbourhoods.length) details.push('Area: '+lastResult.neighbourhoods.join(', '));
+  document.getElementById('r-details').textContent = details.join(' · ')||'No specific details extracted.';
+  document.getElementById('r-create').style.display = 'inline-flex';
+
+  // Save to history
+  const history = loadHistory();
+  history.unshift({ ...lastResult, id: 'sig_'+Date.now().toString(36) });
+  saveHistory(history);
+  renderHistory();
+  updateStats();
+}
+
+function createLeadFromSignal(){
+  if(!lastResult) return;
+  const band = lastResult.score >= 70 ? 'hot' : (lastResult.score >= 40 ? 'warm' : 'cold');
+  // Add to CRM contacts
+  const CRM_KEY = 'rag_crm_contacts';
+  const contacts = JSON.parse(localStorage.getItem(CRM_KEY)||'[]');
+  const name = 'FB Signal '+ new Date().toLocaleDateString();
+  contacts.unshift({
+    id: 'c_'+Date.now().toString(36)+Math.random().toString(36).slice(2,6),
+    name, phone:'', email:'',
+    type: lastResult.intent==='selling'?'seller':'buyer',
+    agent: lastResult.neighbourhoods.some(n=>VICTORIA_HOODS.includes(n))?'Amit Khatkar':'Ricki Kohli',
+    budget: lastResult.budget, source:'facebook_group',
+    tags: [...lastResult.neighbourhoods, lastResult.intent, 'fb-signal'],
+    notes: lastResult.raw_text.slice(0,500), score: band,
+    interactions: [], created_at: new Date().toISOString(), last_contact: null
+  });
+  localStorage.setItem(CRM_KEY, JSON.stringify(contacts));
+
+  // Add to pipeline kanban
+  const PIPE_KEY = 'rag_pipeline_deals';
+  const deals = JSON.parse(localStorage.getItem(PIPE_KEY)||'[]');
+  deals.unshift({
+    id:'d_'+Date.now().toString(36)+Math.random().toString(36).slice(2,6),
+    contact: name,
+    property: lastResult.neighbourhoods.length ? lastResult.neighbourhoods.join(', ') : 'TBD',
+    value: lastResult.budget||0,
+    agent: lastResult.neighbourhoods.some(n=>VICTORIA_HOODS.includes(n))?'Amit Khatkar':'Ricki Kohli',
+    stage: 'new_lead',
+    created_at: new Date().toISOString(),
+    source: 'fb_signal',
+    intent_score: lastResult.score
+  });
+  localStorage.setItem(PIPE_KEY, JSON.stringify(deals));
+
+  document.getElementById('r-create').textContent = '✓ Lead Created';
+  document.getElementById('r-create').disabled = true;
+  setTimeout(()=>{ document.getElementById('r-create').textContent='Create Lead → CRM + Pipeline'; document.getElementById('r-create').disabled=false; }, 2000);
+}
+
+function renderHistory(){
+  const history = loadHistory();
+  document.getElementById('h-count').textContent = history.length+' signals';
+  const wrap = document.getElementById('history-list');
+  if(!history.length){ wrap.innerHTML='<div style="padding:30px;text-align:center;font-family:var(--mono);font-size:11px;color:var(--ink3)">No signals processed yet. Paste a Facebook post above.</div>'; return; }
+  wrap.innerHTML = history.slice(0,30).map(s => {
+    const band = s.score>=70?'hot':(s.score>=40?'warm':'cold');
+    return `<div class="history-item"><div style="display:flex;gap:12px;align-items:flex-start"><div class="score-ring ${band}" style="width:40px;height:40px;font-size:14px;border-width:2px;flex-shrink:0">${s.score}</div><div style="flex:1;min-width:0"><div style="font-weight:700;font-size:13px">${escapeHtml(s.intent||'').toUpperCase()} · ${s.neighbourhoods?.length?escapeHtml(s.neighbourhoods.join(', ')):'No area detected'}</div><div style="font-family:var(--mono);font-size:10px;color:var(--ink3);margin-top:4px">${escapeHtml(s.summary||'')}</div><div style="font-family:var(--mono);font-size:10px;color:var(--ink3);margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escapeHtml((s.raw_text||'').slice(0,120))}${(s.raw_text||'').length>120?'...':''}</div></div><div style="font-family:var(--mono);font-size:9px;color:var(--ink3);white-space:nowrap">${s.created_at?new Date(s.created_at).toLocaleDateString():''}</div></div></div>`;
+  }).join('');
+}
+
+function updateStats(){
+  const history = loadHistory();
+  document.getElementById('s-total').textContent = history.length;
+  document.getElementById('s-hot').textContent = history.filter(s=>s.score>=70).length;
+  document.getElementById('s-warm').textContent = history.filter(s=>s.score>=40&&s.score<70).length;
+  document.getElementById('s-avg').textContent = history.length ? Math.round(history.reduce((s,h)=>s+h.score,0)/history.length) : 0;
+}
+
+renderHistory();
+updateStats();
+</script></body></html>

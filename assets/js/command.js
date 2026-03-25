@@ -181,7 +181,7 @@ function renderListingsGridPage(items, benchmarks=null){
   let rows=[...items];
   rows=rows.filter(l=>!q || `${l.address||''} ${l.city||''} ${l.province||''}`.toLowerCase().includes(q));
   rows=rows.filter(l=>!beds || Number(l.beds||0)>=beds);
-  rows=rows.filter(l=>!type || String(l.property_type||'').toLowerCase()===type);
+  rows=rows.filter(l=>!type || canonicalTypeCategory(l.property_type)===canonicalTypeCategory(type));
   rows=rows.filter(l=>!max || Number(l.list_price||0)<=max);
   rows.sort((a,b)=>{
     if(sort==='price_asc') return Number(a.list_price||0)-Number(b.list_price||0);

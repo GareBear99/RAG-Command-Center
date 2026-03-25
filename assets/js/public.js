@@ -136,29 +136,10 @@ function publicListingFactLine(listing, benchmarks=null){
   if (market?.label) bits.push(market.label);
   return bits.join(' · ');
 }
-/* Map raw property_type values to canonical filter categories.
-   Data has: residential, assessed_record, one storey, two storey, bi-level,
-   strata, land, li, lo, cabover, 3/4 level split, etc. */
-function canonicalTypeCategory(v=''){
-  const t = normalizeType(v);
-  if (!t) return '';
-  /* Commercial */
-  if (['li','lo','industrial','commercial'].includes(t)) return 'commercial';
-  /* Strata */
-  if (t === 'strata') return 'strata';
-  /* Land */
-  if (['land','vacant','lot','acreage'].includes(t)) return 'land';
-  /* Everything else is residential */
-  return 'residential';
-}
-const LICENSED_PUBLIC_PROVINCE = 'BC';
-const LICENSED_PUBLIC_CITIES = ['vancouver','victoria'];
+/* canonicalTypeCategory is now in utils.js (shared across public + command) */
+/* Licensed markets now read from configurable localStorage via utils.js */
 function listingLicensedPriority(listing){
-  const province = String(listing?.province || '').toUpperCase();
-  const city = normalizeType(listing?.city || '');
-  if (province === LICENSED_PUBLIC_PROVINCE && LICENSED_PUBLIC_CITIES.includes(city)) return 3;
-  if (province === LICENSED_PUBLIC_PROVINCE) return 2;
-  return 1;
+  return isLicensedCity(listing?.city, listing?.province);
 }
 function parsePublicFilterState(){
   const params = new URLSearchParams(location.search);

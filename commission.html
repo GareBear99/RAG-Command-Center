@@ -28,7 +28,7 @@ table{width:100%;border-collapse:collapse}th{font-family:var(--mono);font-size:9
 </style>
 <script src="data/bootstrap.js"></script><script src="assets/js/utils.js"></script></head><body>
 <header class="topbar"><div class="topbar-logo"><div class="logo-hex">RAG</div><div><div class="topbar-name">RAG Command Center</div><div class="topbar-sub">Commission Tracker</div></div></div>
-<nav class="topbar-tabs"><a class="tab-btn" href="command-center.html">Dashboard</a><a class="tab-btn" href="contacts.html">Contacts</a><a class="tab-btn" href="pipeline.html">Pipeline</a><a class="tab-btn active" href="commission.html">Commissions</a><a class="tab-btn" href="settings.html">Settings</a></nav></header>
+<nav class="topbar-tabs"><a class="tab-btn" href="command-center.html">Dashboard</a><a class="tab-btn" href="contacts.html">Contacts</a><a class="tab-btn" href="pipeline.html">Pipeline</a><a class="tab-btn active" href="signals.html">Signals</a><a class="tab-btn" href="commission.html">Commissions</a><a class="tab-btn" href="settings.html">Settings</a></nav></header>
 <div class="main">
 <div class="page-hd"><h1 style="font-family:var(--serif)">Commission Tracker</h1><p>per partnership agreement §7 · tiered commission on platform-generated leads</p></div>
 <div class="banner">Commission rates per §7: Deals 1–5 = 20%, Deals 6–10 = 25%, Deal 11+ = 30%. Revenue distribution per §8: Gary Doman 51%, Ricki Kohli + Amit Khatkar 49%. All calculations on gross agent-side commission.</div>
@@ -82,13 +82,23 @@ function render(){
   }).join('');
 }
 
-/* Seed sample data if empty */
-if(!loadCommDeals().length){
-  localStorage.setItem(COMM_KEY, JSON.stringify([
-    {date:'2026-03-01',property:'1842 Fairfield Rd, Victoria',operator:'Amit Khatkar',gross:12500},
-    {date:'2026-03-10',property:'3021 Shelbourne St, Saanich',operator:'Ricki Kohli',gross:15000},
-    {date:'2026-03-18',property:'456 W 10th Ave, Vancouver',operator:'Ricki Kohli',gross:22000}
-  ]));
-}
-render();
+/* Auto-import closed deals from pipeline kanban */
+(function(){
+  try {
+    const pipeDeals = JSON.parse(localStorage.getItem('rag_pipeline_deals')||'[]');
+    const closed = pipeDeals.filter(d=>d.stage==='closed');
+    if(closed.length){
+      const existing = loadCommDeals();
+      const existingProps = new Set(existing.map(d=>(d.property||'').toLowerCase()));
+      let imported = 0;
+      closed.forEach(d => {
+        if(existingProps.has((d.property||'').toLowerCase())) return;
+        existing.push({ date: (d.updated_at||d.created_at||new Date().toISOString()).slice(0,10), property: d.property||'', operator: d.agent||'', gross: Math.round((d.value||0)*0.025) });
+        imported++;
+      });
+      if(imported) localStorage.setItem(COMM_KEY, JSON.stringify(existing));
+    }
+  } catch(e){ console.warn('Commission import:', e); }
+  render();
+})();
 </script></body></html>

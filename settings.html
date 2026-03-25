@@ -106,7 +106,7 @@ a { color: inherit; text-decoration: none; }
     <button class="tab-btn" onclick="window.location.href='add.html'">+ Add</button>
     <button class="tab-btn" onclick="window.location.href='contacts.html'">Contacts</button>
     <button class="tab-btn" onclick="window.location.href='pipeline.html'">Pipeline</button>
-    <button class="tab-btn" onclick="window.location.href='commission.html'">Commissions</button>
+    <button class="tab-btn" onclick="window.location.href='signals.html'">Signals</button><button class="tab-btn" onclick="window.location.href='commission.html'">Commissions</button>
     <button class="tab-btn active">Settings</button>
   </nav>
   <div class="topbar-right">
@@ -174,7 +174,21 @@ a { color: inherit; text-decoration: none; }
         </div>
       </section>
       <section class="card">
-        <div class="card-hd"><h2><span class="hd-dot" style="background:var(--warm)"></span>How the pipeline works</h2><span class="card-action">Locked flow</span></div>
+        <div class="card-hd"><h2><span class="hd-dot" style="background:var(--accent)"></span>Licensed Markets</h2><span class="card-action">Priority routing</span></div>
+        <div class="card-bd">
+          <div class="notice">Licensed cities get highest sort priority + <b>Licensed Focus</b> tag. Provincial listings get elevated priority. Canada-wide listings are standard. This controls lead routing and listing sort order across public and internal pages.</div>
+          <div class="row">
+            <div class="field"><label>Licensed Province</label><select id="lmProvince"><option value="BC">BC — British Columbia</option><option value="AB">AB — Alberta</option><option value="ON">ON — Ontario</option><option value="QC">QC — Quebec</option><option value="MB">MB — Manitoba</option><option value="SK">SK — Saskatchewan</option><option value="NS">NS — Nova Scotia</option><option value="NB">NB — New Brunswick</option><option value="NL">NL — Newfoundland</option><option value="PE">PE — PEI</option></select></div>
+            <div class="field"><label>Licensed Cities (comma-separated)</label><input id="lmCities" placeholder="victoria, vancouver"></div>
+          </div>
+          <div class="action-row" style="margin-top:12px">
+            <button class="btn gold" onclick="saveLicensedMarketsUI()">Save Licensed Markets</button>
+          </div>
+          <div id="lmStatus" class="notice" style="margin-top:12px;margin-bottom:0"></div>
+        </div>
+      </section>
+      <section class="card">
+        <div class="card-hd"><h2><span class="hd-dot" style="background:var(--warm)"></span>How the pipeline works</h2>
         <div class="card-bd">
           <div class="notice" style="margin-bottom:10px">1. Raw source records land in <span class="mono">source_a</span>, <span class="mono">source_b</span>, or <span class="mono">manual_uploads</span>.</div>
           <div class="notice" style="margin-bottom:10px">2. Reconcile merges duplicates, flags source inconsistencies, and builds canonical internal listings.</div>
@@ -202,6 +216,23 @@ a { color: inherit; text-decoration: none; }
 <script>
 (function(){ const clock=document.getElementById('clock'); if(clock){ setInterval(()=> clock.textContent = new Date().toLocaleTimeString(), 1000); clock.textContent = new Date().toLocaleTimeString(); }})();
 GRRTheme.init('command');
+/* Licensed Markets UI */
+(function(){
+  const m = loadLicensedMarkets();
+  const pEl = document.getElementById('lmProvince');
+  const cEl = document.getElementById('lmCities');
+  if(pEl) pEl.value = m.province;
+  if(cEl) cEl.value = m.cities.join(', ');
+  document.getElementById('lmStatus').textContent = 'Current: ' + m.province + ' — ' + m.cities.join(', ');
+})();
+function saveLicensedMarketsUI(){
+  const province = document.getElementById('lmProvince').value;
+  const raw = document.getElementById('lmCities').value;
+  const cities = raw.split(',').map(c=>c.trim().toLowerCase()).filter(Boolean);
+  if(!cities.length){ alert('Enter at least one licensed city.'); return; }
+  saveLicensedMarkets({ province, cities });
+  document.getElementById('lmStatus').textContent = 'Saved: ' + province + ' — ' + cities.join(', ');
+}
 </script>
 </body>
 </html>

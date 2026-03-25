@@ -30,7 +30,7 @@ html{font-family:var(--display);background:var(--bg);color:var(--ink)}body{min-h
 </style>
 <script src="data/bootstrap.js"></script><script src="assets/js/utils.js"></script></head><body>
 <header class="topbar"><div class="topbar-logo"><div class="logo-hex">RAG</div><div><div class="topbar-name">RAG Command Center</div><div class="topbar-sub">Deal Pipeline</div></div></div>
-<nav class="topbar-tabs"><a class="tab-btn" href="command-center.html">Dashboard</a><a class="tab-btn" href="contacts.html">Contacts</a><a class="tab-btn active" href="pipeline.html">Pipeline</a><a class="tab-btn" href="commission.html">Commissions</a><a class="tab-btn" href="settings.html">Settings</a></nav></header>
+<nav class="topbar-tabs"><a class="tab-btn" href="command-center.html">Dashboard</a><a class="tab-btn" href="contacts.html">Contacts</a><a class="tab-btn active" href="pipeline.html">Pipeline</a><a class="tab-btn" href="signals.html">Signals</a><a class="tab-btn" href="commission.html">Commissions</a><a class="tab-btn" href="settings.html">Settings</a></nav></header>
 <div class="main">
 <div class="page-hd"><h1 style="font-family:var(--serif)">Deal Pipeline</h1><p>drag deals between stages · track from lead to close</p></div>
 <div class="stats-row"><div class="stat-mini"><div class="lbl">Active Deals</div><div class="val" id="s-active">0</div></div><div class="stat-mini"><div class="lbl">Pipeline Value</div><div class="val" id="s-value">$0</div></div><div class="stat-mini"><div class="lbl">Closed This Month</div><div class="val" style="color:var(--green)" id="s-closed">0</div></div><div class="stat-mini"><div class="lbl">Conversion Rate</div><div class="val" id="s-conv">0%</div></div></div>
@@ -82,12 +82,26 @@ function dropDeal(e, stage){
   renderKanban();
 }
 
-/* Seed a sample deal if empty for demo */
-if(!loadDeals().length){
-  saveDeals([
-    {id:'d1',contact:'Sample Buyer',property:'123 Main St, Victoria',value:550000,agent:'Amit Khatkar',stage:'new_lead',created_at:new Date().toISOString()},
-    {id:'d2',contact:'Sample Seller',property:'456 Oak Bay Ave',value:780000,agent:'Ricki Kohli',stage:'showing',created_at:new Date().toISOString()}
-  ]);
-}
-renderKanban();
+/* Auto-import pipeline leads as new_lead deals */
+(async function(){
+  try {
+    const data = await GRR.loadData();
+    const leads = (data.internal.leads || []).concat((GRR.loadState().inquiries||[]).map(i=>({name:i.name,email:i.email,phone:i.phone,market:i.market,budget:i.budget,created_at:i.created_at})));
+    if(!leads.length){ renderKanban(); return; }
+    const deals = loadDeals();
+    const existingNames = new Set(deals.map(d=>(d.contact||'').toLowerCase()));
+    let imported = 0;
+    leads.forEach(l => {
+      const name = (l.name||l.full_name||'').trim();
+      if(!name || existingNames.has(name.toLowerCase())) return;
+      const m = loadLicensedMarkets();
+      const agent = (l.target_areas||[]).some(a=>a.toLowerCase().includes('victoria')||a.toLowerCase().includes('saanich')||a.toLowerCase().includes('langford')) ? 'Amit Khatkar' : 'Ricki Kohli';
+      deals.push({ id:'d_'+Date.now().toString(36)+Math.random().toString(36).slice(2,6), contact:name, property:(l.target_areas||[]).join(', ')||l.market||'TBD', value:Number(l.budget_max||l.budget||0), agent, stage:'new_lead', created_at:l.created_at||new Date().toISOString() });
+      existingNames.add(name.toLowerCase());
+      imported++;
+    });
+    if(imported) saveDeals(deals);
+  } catch(e){ console.warn('Pipeline import:', e); }
+  renderKanban();
+})();
 </script></body></html>
