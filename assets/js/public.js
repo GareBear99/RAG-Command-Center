@@ -136,10 +136,20 @@ function publicListingFactLine(listing, benchmarks=null){
   if (market?.label) bits.push(market.label);
   return bits.join(' · ');
 }
-function toCommercialType(v=''){
+/* Map raw property_type values to canonical filter categories.
+   Data has: residential, assessed_record, one storey, two storey, bi-level,
+   strata, land, li, lo, cabover, 3/4 level split, etc. */
+function canonicalTypeCategory(v=''){
   const t = normalizeType(v);
+  if (!t) return '';
+  /* Commercial */
   if (['li','lo','industrial','commercial'].includes(t)) return 'commercial';
-  return t;
+  /* Strata */
+  if (t === 'strata') return 'strata';
+  /* Land */
+  if (['land','vacant','lot','acreage'].includes(t)) return 'land';
+  /* Everything else is residential */
+  return 'residential';
 }
 const LICENSED_PUBLIC_PROVINCE = 'BC';
 const LICENSED_PUBLIC_CITIES = ['vancouver','victoria'];
@@ -221,9 +231,9 @@ function matchesPublicFilters(listing, state){
   if (state.baths && toNum(listing.baths) < state.baths) return false;
   if (state.maxPrice && toNum(listing.list_price) > state.maxPrice) return false;
   if (state.type) {
-    const listingType = toCommercialType(listing.property_type);
-    const targetType = toCommercialType(state.type);
-    if (listingType !== targetType) return false;
+    const listingCategory = canonicalTypeCategory(listing.property_type);
+    const targetCategory = canonicalTypeCategory(state.type);
+    if (listingCategory !== targetCategory) return false;
   }
   return true;
 }
