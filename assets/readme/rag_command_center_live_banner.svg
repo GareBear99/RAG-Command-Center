@@ -1,0 +1,237 @@
+<svg width="1600" height="420" viewBox="0 0 1600 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="38%" stop-color="#0d1f36"/>
+      <stop offset="72%" stop-color="#09182b"/>
+      <stop offset="100%" stop-color="#050b14"/>
+    </linearGradient>
+
+    <radialGradient id="tealGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#48f0d0" stop-opacity="0.24"/>
+      <stop offset="45%" stop-color="#48f0d0" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#48f0d0" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#54a9ff" stop-opacity="0.22"/>
+      <stop offset="45%" stop-color="#54a9ff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#54a9ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="amberGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffcf70" stop-opacity="0.16"/>
+      <stop offset="45%" stop-color="#ffcf70" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffcf70" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8fcff"/>
+      <stop offset="55%" stop-color="#c8f9ff"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#48f0d0"/>
+      <stop offset="60%" stop-color="#54a9ff"/>
+      <stop offset="100%" stop-color="#ffcf70"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="tinyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.1" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="titleGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b1"/>
+      <feColorMatrix in="b1" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 18 -7" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="microGrid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#54a9ff" stroke-opacity="0.08" stroke-width="1"/>
+      <animateTransform attributeName="patternTransform" type="translate" values="0 0;44 0;0 0" dur="16s" repeatCount="indefinite"/>
+    </pattern>
+
+    <pattern id="scanPattern" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="2" fill="white" fill-opacity="0.03"/>
+    </pattern>
+
+    <linearGradient id="vignette" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="black" stop-opacity="0.08"/>
+      <stop offset="65%" stop-color="black" stop-opacity="0"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.34"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="420" fill="url(#bg)"/>
+  <rect width="1600" height="420" fill="url(#microGrid)"/>
+
+  <!-- ambient real-estate intelligence glows -->
+  <circle cx="240" cy="100" r="190" fill="url(#tealGlow)">
+    <animate attributeName="cx" values="240;275;240" dur="11s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="100;118;100" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1360" cy="110" r="200" fill="url(#blueGlow)">
+    <animate attributeName="cx" values="1360;1315;1360" dur="12s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="110;132;110" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="820" cy="330" r="280" fill="url(#amberGlow)">
+    <animate attributeName="cy" values="330;308;330" dur="14s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- map pulse rings -->
+  <g transform="translate(1220 116)" filter="url(#softGlow)">
+    <circle r="24" fill="none" stroke="#48f0d0" stroke-opacity="0.65" stroke-width="2">
+      <animate attributeName="r" values="18;42;18" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.7;0.15;0.7" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="10" fill="#48f0d0" fill-opacity="0.9"/>
+  </g>
+
+  <!-- left-side signal cluster -->
+  <g transform="translate(255 120)" filter="url(#tinyGlow)">
+    <circle cx="0" cy="0" r="7" fill="#54a9ff"/>
+    <circle cx="68" cy="-26" r="5" fill="#48f0d0"/>
+    <circle cx="112" cy="18" r="4.5" fill="#ffcf70"/>
+    <circle cx="88" cy="72" r="5" fill="#48f0d0"/>
+    <circle cx="20" cy="88" r="4.5" fill="#54a9ff"/>
+    <path d="M0 0 L68 -26 L112 18 L88 72 L20 88 L0 0" stroke="url(#lineGrad)" stroke-opacity="0.62" stroke-width="2.2" fill="none" stroke-dasharray="8 10">
+      <animate attributeName="stroke-dashoffset" values="0;-72" dur="3.6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M68 -26 L88 72 M0 0 L112 18 M20 88 L112 18" stroke="#54a9ff" stroke-opacity="0.24" stroke-width="1.6"/>
+  </g>
+
+  <!-- city / listings skyline -->
+  <g transform="translate(0 0)">
+    <rect x="82" y="248" width="34" height="92" rx="2" fill="#0f243d" stroke="#54a9ff" stroke-opacity="0.18"/>
+    <rect x="126" y="216" width="44" height="124" rx="2" fill="#112a47" stroke="#54a9ff" stroke-opacity="0.18"/>
+    <rect x="181" y="236" width="38" height="104" rx="2" fill="#0f2138" stroke="#54a9ff" stroke-opacity="0.18"/>
+    <rect x="232" y="196" width="52" height="144" rx="2" fill="#13304f" stroke="#54a9ff" stroke-opacity="0.18"/>
+    <rect x="298" y="227" width="40" height="113" rx="2" fill="#10253e" stroke="#54a9ff" stroke-opacity="0.18"/>
+
+    <rect x="1258" y="230" width="40" height="110" rx="2" fill="#10253e" stroke="#54a9ff" stroke-opacity="0.18"/>
+    <rect x="1308" y="190" width="54" height="150" rx="2" fill="#13304f" stroke="#54a9ff" stroke-opacity="0.18"/>
+    <rect x="1373" y="220" width="38" height="120" rx="2" fill="#0f2138" stroke="#54a9ff" stroke-opacity="0.18"/>
+    <rect x="1422" y="204" width="46" height="136" rx="2" fill="#112a47" stroke="#54a9ff" stroke-opacity="0.18"/>
+    <rect x="1478" y="240" width="30" height="100" rx="2" fill="#0f243d" stroke="#54a9ff" stroke-opacity="0.18"/>
+  </g>
+
+  <!-- window flickers -->
+  <g fill="#9bd6ff" fill-opacity="0.7">
+    <rect x="137" y="234" width="6" height="8"><animate attributeName="fill-opacity" values="0.3;0.95;0.3" dur="4.6s" repeatCount="indefinite"/></rect>
+    <rect x="145" y="252" width="6" height="8"><animate attributeName="fill-opacity" values="0.7;0.2;0.7" dur="5.2s" repeatCount="indefinite"/></rect>
+    <rect x="247" y="220" width="6" height="8"><animate attributeName="fill-opacity" values="0.4;0.9;0.4" dur="4.1s" repeatCount="indefinite"/></rect>
+    <rect x="267" y="258" width="6" height="8"><animate attributeName="fill-opacity" values="0.8;0.25;0.8" dur="5.8s" repeatCount="indefinite"/></rect>
+    <rect x="1323" y="210" width="6" height="8"><animate attributeName="fill-opacity" values="0.3;0.95;0.3" dur="4.8s" repeatCount="indefinite"/></rect>
+    <rect x="1341" y="250" width="6" height="8"><animate attributeName="fill-opacity" values="0.7;0.2;0.7" dur="5.6s" repeatCount="indefinite"/></rect>
+    <rect x="1440" y="222" width="6" height="8"><animate attributeName="fill-opacity" values="0.5;0.95;0.5" dur="4.3s" repeatCount="indefinite"/></rect>
+    <rect x="1458" y="272" width="6" height="8"><animate attributeName="fill-opacity" values="0.8;0.25;0.8" dur="5.1s" repeatCount="indefinite"/></rect>
+  </g>
+
+  <!-- flowing analytics lines -->
+  <g fill="none" filter="url(#tinyGlow)">
+    <path d="M140 314 C 300 262, 425 326, 560 282 S 830 228, 960 258 S 1220 326, 1450 252" stroke="#48f0d0" stroke-opacity="0.55" stroke-width="2.4" stroke-dasharray="10 14">
+      <animate attributeName="stroke-dashoffset" values="0;-110" dur="4.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M100 336 C 270 292, 410 350, 560 314 S 820 250, 975 292 S 1230 352, 1490 292" stroke="#54a9ff" stroke-opacity="0.48" stroke-width="1.8" stroke-dasharray="7 13">
+      <animate attributeName="stroke-dashoffset" values="0;-92" dur="4.1s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- center command frame -->
+  <g transform="translate(800 210)">
+    <rect x="-420" y="-118" width="840" height="196" rx="24" fill="#0b1727" fill-opacity="0.52" stroke="#54a9ff" stroke-opacity="0.18"/>
+    <rect x="-396" y="-94" width="792" height="148" rx="18" fill="#0d1b2e" fill-opacity="0.34" stroke="#48f0d0" stroke-opacity="0.13"/>
+  </g>
+
+  <!-- title -->
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" text-anchor="middle">
+    <text x="800" y="110" fill="#ddfcff" fill-opacity="0.82" font-size="15" font-weight="800" letter-spacing="7" filter="url(#tinyGlow)">
+      REAL ESTATE • INTELLIGENCE • COMMAND • SIGNALS
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="4.8s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="0.72;1;0.72" dur="4.8s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" text-anchor="middle" filter="url(#titleGlow)">
+    <text x="800" y="196" font-size="86" font-weight="1000" letter-spacing="5" fill="#48f0d0" fill-opacity="0">
+      RAG COMMAND CENTER
+      <animate attributeName="fill-opacity" values="0;0;0;0.92;0;0;0" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="800;800;800;794;804;800;800" dur="3.2s" repeatCount="indefinite"/>
+    </text>
+    <text x="800" y="196" font-size="86" font-weight="1000" letter-spacing="5" fill="#54a9ff" fill-opacity="0">
+      RAG COMMAND CENTER
+      <animate attributeName="fill-opacity" values="0;0;0.85;0;0.78;0;0" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="800;800;806;800;796;800;800" dur="2.8s" repeatCount="indefinite"/>
+    </text>
+    <text x="800" y="196" font-size="86" font-weight="1000" letter-spacing="5" fill="url(#titleGrad)">
+      RAG COMMAND CENTER
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="5.2s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" text-anchor="middle">
+    <text x="800" y="238" fill="#f1fbff" fill-opacity="0.88" font-size="22" letter-spacing="3" filter="url(#tinyGlow)">
+      CANADA-WIDE LISTINGS · CRM · DEAL SCORING · GPS MAPS · SIGNAL ENGINE
+    </text>
+  </g>
+
+  <!-- little status pills -->
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" text-anchor="middle" filter="url(#tinyGlow)">
+    <rect x="522" y="276" width="128" height="30" rx="15" fill="#10233a" stroke="#48f0d0" stroke-opacity="0.28"/>
+    <text x="586" y="296" fill="#dffcff" letter-spacing="2">CANADA-WIDE</text>
+
+    <rect x="670" y="276" width="126" height="30" rx="15" fill="#10233a" stroke="#54a9ff" stroke-opacity="0.28"/>
+    <text x="733" y="296" fill="#dffcff" letter-spacing="2">COMMAND</text>
+
+    <rect x="816" y="276" width="112" height="30" rx="15" fill="#10233a" stroke="#48f0d0" stroke-opacity="0.28"/>
+    <text x="872" y="296" fill="#dffcff" letter-spacing="2">SIGNALS</text>
+
+    <rect x="948" y="276" width="118" height="30" rx="15" fill="#10233a" stroke="#ffcf70" stroke-opacity="0.28"/>
+    <text x="1007" y="296" fill="#fff7df" letter-spacing="2">DEAL SCORE</text>
+  </g>
+
+  <!-- map route animation -->
+  <g fill="none" filter="url(#tinyGlow)">
+    <path d="M1110 142 C 1020 168, 962 210, 898 244 C 842 272, 790 280, 742 277" stroke="url(#lineGrad)" stroke-width="2.6" stroke-opacity="0.68" stroke-dasharray="9 10">
+      <animate attributeName="stroke-dashoffset" values="0;-76" dur="3.4s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="742" cy="277" r="6" fill="#ffcf70"/>
+    <circle cx="1110" cy="142" r="5" fill="#48f0d0"/>
+  </g>
+
+  <!-- particles -->
+  <g fill="white" filter="url(#tinyGlow)">
+    <circle cx="458" cy="94" r="1.5"><animate attributeName="opacity" values="0.2;0.95;0.2" dur="4.1s" repeatCount="indefinite"/></circle>
+    <circle cx="548" cy="132" r="1.8"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="5.2s" repeatCount="indefinite"/></circle>
+    <circle cx="678" cy="84" r="1.4"><animate attributeName="opacity" values="0.3;0.85;0.3" dur="4.6s" repeatCount="indefinite"/></circle>
+    <circle cx="912" cy="86" r="1.6"><animate attributeName="opacity" values="0.25;0.88;0.25" dur="4.8s" repeatCount="indefinite"/></circle>
+    <circle cx="1046" cy="102" r="1.8"><animate attributeName="opacity" values="0.7;0.25;0.7" dur="5.4s" repeatCount="indefinite"/></circle>
+    <circle cx="1178" cy="78" r="1.4"><animate attributeName="opacity" values="0.35;0.9;0.35" dur="4.2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <rect width="1600" height="420" fill="url(#scanPattern)" opacity="0.14">
+    <animateTransform attributeName="transform" type="translate" values="0 -20;0 20;0 -20" dur="10s" repeatCount="indefinite"/>
+  </rect>
+
+  <rect width="1600" height="420" fill="url(#vignette)"/>
+</svg>
