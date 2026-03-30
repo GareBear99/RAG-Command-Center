@@ -30,6 +30,12 @@
 
 ## What Is This?
 
+<p align="center">
+  <img src="<p align="center">
+  <img src="assets/readme/rag-command-center-banner.svg" alt="RAG Command Center Banner"/>
+</p>
+
+
 **RAG Command Center** is a full-stack real estate intelligence platform that combines a **public consumer-facing listing site** with an **internal CRM, lead pipeline, and AI-powered signal engine** for real estate professionals.
 
 **R = Ricki Kohli** · **A = Amit Khatkar** · **G = Gary Doman**
