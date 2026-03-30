@@ -32,7 +32,7 @@
 
 <p align="center">
   <img src="<p align="center">
-  <img src="assets/readme/rag-command-center-banner.svg" alt="RAG Command Center Banner"/>
+  <img src="rag-command-center-banner.svg" alt="RAG Command Center Banner"/>
 </p>
 
 
