@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="assets/readme/rag-command-center-banner.svg" alt="RAG Command Center Banner"/>
-</p>
 
 <p align="center">
   <strong>RAG Command Center</strong><br>
