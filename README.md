@@ -31,10 +31,8 @@
 ## What Is This?
 
 <p align="center">
-  <img src="<p align="center">
-  <img src="/rag-command-center-banner.svg" alt="RAG Command Center Banner"/>
+  <img src="assets/readme/rag_command_center_live_banner.svg" alt="RAG Command Center Banner"/>
 </p>
-
 
 **RAG Command Center** is a full-stack real estate intelligence platform that combines a **public consumer-facing listing site** with an **internal CRM, lead pipeline, and AI-powered signal engine** for real estate professionals.
 
