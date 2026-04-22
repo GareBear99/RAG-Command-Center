@@ -31,6 +31,8 @@
   <img src="assets/readme/rag_command_center_live_banner.svg" alt="RAG Command Center Banner"/>
 </p>
 
+> 🔐 **Built on [ARC-Core](https://github.com/GareBear99/ARC-Core)** — the authority / event / receipt kernel. Every signal compile, lead score, pipeline transition, commission event, and inquiry submission is structurally an ARC-Core-shaped event with a SHA-256-addressable fingerprint and a receipt-chain tail.
+
 **RAG Command Center** is a full-stack real estate intelligence platform that combines a **public consumer-facing listing site** with an **internal CRM, lead pipeline, and AI-powered signal engine** for real estate professionals.
 
 **R = Ricki Kohli** · **A = Amit Khatkar** · **G = Gary Doman**
@@ -42,6 +44,47 @@
 **Command Center** — Operations dashboard, CRM, pipeline, AI signals, commission tracking. Currently focused on **Victoria, BC** as the primary licensed market, with Vancouver as secondary. Internal access via SHA-256 auth.
 
 The public site serves all of Canada. The command center concentrates on Victoria/Vancouver — lead routing, signal priority, auto-lead generation, and listing sort weight all focus on the licensed markets first. Licensed areas are configurable from the command center settings.
+
+---
+
+## 🔐 Built on ARC-Core
+
+RAG Command Center was built directly on ARC-Core doctrine — every surface in the platform maps to an ARC-Core primitive. This is the real-estate-intelligence equivalent of the signal-intelligence console ARC-Core provides.
+
+| Platform layer | ARC-Core pattern | How it's applied here |
+|---|---|---|
+| Signal compile (Reddit, Victoria Open Data, Facebook paste) | **Event ingest + fingerprint dedupe** | Every scraped/pasted post becomes an event with a SHA-256-like URL + fuzzy-text fingerprint; replays return the existing signal instead of duplicating (same idempotency contract as `ingest.create_event`) |
+| Lead intent scoring (0–100 credibility, budget, neighbourhood) | **Explainable linear `score_event`** | Six weighted components (intent, budget match, neighbourhood, credibility, freshness, licensed-area boost) mirror the inspectable `confidence×50 + severity×4 + … + watchlist×18` recipe |
+| Deal scoring (below market, price drop, DOM, comps, features, freshness) | **Explainable linear `score_event`** | Six-component composite 0–100 score with per-component breakdown shown in the listing detail modal |
+| Pipeline stages (new → qualified → showing → offer → closed) | **Proposal → evidence → receipt → approval** flow | Each stage transition is an authority-gated mutation with an audit trail, exactly like ARC-Core's proposal lifecycle |
+| Licensed-area routing + priority | **Authority gating** | The licensed province/cities decision is an authority claim that gates lead routing, sort priority, and auto-lead generation — same role-based gate as `require_role` |
+| Contact CRM + interaction history | **Entity resolution + aliases** | Contacts are canonical entities with aliased identifiers; interaction events append to their timeline |
+| Hot / Warm / Cold / Stale freshness decay | **Risk band + 7-day window** | 7-day / 14-day decay is the consumer-domain analog of the 7-day sliding risk window |
+| Inquiry → Worker → KV pipeline | **Event → audit → receipt** | Every public inquiry is captured as an event, analytics fires on submit, and the KV store acts as the append-only receipt ledger |
+| SHA-256 auth for command center | **Authority-gated execution** | Internal-only surface requires authenticated session — same separation observer (public) / analyst+ (command center) that ARC-Core enforces |
+| Cron-triggered hourly compile | **Connector poll cycle** | The Worker `scheduled()` handler is an `filesystem_jsonl`-style connector polling Reddit + Open Data, with dedup and cursor-like freshness tracking |
+
+### What this means concretely
+
+- **Signal dedupe** is URL-based + fuzzy-text (`duplicate_of` field) — the same contract as `events.fingerprint UNIQUE` in ARC-Core.
+- **Lead decay** (7d → stale) mirrors the 7-day sliding window in `risk.score_event`.
+- **Pipeline kanban** is a proposal ledger with timestamped stage transitions.
+- **Commission splits** are first-class events with attached authority (tiered partnership agreement) — billing-reconciliation discipline without needing Stripe's webhook-event wrangling.
+- Every score is **explainable** — the detail modal breaks down each component's weight and contribution, in the same spirit as ARC-Core's linear-and-inspectable risk formula.
+
+ARC-Core is the doctrinal substrate. RAG owns the real-estate domain (listings, deals, commissions, BC mortgage math, neighbourhood dictionary); ARC-Core owns the event/authority/receipt discipline that keeps the whole operation tamper-evident and replayable.
+
+Full seven-repo ARC ecosystem + companion consumer applications:
+
+- [ARC-Core](https://github.com/GareBear99/ARC-Core) — authority / event / receipt kernel *(backbone of this platform)*
+- [arc-lucifer-cleanroom-runtime](https://github.com/GareBear99/arc-lucifer-cleanroom-runtime)
+- [arc-cognition-core](https://github.com/GareBear99/arc-cognition-core)
+- [ARC-Neuron-LLMBuilder](https://github.com/GareBear99/ARC-Neuron-LLMBuilder)
+- [arc-language-module](https://github.com/GareBear99/arc-language-module)
+- [omnibinary-runtime](https://github.com/GareBear99/omnibinary-runtime)
+- [Arc-RAR](https://github.com/GareBear99/Arc-RAR)
+
+Companion consumer repos on the same spine: [RiftAscent](https://github.com/GareBear99/RiftAscent) · [Seeded-Universe-Recreation-Engine](https://github.com/GareBear99/Seeded-Universe-Recreation-Engine) · [Proto-Synth_Grid_Engine](https://github.com/GareBear99/Proto-Synth_Grid_Engine) · [Neo-VECTR_Solar_Sim_NASA_Standard](https://github.com/GareBear99/Neo-VECTR_Solar_Sim_NASA_Standard) · [TizWildinEntertainmentHUB](https://github.com/GareBear99/TizWildinEntertainmentHUB) · [Robotics-Master-Controller](https://github.com/GareBear99/Robotics-Master-Controller).
 
 ---
 
